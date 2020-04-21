@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Interactive NELT Map</title>
+    <style media="screen">
+      @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@700&display=swap');
+      body {
+        background: #E5E5E5;
+        font-family: "Barlow";
+        overflow: hidden;
+        margin: 0px;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      div.controls {
+        position: fixed;
+        right: 0px;
+        padding: 25px;
+        background: #DDD;
+        text-align: right;
+        line-height: 1.5;
+        z-index: 5;
+      }
+      div.controls input {
+        margin-bottom: 15px;
+      }
+      label {
+        margin-left: 10px;
+      }
+      div.central {
+        margin: auto;
+        width: 800px;
+        height: 800px;
+        position: relative;
+      }
+      div.central img {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+      }
+      @media screen and (max-height: 800px) and (min-width: 800px) {
+        div.central {
+          width: 100vh;
+          height: 100vh;
+        }
+      }
+      @media screen and (max-width: 800px) {
+        div.central {
+          width: 100vw;
+          height: 100vw;
+        }
+      }
+      .map {
+        z-index: 1;
+      }
+      .lines {
+        z-index: 2;
+      }
+      .stops {
+        z-index: 3;
+      }
+      .names {
+        z-index: 4;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="central">
+      <img class="map" src="map.png">
+      <img class="title" src="title.png">
+      <img class="lines" src="lines.png">
+      <img class="names" src="names.png">
+      <img class="stops" src="stops.png">
+    </div>
+    <div class="controls">
+      <input type="checkbox" checked id="names" name="names"><label for="names">Names</label></input><br>
+      <input type="checkbox" checked  id="stops" name="stops"><label for="stops">Stops</label></input><br>
+      <input type="checkbox" checked  id="lines" name="lines"><label for="lines">Lines</label></input><br>
+      <input type="checkbox" checked  id="map" name="map"><label for="map">Political Map</label></input><br>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $('#lines').click(function() {
+        $('img.lines').fadeToggle(100);
+      });
+      $('#stops').click(function() {
+        $('img.stops').fadeToggle(100);
+      });
+      $('#names').click(function() {
+        $('img.names').fadeToggle(100);
+      });
+      $('#map').click(function() {
+        $('img.map').fadeToggle(100);
+      });
+    </script>
+  </body>
+</html>
