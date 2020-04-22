@@ -57,15 +57,31 @@
       }
       .map {
         z-index: 1;
+        opacity: 0.1;
       }
       .lines {
         z-index: 2;
+      }
+      .prolines {
+        z-index: 7;
+        opacity: 0;
+      }
+      .prostops {
+        z-index: 8;
+        opacity: 0;
+      }
+      .pronames {
+        z-index: 9;
+        opacity: 0;
       }
       .stops {
         z-index: 3;
       }
       .names {
         z-index: 4;
+      }
+      .title {
+        z-index: 6;
       }
     </style>
   </head>
@@ -74,31 +90,46 @@
       <img class="map" src="map.png">
       <img class="title" src="title.png">
       <img class="lines" src="lines.png">
+      <img class="prolines" src="prolines.png">
       <img class="names" src="names.png">
+      <img class="pronames" src="pronames.png">
       <img class="stops" src="stops.png">
+      <img class="prostops" src="prostops.png">
     </div>
     <div class="controls">
       <input type="checkbox" checked id="names" name="names"><label for="names">Names</label></input><br>
       <input type="checkbox" checked id="stops" name="stops"><label for="stops">Stops</label></input><br>
       <input type="checkbox" checked id="lines" name="lines"><label for="lines">Lines</label></input><br>
-      <input type="checkbox" id="map" name="map"><label for="map">Political Map</label></input><br>
+      Current / Proposed<br><input type="range" min="0" max="1" step="0.01" value="0" id="balance" name="balance"></input><br>
+      Map Opacity<br><input type="range" min="0" max="1" step="0.01" value="0.1" id="map" name="map"></input>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function() {
-        $('img.map').fadeOut(1);
+        //
       });
       $('#lines').click(function() {
         $('img.lines').fadeToggle(100);
+        $('img.prolines').fadeToggle(100);
       });
       $('#stops').click(function() {
         $('img.stops').fadeToggle(100);
+        $('img.prostops').fadeToggle(100);
       });
       $('#names').click(function() {
         $('img.names').fadeToggle(100);
+        $('img.pronames').fadeToggle(100);
       });
-      $('#map').click(function() {
-        $('img.map').fadeToggle(100);
+      $('#map').on('input', function() {
+        $('img.map').css('opacity', this.value);
+      });
+      $('#balance').on('input', function() {
+        $('img.lines').css('opacity', 1-this.value);
+        $('img.prolines').css('opacity', this.value);
+        $('img.stops').css('opacity', 1-this.value);
+        $('img.prostops').css('opacity', this.value);
+        $('img.names').css('opacity', 1-this.value);
+        $('img.pronames').css('opacity', this.value);
       });
     </script>
   </body>
