@@ -2,8 +2,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Interactive NELT Map</title>
     <meta property="og:title" content="Interactive NELT Map">
+    <title>Interactive NELT Map</title>
     <style media="screen">
       @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@700&display=swap');
       body {
@@ -56,30 +56,22 @@
           height: 100vw;
         }
       }
-      .map {
+      .dynmap {
         z-index: 1;
         opacity: 0.1;
       }
-      .lines {
+      .country {
         z-index: 2;
+        opacity: 0.6;
       }
-      .prolines {
-        z-index: 7;
-        opacity: 0;
-      }
-      .prostops {
-        z-index: 8;
-        opacity: 0;
-      }
-      .pronames {
-        z-index: 9;
-        opacity: 0;
-      }
-      .stops {
+      .lines {
         z-index: 3;
       }
-      .names {
+      .stops {
         z-index: 4;
+      }
+      .names {
+        z-index: 5;
       }
       .title {
         z-index: 6;
@@ -88,49 +80,30 @@
   </head>
   <body>
     <div class="central">
-      <img class="map" src="map.jpg">
+      <img class="dynmap" src="dynmap.jpg">
+      <img class="country" src="country.png">
       <img class="title" src="title.png">
       <img class="lines" src="lines.png">
-      <img class="prolines" src="prolines.png">
       <img class="names" src="names.png">
-      <img class="pronames" src="pronames.png">
       <img class="stops" src="stops.png">
-      <img class="prostops" src="prostops.png">
     </div>
     <div class="controls">
       <input type="checkbox" checked id="names" name="names"><label for="names">Names</label></input><br>
       <input type="checkbox" checked id="stops" name="stops"><label for="stops">Stops</label></input><br>
       <input type="checkbox" checked id="lines" name="lines"><label for="lines">Lines</label></input><br>
-      Current / Proposed<br><input type="range" min="0" max="1" step="0.01" value="0" id="balance" name="balance"></input><br>
-      Map Opacity<br><input type="range" min="0" max="1" step="0.01" value="0.1" id="map" name="map"></input>
+      Country Opacity<br><input type="range" min="0" max="1" step="0.01" value="0.6" id="country" name="country"></input><br>
+      Dynmap Opacity<br><input type="range" min="0" max="1" step="0.01" value="0.1" id="dynmap" name="dynmap"></input>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function() {
         //
       });
-      $('#lines').click(function() {
-        $('img.lines').fadeToggle(100);
-        $('img.prolines').fadeToggle(100);
+      $('#dynmap').on('input', function() {
+        $('img.dynmap').css('opacity', this.value);
       });
-      $('#stops').click(function() {
-        $('img.stops').fadeToggle(100);
-        $('img.prostops').fadeToggle(100);
-      });
-      $('#names').click(function() {
-        $('img.names').fadeToggle(100);
-        $('img.pronames').fadeToggle(100);
-      });
-      $('#map').on('input', function() {
-        $('img.map').css('opacity', this.value);
-      });
-      $('#balance').on('input', function() {
-        $('img.lines').css('opacity', 1-this.value);
-        $('img.prolines').css('opacity', this.value);
-        $('img.stops').css('opacity', 1-this.value);
-        $('img.prostops').css('opacity', this.value);
-        $('img.names').css('opacity', 1-this.value);
-        $('img.pronames').css('opacity', this.value);
+      $('#country').on('input', function() {
+        $('img.country').css('opacity', this.value);
       });
     </script>
   </body>
