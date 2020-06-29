@@ -99,6 +99,15 @@
       $(document).ready(function() {
         //
       });
+      $('#lines').click(function() {
+        $('img.lines').fadeToggle(100);
+      });
+      $('#stops').click(function() {
+        $('img.stops').fadeToggle(100);
+      });
+      $('#names').click(function() {
+        $('img.names').fadeToggle(100);
+      });
       $('#dynmap').on('input', function() {
         $('img.dynmap').css('opacity', this.value);
       });
