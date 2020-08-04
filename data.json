@@ -3,29 +3,29 @@
     "X": -76,
     "Z": -78,
     "District": "Montrose",
-    "Description": "",
-    "Image": ""
+    "Description": "Montrose's public archives.",
+    "Image": "images/archivesofmontrose.png"
   },
   "Baguette": {
     "X": 164,
     "Z": 245,
     "District": "Baguette & Inquisition",
-    "Description": "",
+    "Description": "The northern half of Baguette & Inquisition.",
     "Image": ""
   },
   "Banapo": {
     "X": -35,
     "Z": -109,
     "District": "Banapo",
-    "Description": "",
-    "Image": ""
+    "Description": "Located in the swamps and dark forests, Banapo is one of the older nations on the server.",
+    "Image": "images/banapo.png"
   },
   "Bialya": {
     "X": 248,
     "Z": 334,
     "District": "Bialya",
-    "Description": "",
-    "Image": ""
+    "Description": "Bialya is a small country in the southeast corner of the map. Its mission is to have the largest farms and undercut every other nations' prices, and is always looking for new members and allies.",
+    "Image": "images/bialya.png"
   },
   "Botania": {
     "X": -190,
@@ -38,7 +38,7 @@
     "X": -350,
     "Z": -58,
     "District": "Cascadia",
-    "Description": "",
+    "Description": "Cascadia is a peaceful nation focused on environmentalism, international relations, and science. Located in the birch forests of the West, it is a nation dedicated to making the world a better place.",
     "Image": ""
   },
   "Castle Montrose": {
@@ -46,20 +46,20 @@
     "Z": -76,
     "District": "Montrose",
     "Description": "",
-    "Image": "https://vignette.wikia.nocookie.net/lgsmc/images/5/5f/Castle_montrose.JPG"
+    "Image": "images/castlemontrose.png"
   },
   "Cattlehead": {
     "X": 44,
     "Z": -45,
     "District": "Goomlandia",
     "Description": "",
-    "Image": ""
+    "Image": "images/cattlehead.png"
   },
   "Champignon": {
     "X": 85,
     "Z": -35,
     "District": "Goomlandia",
-    "Description": "",
+    "Description": "Champignon is a city just east of Goomtown, featuring the site of Grooge64's house, numerous Gabe Heads, and functioning as the transition between the inhabited plains and broad mesa of Goomlandia.",
     "Image": "https://vignette.wikia.nocookie.net/lgsmc/images/2/22/Capture_d%E2%80%99%C3%A9cran_%281061%29.png/revision/latest/scale-to-width-down/620?cb=20200106224215"
   },
   "Championis": {
@@ -68,6 +68,13 @@
     "District": "Championis",
     "Description": "",
     "Image": ""
+  },
+  "Cob Castle": {
+    "X": 44,
+    "Z": -76,
+    "District": "Voidnest",
+    "Description": "Cob Castle is one of the newest structures in Voidnest, built by c0baltblue.",
+    "Image": "images/cob.png"
   },
   "East Goomtown": {
     "X": 64,
@@ -87,28 +94,28 @@
     "X": 56,
     "Z": 85,
     "District": "Fianna",
-    "Description": "",
+    "Description": "The famed PVP arena located in the southern part of Fianna.",
     "Image": ""
   },
   "Farnough": {
     "X": 317,
     "Z": 313,
     "District": "Farnough",
-    "Description": "",
+    "Description": "The Beachdom of Farnough, led by ArcherAce, is a desert kingdom in the far South.",
     "Image": ""
   },
   "Federal Province": {
     "X": -104,
     "Z": 5,
     "District": "Sylvia",
-    "Description": "",
-    "Image": ""
+    "Description": "The Sylvian Union Federal Province is the federal land of the Sylvian Union.",
+    "Image": "images/sufp.png"
   },
   "Fianna": {
     "X": 2,
     "Z": 36,
     "District": "Fianna",
-    "Description": "",
+    "Description": "Fianna is a kingdom located on Dwarf Island.",
     "Image": "https://vignette.wikia.nocookie.net/lgsmc/images/7/72/Fianna.png/revision/latest/scale-to-width-down/1000?cb=20191108040454"
   },
   "Fort Skardaz": {
@@ -122,7 +129,7 @@
     "X": -106,
     "Z": -66,
     "District": "Montrose",
-    "Description": "",
+    "Description": "Gabeford is one of the oldest personal estates on the server, owned by Header of Montrose FlyingGMM. It contains several farms and secondary buildings, a dock, and FlyingGMM's signature square cobblestone house.",
     "Image": ""
   },
   "Gateway City": {
@@ -178,8 +185,8 @@
     "X": -36,
     "Z": -36,
     "District": "HUM",
-    "Description": "",
-    "Image": "https://vignette.wikia.nocookie.net/lgsmc/images/3/39/HUM_Skyline.png/revision/latest/scale-to-width-down/1000?cb=20190513233402"
+    "Description": "Properopolis is the capital of HUM, the oldest nation in the world. HUM has historically operated a confidential banking service based in Properopolis, providing non-partisan safe storage and interest-gaining accounts which has made the state quite wealthy.",
+    "Image": "images/hum.png"
   },
   "Hunger Games Island": {
     "X": -58,
@@ -192,8 +199,8 @@
     "X": -231,
     "Z": 348,
     "District": "Hybrasil",
-    "Description": "",
-    "Image": ""
+    "Description": "A splinter state of Yugoslavia, Hybrasil is located in the southwest sea, containing several sizable farms (prismarine, cactus, and iron).",
+    "Image": "images/hybrasil.png"
   },
   "Icedale Tavern": {
     "X": -96,
@@ -207,20 +214,20 @@
     "Z": 190,
     "District": "",
     "Description": "",
-    "Image": ""
+    "Image": "images/ilyrdom.png"
   },
   "Inquisition": {
     "X": 139,
     "Z": 299,
     "District": "Baguette",
-    "Description": "",
+    "Description": "The southern half of Baguette & Inquisition.",
     "Image": ""
   },
   "Iris": {
     "X": -96,
     "Z": -53,
     "District": "Montrose",
-    "Description": "",
+    "Description": "The Montrosian estate of argetlam04.",
     "Image": "https://vignette.wikia.nocookie.net/lgsmc/images/0/02/2020-03-05_19.44.35.png"
   },
   "Isle of Gold": {
@@ -234,15 +241,15 @@
     "X": 309,
     "Z": -261,
     "District": "Krabbatoah",
-    "Description": "",
+    "Description": "Featuring many landmarks and many large builds that makeup the nation, Krabbatoah consists of many different biomes (such as swamps, rivers, and savannas) and cities (such as Krabbothia and Cheeston).",
     "Image": ""
   },
   "Montrose Industrial District": {
     "X": -82,
     "Z": -118,
     "District": "Montrose",
-    "Description": "Montrose's industrial hub, including a mob grinder, pumpkin farm, villager breeder, and iron farm",
-    "Image": ""
+    "Description": "The Montrose Industrial District (MID for short) is Montrose's industrial hub, featuring a mob grinder, pumpkin farm, villager breeder, and iron farm.",
+    "Image": "images/mid.png"
   },
   "Montrose Institute of Technology": {
     "X": -86,
@@ -297,7 +304,7 @@
     "X": -64,
     "Z": -25,
     "District": "Montrose",
-    "Description": "",
+    "Description": "The headquarters of the former Prosperity League, a multinational alliance including Montrose, HUM, Rhett, Bagelonia, The Guardian State, and Lucas.",
     "Image": ""
   },
   "Rapture": {
@@ -311,14 +318,14 @@
     "X": -36,
     "Z": 81,
     "District": "Rhett",
-    "Description": "",
-    "Image": ""
+    "Description": "Rhett Island is the mainland of Rhett, located in the westernmost portion of Tierra Del Fuego. Covered in podzol, this is the site of many iconic Rhettian builds.",
+    "Image": "images/rhett.png"
   },
   "Rhett Tropical": {
     "X": -123,
     "Z": 96,
     "District": "Rhett",
-    "Description": "",
+    "Description": "Rhett Tropical is",
     "Image": ""
   },
   "Richard": {
@@ -335,18 +342,11 @@
     "Description": "",
     "Image": ""
   },
-  "Schavick": {
-    "X": 54,
-    "Z": 259,
-    "District": "CSA",
-    "Description": "",
-    "Image": ""
-  },
   "Schenektengrad": {
     "X": 56,
     "Z": 193,
     "District": "CSA",
-    "Description": "",
+    "Description": "One of the most populated cities on the landscape, Schenektengrad is also one of the most war-torn, suffering significant fire damage during the Balkan Troubles. It is currently split between the Schevakian splinter states.",
     "Image": "https://vignette.wikia.nocookie.net/lgsmc/images/b/b6/Screenshot_%2810%29.png"
   },
   "Soleil Islands": {
@@ -363,18 +363,25 @@
     "Description": "",
     "Image": ""
   },
+  "South Polgolas": {
+    "X": 54,
+    "Z": 259,
+    "District": "CSA",
+    "Description": "South Polgolas (also known as Satama and Schavick) is the southernmost city in the CSA. Having suffered destruction during the Balkan Troubles, it is currently being rebuilt.",
+    "Image": "images/southpolgolas.png"
+  },
   "Spawn": {
     "X": -30,
     "Z": 15,
     "District": "Spawn",
-    "Description": "",
+    "Description": "The server's spawn island.",
     "Image": ""
   },
   "Spruceville": {
     "X": -111,
     "Z": -78,
     "District": "Montrose",
-    "Description": "",
+    "Description": "A historic village in the lush spruce forests of northern Montrose.",
     "Image": ""
   },
   "Stemtown": {
@@ -395,28 +402,28 @@
     "X": -131,
     "Z": 72,
     "District": "Montrose",
-    "Description": "",
-    "Image": ""
+    "Description": "The island estate of Montrosian citizen Sunflame_is_DED.",
+    "Image": "images/sunflame.png"
   },
   "Sylvian End Portal": {
     "X": -119,
     "Z": 250,
     "District": "Montrose",
-    "Description": "",
+    "Description": "The stronghold claimed by the Sylvian Union.",
     "Image": ""
   },
   "Tautona": {
     "X": 222,
     "Z": 222,
     "District": "HUM",
-    "Description": "",
+    "Description": "An underground bunker & former satellite state of Sylvia, now part of the East Taiga lands owned by HUM.",
     "Image": ""
   },
   "Toe Gang": {
     "X": 4,
     "Z": 92,
     "District": "Sylvia",
-    "Description": "",
+    "Description": "The iconic lands owned by hongstoes and ongstoes.",
     "Image": ""
   },
   "Tsarevets": {
@@ -430,21 +437,21 @@
     "X": -300,
     "Z": -200,
     "District": "Twiceland",
-    "Description": "",
-    "Image": ""
+    "Description": "Twiceland is the pinnacle of Gothic architecture in LGS, featuring beautiful cathedrals and towering stone structures.",
+    "Image": "images/twiceland.png"
   },
   "UFYSR": {
     "X": 156,
     "Z": 120,
     "District": "UFYSR",
-    "Description": "",
-    "Image": "https://vignette.wikia.nocookie.net/lgsmc/images/d/dd/Vladivostok.PNG"
+    "Description": "The United Former Yugoslav Socialist Republics is a reformation of former Yugoslavia.",
+    "Image": "images/ufysr.png"
   },
   "Vailan": {
     "X": -120,
     "Z": -169,
     "District": "Vailan",
-    "Description": "",
+    "Description": "Vailan is a partially isolationist nation in the North, containing many beautifully constructed cities and villages, and serving as the main force behing the Northern Alliance. It is the primary nation holding to the beliefs of Oarfanism.",
     "Image": "https://vignette.wikia.nocookie.net/lgsmc/images/8/86/Ailan.png"
   },
   "Vietsnom": {
@@ -466,13 +473,13 @@
     "Z": -67,
     "District": "Voidnest",
     "Description": "",
-    "Image": ""
+    "Image": "images/voidnest.png"
   },
   "Winterfell": {
     "X": -236,
     "Z": -8,
     "District": "Vailan",
-    "Description": "",
+    "Description": "Winterfell is a Vailic city built by MiksaSerbia, featuring dark towers and a PVP arena.",
     "Image": "https://vignette.wikia.nocookie.net/lgsmc/images/7/76/Winterfell.png"
   },
   "Wohlstand": {
@@ -480,13 +487,6 @@
     "Z": 284,
     "District": "Wohlstand",
     "Description": "",
-    "Image": ""
-  },
-  "Cob Castle": {
-    "X": 44,
-    "Z": -76,
-    "District": "Voidnest",
-    "Description": "",
-    "Image": ""
+    "Image": "images/wohlstand.png"
   }
 }
