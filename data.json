@@ -11,7 +11,7 @@
     "Z": 245,
     "District": "Baguette & Inquisition",
     "Description": "The northern half of Baguette & Inquisition.",
-    "Image": ""
+    "Image": "images/baguette.png"
   },
   "Banapo": {
     "X": -35,
@@ -32,14 +32,14 @@
     "Z": 90,
     "District": "Goomlandia",
     "Description": "",
-    "Image": ""
+    "Image": "images/botania.png"
   },
   "Cascadia": {
     "X": -350,
     "Z": -58,
     "District": "Cascadia",
     "Description": "Cascadia is a peaceful nation focused on environmentalism, international relations, and science. Located in the birch forests of the West, it is a nation dedicated to making the world a better place.",
-    "Image": ""
+    "Image": "images/cascadia.png"
   },
   "Castle Montrose": {
     "X": -62,
@@ -67,7 +67,7 @@
     "Z": -74,
     "District": "Championis",
     "Description": "",
-    "Image": ""
+    "Image": "images/championis.png"
   },
   "Cob Castle": {
     "X": 44,
@@ -88,21 +88,21 @@
     "Z": 189,
     "District": "HUM",
     "Description": "",
-    "Image": ""
+    "Image": "images/etaiga.png"
   },
   "Falcon's Nest": {
     "X": 56,
     "Z": 85,
     "District": "Fianna",
     "Description": "The famed PVP arena located in the southern part of Fianna.",
-    "Image": ""
+    "Image": "images/falcon.png"
   },
   "Farnough": {
     "X": 317,
     "Z": 313,
     "District": "Farnough",
     "Description": "The Beachdom of Farnough, led by ArcherAce, is a desert kingdom in the far South.",
-    "Image": ""
+    "Image": "images/farnough.png"
   },
   "Federal Province": {
     "X": -104,
@@ -123,49 +123,49 @@
     "Z": 194,
     "District": "Montrose",
     "Description": "",
-    "Image": ""
+    "Image": "images/skardaz.png"
   },
   "Gabeford": {
     "X": -106,
     "Z": -66,
     "District": "Montrose",
     "Description": "Gabeford is one of the oldest personal estates on the server, owned by Header of Montrose FlyingGMM. It contains several farms and secondary buildings, a dock, and FlyingGMM's signature square cobblestone house.",
-    "Image": ""
+    "Image": "images/gabeford.png"
   },
   "Gateway City": {
     "X": 96,
     "Z": -241,
     "District": "",
     "Description": "",
-    "Image": ""
+    "Image": "images/gateway.png"
   },
   "Glavnaya": {
     "X": -240,
     "Z": 29,
     "District": "Goomlandia",
     "Description": "",
-    "Image": ""
+    "Image": "images/glavnaya.png"
   },
   "Global Crossroad, Yanshu Dynasty": {
     "X": 240,
     "Z": 170,
     "District": "Yanshu",
     "Description": "",
-    "Image": ""
+    "Image": "images/yanshu.png"
   },
   "GoatWear Island": {
     "X": -214,
     "Z": 147,
     "District": "HUM",
     "Description": "",
-    "Image": ""
+    "Image": "images/goatwear.png"
   },
   "Goomlandian End Portal": {
     "X": 241,
     "Z": -22,
     "District": "Goomlandia",
     "Description": "",
-    "Image": ""
+    "Image": "images/goomend.png"
   },
   "Goomtown": {
     "X": 44,
@@ -179,7 +179,7 @@
     "Z": -35,
     "District": "Goomlandia",
     "Description": "",
-    "Image": ""
+    "Image": "images/groogelandia.png"
   },
   "HUM": {
     "X": -36,
@@ -193,7 +193,7 @@
     "Z": 182,
     "District": "Vailan",
     "Description": "",
-    "Image": ""
+    "Image": "images/hunger.png"
   },
   "Hybrasil": {
     "X": -231,
@@ -207,7 +207,7 @@
     "Z": 117,
     "District": "Rhett",
     "Description": "",
-    "Image": ""
+    "Image": "images/icedale.png"
   },
   "Ilyrdom": {
     "X": 6,
@@ -221,7 +221,7 @@
     "Z": 299,
     "District": "Baguette",
     "Description": "The southern half of Baguette & Inquisition.",
-    "Image": ""
+    "Image": "images/inquisition.png"
   },
   "Iris": {
     "X": -96,
@@ -235,14 +235,14 @@
     "Z": 15,
     "District": "Goomlandia",
     "Description": "",
-    "Image": ""
+    "Image": "images/isle.png"
   },
   "Krabbatoah": {
     "X": 309,
     "Z": -261,
     "District": "Krabbatoah",
     "Description": "Featuring many landmarks and many large builds that makeup the nation, Krabbatoah consists of many different biomes (such as swamps, rivers, and savannas) and cities (such as Krabbothia and Cheeston).",
-    "Image": ""
+    "Image": "images/krab.png"
   },
   "Montrose Industrial District": {
     "X": -82,
@@ -256,14 +256,14 @@
     "Z": -92,
     "District": "Montrose",
     "Description": "",
-    "Image": ""
+    "Image": "images/mit.png"
   },
   "Montrosian Prismarine Farm": {
     "X": -96,
     "Z": 222,
     "District": "Montrose",
     "Description": "",
-    "Image": ""
+    "Image": "images/mpf.png"
   },
   "Montrosian Production Emporium": {
     "X": -51,
@@ -277,42 +277,42 @@
     "Z": 38,
     "District": "Goomlandia",
     "Description": "",
-    "Image": ""
+    "Image": "images/toeland.png"
   },
   "Northbay": {
     "X": -60,
     "Z": 252,
     "District": "Wohlstand",
     "Description": "",
-    "Image": ""
+    "Image": "images/northbay.png"
   },
   "Novosibirsk": {
     "X": -149,
     "Z": 113,
     "District": "Goomlandia",
     "Description": "",
-    "Image": ""
+    "Image": "images/novo.png"
   },
   "Ozai": {
     "X": -366,
     "Z": 228,
     "District": "Ozai",
     "Description": "",
-    "Image": ""
+    "Image": "images/ozai.png"
   },
   "Prosperity League HQ": {
     "X": -64,
     "Z": -25,
     "District": "Montrose",
     "Description": "The headquarters of the former Prosperity League, a multinational alliance including Montrose, HUM, Rhett, Bagelonia, The Guardian State, and Lucas.",
-    "Image": ""
+    "Image": "images/pl.png"
   },
   "Rapture": {
     "X": -133,
     "Z": 129,
     "District": "Goomlandia",
     "Description": "MTJNC's underwater glass dome",
-    "Image": ""
+    "Image": "images/rapture.png"
   },
   "Rhett": {
     "X": -36,
@@ -325,8 +325,8 @@
     "X": -123,
     "Z": 96,
     "District": "Rhett",
-    "Description": "Rhett Tropical is",
-    "Image": ""
+    "Description": "",
+    "Image": "images/tropical.png"
   },
   "Richard": {
     "X": 105,
@@ -340,7 +340,7 @@
     "Z": -12,
     "District": "Goomlandia",
     "Description": "",
-    "Image": ""
+    "Image": "images/sable.png"
   },
   "Schenektengrad": {
     "X": 56,
@@ -354,14 +354,14 @@
     "Z": 57,
     "District": "Goomlandia",
     "Description": "",
-    "Image": ""
+    "Image": "images/soleil.png"
   },
   "South East Taiga": {
     "X": 212,
     "Z": 205,
     "District": "HUM",
     "Description": "",
-    "Image": ""
+    "Image": "images/setaiga.png"
   },
   "South Polgolas": {
     "X": 54,
@@ -375,32 +375,32 @@
     "Z": 15,
     "District": "Spawn",
     "Description": "The server's spawn island.",
-    "Image": ""
+    "Image": "images/spawn.png"
   },
   "Spruceville": {
     "X": -111,
     "Z": -78,
     "District": "Montrose",
     "Description": "A historic village in the lush spruce forests of northern Montrose.",
-    "Image": ""
+    "Image": "images/spruceville.png"
   },
   "Stemtown": {
     "X": 83,
     "Z": 15,
     "District": "Goomlandia",
     "Description": "",
-    "Image": ""
+    "Image": "images/stemtown.png"
   },
   "Stradova": {
     "X": 96,
     "Z": -175,
     "District": "Vailan",
     "Description": "",
-    "Image": ""
+    "Image": "images/stradova.png"
   },
   "Sunflame's House": {
     "X": -131,
-    "Z": 72,
+    "Z": -72,
     "District": "Montrose",
     "Description": "The island estate of Montrosian citizen Sunflame_is_DED.",
     "Image": "images/sunflame.png"
@@ -410,28 +410,28 @@
     "Z": 250,
     "District": "Montrose",
     "Description": "The stronghold claimed by the Sylvian Union.",
-    "Image": ""
+    "Image": "images/sylvianend.png"
   },
   "Tautona": {
     "X": 222,
     "Z": 222,
     "District": "HUM",
     "Description": "An underground bunker & former satellite state of Sylvia, now part of the East Taiga lands owned by HUM.",
-    "Image": ""
+    "Image": "https://vignette.wikia.nocookie.net/lgsmc/images/7/7e/Tautona_api.png"
   },
   "Toe Gang": {
     "X": 4,
     "Z": 92,
     "District": "Sylvia",
     "Description": "The iconic lands owned by hongstoes and ongstoes.",
-    "Image": ""
+    "Image": "images/toe.png"
   },
   "Tsarevets": {
     "X": 90,
     "Z": 112,
     "District": "",
     "Description": "",
-    "Image": ""
+    "Image": "images/tsarevets.png"
   },
   "Twiceland": {
     "X": -300,
@@ -459,14 +459,14 @@
     "Z": -335,
     "District": "Vietsnom",
     "Description": "",
-    "Image": ""
+    "Image": "images/vietsnom.png"
   },
   "Vietsnom Ice Sea Outpost": {
     "X": 256,
     "Z": 146,
     "District": "Vietsnom",
     "Description": "",
-    "Image": ""
+    "Image": "images/vietsnomice.png"
   },
   "Voidnest": {
     "X": 51,
