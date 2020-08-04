@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta property="og:title" content="Interactive NELT Map">
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <title>Interactive NELT Map</title>
+    <style media="screen">
+      @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@700&display=swap');
+      body {
+        background: #E5E5E5;
+        font-family: "Barlow";
+        overflow: hidden;
+        margin: 0px;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      div.controls {
+        position: fixed;
+        right: 0px;
+        padding: 25px;
+        background: #DDD;
+        text-align: right;
+        line-height: 1.5;
+        z-index: 5;
+      }
+      div.controls input {
+        margin-bottom: 15px;
+      }
+      label {
+        margin-left: 5px;
+      }
+      div.central {
+        margin: auto;
+        width: 800px;
+        height: 800px;
+        position: relative;
+      }
+      div.central img {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+      }
+      @media screen and (max-height: 800px) and (min-width: 800px) {
+        div.central {
+          width: 100vh;
+          height: 100vh;
+        }
+      }
+      @media screen and (max-width: 800px) {
+        div.central {
+          width: 100vw;
+          height: 100vw;
+        }
+      }
+      .dynmap {
+        z-index: 1;
+        opacity: 0.1;
+      }
+      .country {
+        z-index: 2;
+        opacity: 0.6;
+      }
+      .lines {
+        z-index: 3;
+      }
+      .stops {
+        z-index: 4;
+      }
+      .names {
+        z-index: 5;
+      }
+      .title {
+        z-index: 6;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="central">
+      <img class="dynmap" src="dynmap.jpg">
+      <img class="country" src="country.svg">
+      <img class="title" src="title.png">
+      <img class="lines" src="lines.svg">
+      <img class="names" src="names.svg">
+      <img class="stops" src="stops.svg">
+    </div>
+    <div class="controls">
+      <input type="checkbox" checked id="names" name="names"><label for="names">Names</label></input><br>
+      <input type="checkbox" checked id="stops" name="stops"><label for="stops">Stops</label></input><br>
+      <input type="checkbox" checked id="lines" name="lines"><label for="lines">Lines</label></input><br>
+      Country Opacity<br><input type="range" min="0" max="1" step="0.01" value="0.6" id="country" name="country"></input><br>
+      Dynmap Opacity<br><input type="range" min="0" max="1" step="0.01" value="0.1" id="dynmap" name="dynmap"></input>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        //
+      });
+      $('#lines').click(function() {
+        $('img.lines').fadeToggle(100);
+      });
+      $('#stops').click(function() {
+        $('img.stops').fadeToggle(100);
+      });
+      $('#names').click(function() {
+        $('img.names').fadeToggle(100);
+      });
+      $('#dynmap').on('input', function() {
+        $('img.dynmap').css('opacity', this.value);
+      });
+      $('#country').on('input', function() {
+        $('img.country').css('opacity', this.value);
+      });
+    </script>
+  </body>
+</html>
