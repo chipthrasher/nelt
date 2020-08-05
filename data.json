@@ -31,7 +31,7 @@
     "X": -190,
     "Z": 90,
     "District": "Goomlandia",
-    "Description": "",
+    "Description": "This archipelago of 7 islands was gifted to Goomlandia by Vanskovich and heavily developed as a \"vacation paradise\" before being bombed extensively in the Vansk-Fiannan War and subsequently being abandoned. However, Novosibirsk remains as an underground city on the southeasternmost island.",
     "Image": "images/botania.png"
   },
   "Cascadia": {
@@ -45,28 +45,28 @@
     "X": -62,
     "Z": -76,
     "District": "Montrose",
-    "Description": "",
+    "Description": "The original building in Montrose, Castle Montrose holds the main storage for Montrosian citizens, as well as a variety of workbenches and functional blocks.",
     "Image": "images/castlemontrose.png"
   },
   "Cattlehead": {
     "X": 44,
     "Z": -45,
     "District": "Goomlandia",
-    "Description": "",
+    "Description": "A historic suburb northwest of Goomtown, originally constructed on land gifted to Goomlandia by Voidnest after the split of Goomnest. It marks the original spot of the Goomtown Wall, laid to protect against the adjacent VOC, then an independent splinter state.",
     "Image": "images/cattlehead.png"
   },
   "Champignon": {
     "X": 85,
     "Z": -35,
     "District": "Goomlandia",
-    "Description": "Champignon is a city just east of Goomtown, featuring the site of Grooge64's house, numerous Gabe Heads, and functioning as the transition between the inhabited plains and broad mesa of Goomlandia.",
+    "Description": "A suburb east of Goomtown, it is the longtime home of Grooge64 and the second-oldest settlement in Goomlandia, being constructed as a home for villagers just after Bageltown was founded in December 2018. It features several Gabe heads and stands at the crossroads of the Goomlandian Mesa and Goomtown.",
     "Image": "https://vignette.wikia.nocookie.net/lgsmc/images/2/22/Capture_d%E2%80%99%C3%A9cran_%281061%29.png/revision/latest/scale-to-width-down/620?cb=20200106224215"
   },
   "Championis": {
     "X": 178,
     "Z": -74,
     "District": "Championis",
-    "Description": "",
+    "Description": "A state formed by Pawnch_ when his wilderness base was exposed by MiksaSerbia.",
     "Image": "images/championis.png"
   },
   "Cob Castle": {
@@ -80,14 +80,14 @@
     "X": 64,
     "Z": -37,
     "District": "Goomlandia",
-    "Description": "One of the most developed cities in LGS, Goomtown stands tall as the hub of Eastern trade and the capital of Goomlandia.",
+    "Description": "A neighborhood of Goomtown, it is really the south-central of the city, despite the name. It is mostly residential but has several businesses and storages.",
     "Image": "https://vignette.wikia.nocookie.net/lgsmc/images/1/14/Capture_d%E2%80%99%C3%A9cran_%281928%29.png/revision/latest?cb=20200716053637"
   },
   "East Taiga": {
     "X": 193,
     "Z": 189,
     "District": "HUM",
-    "Description": "",
+    "Description": "A colony in the South owned by HUM, containing the Tautona bunker.",
     "Image": "images/etaiga.png"
   },
   "Falcon's Nest": {
@@ -112,7 +112,7 @@
     "Image": "images/sufp.png"
   },
   "Fianna": {
-    "X": 2,
+    "X": 3,
     "Z": 36,
     "District": "Fianna",
     "Description": "Fianna is a kingdom located on Dwarf Island.",
@@ -136,14 +136,14 @@
     "X": 96,
     "Z": -241,
     "District": "",
-    "Description": "",
+    "Description": "The ruins of Nyania.",
     "Image": "images/gateway.png"
   },
   "Glavnaya": {
     "X": -240,
     "Z": 29,
     "District": "Goomlandia",
-    "Description": "",
+    "Description": "The historical and cultural capital of Vanskovich, it has seen many battles and changed hands many times throughout history. Also partially destroyed in the Vansk-Fiannan War, it has since been rebuilt and is a thriving Goomlandian city-island.",
     "Image": "images/glavnaya.png"
   },
   "Global Crossroad, Yanshu Dynasty": {
@@ -157,28 +157,28 @@
     "X": -214,
     "Z": 147,
     "District": "HUM",
-    "Description": "",
+    "Description": "The only mushroom island in the world.",
     "Image": "images/goatwear.png"
   },
   "Goomlandian End Portal": {
     "X": 241,
     "Z": -22,
     "District": "Goomlandia",
-    "Description": "",
+    "Description": "The stronghold claimed by Goomlandia.",
     "Image": "images/goomend.png"
   },
   "Goomtown": {
     "X": 44,
     "Z": -35,
     "District": "Goomlandia",
-    "Description": "One of the most developed cities in LGS, Goomtown stands tall as the hub of Eastern trade and the capital of Goomlandia.",
+    "Description": "The cultural and economic center, and the capital of Goomlandia, it is one of the largest and oldest cities in the world. Originally named Bageltown, it has a long and colorful history and a large amount of tourist attractions.",
     "Image": "https://vignette.wikia.nocookie.net/lgsmc/images/1/14/Capture_d%E2%80%99%C3%A9cran_%281928%29.png/revision/latest?cb=20200716053637"
   },
   "Groogelandia": {
     "X": 290,
     "Z": -35,
     "District": "Goomlandia",
-    "Description": "",
+    "Description": "A large Goomlandian forest colony and the site of Propaganda Island. The city of Vilnius lies to the south, settled by crazyjuplup.",
     "Image": "images/groogelandia.png"
   },
   "HUM": {
@@ -212,13 +212,13 @@
   "Ilyrdom": {
     "X": 6,
     "Z": 190,
-    "District": "",
+    "District": "PRS",
     "Description": "",
     "Image": "images/ilyrdom.png"
   },
   "Inquisition": {
-    "X": 139,
-    "Z": 299,
+    "X": 149,
+    "Z": 283,
     "District": "Baguette",
     "Description": "The southern half of Baguette & Inquisition.",
     "Image": "images/inquisition.png"
@@ -234,7 +234,7 @@
     "X": 150,
     "Z": 15,
     "District": "Goomlandia",
-    "Description": "",
+    "Description": "The easternmost part of the Goomlandian province of Gold Coast, Isle of Gold is shaded by the World Tree located on the Grove Tribe-owned plateau above the island.",
     "Image": "images/isle.png"
   },
   "Krabbatoah": {
@@ -276,7 +276,7 @@
     "X": 102,
     "Z": 38,
     "District": "Goomlandia",
-    "Description": "",
+    "Description": "Once part of the small nation of Banastair before it migrated to become modern-day Banapo, New Toeland has changed hands many times throughout history, but remains still uninhabited. The province's only permanent settlement is Stemtown in the northwest.",
     "Image": "images/toeland.png"
   },
   "Northbay": {
@@ -290,8 +290,15 @@
     "X": -149,
     "Z": 113,
     "District": "Goomlandia",
-    "Description": "",
+    "Description": "A project by DoctorProck, it is an underground city built into a ravine in the southeastern Botanian Isles and is the only permanent settlement there. It connects via underwater tunnel to Rapture and Vailan-owned Atlantis.",
     "Image": "images/novo.png"
+  },
+  "North UAC, The Capital": {
+    "X": 224,
+    "Z": -356,
+    "District": "UAC",
+    "Description": "The northern portion of the Union of Allied Countries, home of the Capital.",
+    "Image": ""
   },
   "Ozai": {
     "X": -366,
@@ -308,15 +315,15 @@
     "Image": "images/pl.png"
   },
   "Rapture": {
-    "X": -133,
-    "Z": 129,
+    "X": -132,
+    "Z": 132,
     "District": "Goomlandia",
     "Description": "MTJNC's underwater glass dome",
     "Image": "images/rapture.png"
   },
   "Rhett": {
-    "X": -36,
-    "Z": 81,
+    "X": -37,
+    "Z": 78,
     "District": "Rhett",
     "Description": "Rhett Island is the mainland of Rhett, located in the westernmost portion of Tierra Del Fuego. Covered in podzol, this is the site of many iconic Rhettian builds.",
     "Image": "images/rhett.png"
@@ -332,14 +339,14 @@
     "X": 105,
     "Z": -44,
     "District": "Goomlandia",
-    "Description": "",
+    "Description": "The most developed of the Goomlandian mesa provinces, it hosts several fortifications, an airstrip, redstone projects, ancient habitations, and a giant woolen Goomy billboard. It was once an independent nation under Carpo_Diem, which later merged into Mesadonia and moved southward to Mesadonia2.",
     "Image": "https://vignette.wikia.nocookie.net/lgsmc/images/0/0a/Richard.PNG/revision/latest?cb=20200506132021"
   },
   "Sable-Rouge": {
     "X": 100,
     "Z": -12,
     "District": "Goomlandia",
-    "Description": "",
+    "Description": "An ancient ghost town in southeastern Clappia that was built to assert Goomlandian presence in that province that had been recently purchased from ClapYoThighs, it was once as busy and bustling as Goomtown (then called Bageltown) but faded in importance as Bageltown became the center of commerce and culture.",
     "Image": "images/sable.png"
   },
   "Schenektengrad": {
@@ -353,7 +360,7 @@
     "X": 143,
     "Z": 57,
     "District": "Goomlandia",
-    "Description": "",
+    "Description": "These islands have been Soraryian, Yugoslavian, and now Goomlandian, currently housing awesome_ketchup's small fishing village.",
     "Image": "images/soleil.png"
   },
   "South East Taiga": {
@@ -384,11 +391,18 @@
     "Description": "A historic village in the lush spruce forests of northern Montrose.",
     "Image": "images/spruceville.png"
   },
+  "Squarenough": {
+    "X": 135,
+    "Z": -349,
+    "District": "Farnough",
+    "Description": "The Northen Village of Farnough.",
+    "Image": ""
+  },
   "Stemtown": {
     "X": 83,
     "Z": 15,
     "District": "Goomlandia",
-    "Description": "",
+    "Description": "A ghost town in the Goomlandian province of New Toeland. Constructed as a joint project with HUM, the endeavor was abandoned when HUM did not develop their half of the town. HUM's half became Toe Gang and was later re-purchased by Goomlandia.",
     "Image": "images/stemtown.png"
   },
   "Stradova": {
@@ -422,14 +436,14 @@
   "Toe Gang": {
     "X": 4,
     "Z": 92,
-    "District": "Sylvia",
+    "District": "Toe Gang",
     "Description": "The iconic lands owned by hongstoes and ongstoes.",
     "Image": "images/toe.png"
   },
   "Tsarevets": {
     "X": 90,
     "Z": 112,
-    "District": "",
+    "District": "IBWH",
     "Description": "",
     "Image": "images/tsarevets.png"
   },
@@ -439,6 +453,13 @@
     "District": "Twiceland",
     "Description": "Twiceland is the pinnacle of Gothic architecture in LGS, featuring beautiful cathedrals and towering stone structures.",
     "Image": "images/twiceland.png"
+  },
+  "UAC": {
+    "X": 218,
+    "Z": -253,
+    "District": "UAC",
+    "Description": "The Union of Allied Countries main portal.",
+    "Image": ""
   },
   "UFYSR": {
     "X": 156,
@@ -488,5 +509,26 @@
     "District": "Wohlstand",
     "Description": "",
     "Image": "images/wohlstand.png"
+  },
+  "Ambrosia": {
+    "X": 43,
+    "Z": 185,
+    "District": "DRA",
+    "Description": "The Democratic Republic of Ambrosia",
+    "Image": ""
+  },
+  "MBL & MVPC": {
+    "X": -89,
+    "Z": -111,
+    "District": "Montrose",
+    "Description": "Montrosian Bureau of Logistics & Villager Production Co.",
+    "Image": "images/mbl.png"
+  },
+  "Vigi": {
+    "X": 227,
+    "Z": 372,
+    "District": "Wohlstand",
+    "Description": "A Wohlstandian village in the Far South.",
+    "Image": "images/vigi.png"
   }
 }

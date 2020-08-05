@@ -4,17 +4,13 @@
     <meta charset="utf-8">
     <title>Interactive NELT Map</title>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-    <link rel="stylesheet" href="/leaflet/leaflet.css"/>
-    <link rel="stylesheet" href="/leaflet/coords.css"/>
-    <script src="/leaflet/leaflet.js"></script>
-    <script src="/leaflet/coords.js"></script>
     <meta property="og:title" content="Interactive NELT Map">
     <link rel="icon" href="favicon.png" type="image/png" />
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,700;1,400;1,700;1,900&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap');
       body {
         background: #E5E5E5;
-        font-family: "Barlow", sans-serif;
+        font-family: "Barlow";
         margin: 0px;
         height: 100vh;
         display: flex;
@@ -27,19 +23,13 @@
         position: fixed;
         right: 0px;
         padding: 25px;
-        color: #ddd;
-        background: #222;
+        background: #DDD;
+        text-align: right;
         line-height: 1.5;
-        z-index: 7;
+        z-index: 5;
       }
       div.controls input {
         margin-bottom: 15px;
-      }
-      .title {
-        font-size: 30px;
-        font-weight: 900;
-        font-style: italic;
-        text-align: center;
       }
       label {
         margin-left: 5px;
@@ -49,14 +39,20 @@
 
       .layers {
         margin: auto;
-        width: 100vw;
-        height: 100vh;
+        width: 800px;
+        height: 800px;
         position: relative;
-        background: inherit;
-        z-index: 1;
+      }
+      .layer {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
       }
 
       .stops { z-index: 4; }
+      .title { z-index: 3; }
       .lines { z-index: 2; }
       .countries { z-index: 1; opacity: 0.6; }
       .dynmap { z-index: 0; opacity: 0.1; }
@@ -89,23 +85,17 @@
         stroke-width: 1;
         stroke: black;
       }
-      .leaflet-control {
-        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
-      }
-      .leaflet-control-coordinates {
-        padding: 10px;
-      }
 
       /* jQuery Tooltips */
 
       .ui-tooltip {
         box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
         font-family: inherit;
+        color: #ddd;
         border: none!important;
         border-radius: 4px;
-        padding: 0px;
+        padding: 0px 0px 20px 0px;
         margin: 0px;
-        color: #ddd;
         background: #222;
         overflow: hidden;
       }
@@ -116,21 +106,23 @@
       div.image img {
         border-radius: 3px;
         max-width: 100%;
+        margin-bottom: 15px;
       }
       div.content {
-        padding: 25px;
+        margin: -5px 0px 0px 0px;
+        padding: 25px 25px 0px 25px;
       }
       div.name {
         font-weight: bold;
         font-size: 18px;
         text-align: center;
+        margin: 0px;
       }
       div.description {
         font-size: 15px;
         word-wrap: break-word;
-        line-height: 1.5;
+        line-height: 1.4;
         color: #b9bbbe;
-        padding-top: 25px;
       }
       .coords {
         color: #b9bbbe;
@@ -138,9 +130,15 @@
     </style>
   </head>
   <body>
-    <div id="layers" class="layers"></div>
+    <div class="layers">
+      <svg class="stops layer" width="750" height="750" viewBox="0 0 750 750" xmlns="http://www.w3.org/2000/svg">
+      </svg>
+      <img class="layer lines" src="lines.png">
+      <img class="layer countries" src="country.png">
+      <img class="layer dynmap" src="dynmap.jpg">
+      <img class="layer title" src="title.png">
+    </div>
     <div class="controls">
-      <div class="title">NELT</div>
       <input type="checkbox" checked id="stops" name="stops"/><label for="stops">Stops</label><br>
       <input type="checkbox" checked id="lines" name="lines"/><label for="lines">Lines</label><br>
       Countries<br><input type="range" min="0" max="1" step="0.01" value="0.6" id="country" name="country"/><br>
@@ -148,10 +146,10 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script>
+    <script type="text/javascript">
       $(document).ready(function(e) {
         $.getJSON("data.json", function(data) {
-          var image, description, url, content, desc, x, y;
+          var image, description, content, url, desc, x, y;
           $.each(data, function(name, info) {
             // Circle with built-in data
 
@@ -209,70 +207,33 @@
             }
             // Use special[name]. If it has Z, then map to the Z. If it contains X, then map to the X.
           });
-          var map = L.map('layers', {
-            crs: L.CRS.Simple,
-            zoom: -3,
-            minZoom: -5,
-            maxZoom: 10
-          });
-
-          var topleft = [-3000, -3000];
-          var bottomright = [3000, 3000];
-
-          L.imageOverlay('dynmap.jpg', [topleft, bottomright], { className: 'dynmap', zIndex: 1 }).addTo(map);
-          L.imageOverlay('country.svg', [topleft, bottomright], { className: 'countries', zIndex: 2 }).addTo(map);
-          L.imageOverlay('lines.svg', [topleft, bottomright], { className: 'lines', zIndex: 3 }).addTo(map);
-
-          var svgElement = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-          svgElement.setAttribute('xmlns', "http://www.w3.org/2000/svg");
-          svgElement.setAttribute('viewBox', "0 0 750 750");
-          svgElement.innerHTML = content;
-          L.svgOverlay(svgElement, [topleft, bottomright], {
-            interactive: true, zIndex: 5
-          }).addTo(map);
-
-          // L.Control({
-          //   position: 'topleft'
-          // }).addTo(map);
-          map.panTo([0, 0]);
-
-          var c = new L.Control.Coordinates({
-            position: 'topleft'
-          });
-          c.addTo(map);
-
-          map.on('mousemove', function(e) {
-          	c.setCoordinates(e);
-          });
-
-          $("circle").tooltip({
+          $("svg.stops").html(content);
+          $("svg.stops circle").tooltip({
             content: function() {
               if($(this).data('image') !== "") {
                 url = `<img src="${$(this).data('image')}">`;
               } else url = "";
               if($(this).data('description') !== "") {
-                desc = `<div class="description">${$(this).data('description')}</div>`;
+                desc = `<div class="content"><div class="description">${$(this).data('description')}</div></div>`;
               } else {
                 desc = ""
                 $('.image').css({
                   'border-radius': '2px'
                 })
               };
-              var content = `<div><div class="image">${url}</div><div class="content"><div class="name">${$(this).attr('title')} <span class="coords">(${$(this).data('x')}, ${$(this).data('z')})</span></div>${desc}</div>`;
+              var content = '<div><div class="image">' + url + '<div class="name">' + $(this).attr('title') + ' <span class="coords">(' + $(this).data('x') + ', ' + $(this).data('z') + ')</span></div></div>' + desc;
               return content;
             }
           });
         });
-
       });
-
       var duration = 0;
-      $('#lines').click(function() { // Line button
-        if($('.lines').is(':visible')) { // Line image
-          $('.lines').fadeOut(duration); // Line image
-          $('.line').fadeOut(duration); // All lines have .line
+      $('#lines').click(function() {
+        if($('img.lines').is(':visible')) {
+          $('img.lines').fadeOut(duration);
+          $('.line').fadeOut(duration);
         } else {
-          $('.lines').fadeIn(duration);
+          $('img.lines').fadeIn(duration);
           if($('.circle').is(':visible')) $('.line').fadeIn(duration);
         }
       });
@@ -282,7 +243,7 @@
           $('.line').fadeOut(duration);
         } else {
           $('.circle').fadeIn(duration);
-          if($('.lines').is(':visible')) { // Exit lines
+          if($('img.lines').is(':visible')) { // Exit lines
             $('.line').fadeIn(duration);
           }
         }
@@ -293,7 +254,6 @@
       $('#country').on('input', function() {
         $('img.countries').css('opacity', this.value);
       });
-
     </script>
   </body>
 </html>
