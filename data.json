@@ -35,8 +35,8 @@
     "Image": "images/botania.png"
   },
   "Cascadia": {
-    "X": -350,
-    "Z": -58,
+    "X": -357,
+    "Z": -88,
     "District": "Cascadia",
     "Description": "Cascadia is a peaceful nation focused on environmentalism, international relations, and science. Located in the birch forests of the West, it is a nation dedicated to making the world a better place.",
     "Image": "images/cascadia.png"
@@ -419,9 +419,9 @@
     "Description": "The island estate of Montrosian citizen Sunflame_is_DED.",
     "Image": "images/sunflame.png"
   },
-  "Sylvian End Portal": {
-    "X": -119,
-    "Z": 250,
+  "Western End Portal": {
+    "X": -100,
+    "Z": 247,
     "District": "Montrose",
     "Description": "The stronghold claimed by the Sylvian Union.",
     "Image": "images/sylvianend.png"
