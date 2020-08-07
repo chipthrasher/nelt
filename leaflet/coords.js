@@ -73,7 +73,7 @@ L.Control.Coordinates = L.Control.extend({
 		}
 
 		if (obj.latlng) {
-      L.DomUtil.get(this._lng).innerHTML = '<strong>Overworld:</strong><br>' + (obj.latlng.lng.toFixed(this.options.precision) * 1).toString();
+      L.DomUtil.get(this._lng).innerHTML = '<strong>Overworld: </strong><br>' + (obj.latlng.lng.toFixed(this.options.precision) * 1).toString();
       L.DomUtil.get(this._lat).innerHTML = ', ' + (obj.latlng.lat.toFixed(this.options.precision) * -1).toString();
 
       // L.DomUtil.get(this._nethlat).innerHTML = '<br><strong>' + this.options.longitudeText + ':</strong> ' + (obj.latlng.lat.toFixed(this.options.precision)/8).toString();
