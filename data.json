@@ -422,7 +422,7 @@
   "Western End Portal": {
     "X": -100,
     "Z": 247,
-    "District": "Montrose",
+    "District": "Sylvia",
     "Description": "The stronghold claimed by the Sylvian Union.",
     "Image": "images/sylvianend.png"
   },
@@ -530,5 +530,12 @@
     "District": "Wohlstand",
     "Description": "A Wohlstandian village in the Far South.",
     "Image": "images/vigi.png"
+  },
+  "Montrose Ice Farm": {
+    "X": -129,
+    "Z": -133,
+    "District": "Montrose",
+    "Description": "The ice farm employed by the Montrose Nether Company.",
+    "Image": "images/montroseice.png"
   }
 }
