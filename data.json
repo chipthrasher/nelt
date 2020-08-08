@@ -42,8 +42,8 @@
     "Image": "images/cascadia.png"
   },
   "Castle Montrose": {
-    "X": -62,
-    "Z": -76,
+    "X": -69,
+    "Z": -74,
     "District": "Montrose",
     "Description": "The original building in Montrose, Castle Montrose holds the main storage for Montrosian citizens, as well as a variety of workbenches and functional blocks.",
     "Image": "images/castlemontrose.png"
@@ -537,5 +537,19 @@
     "District": "Montrose",
     "Description": "The ice farm employed by the Montrose Nether Company.",
     "Image": "images/montroseice.png"
+  },
+  "Atlantis City": {
+    "X": -187,
+    "Z": 223,
+    "District": "Vailan",
+    "Description": "An underwater city enclosed in a glass dome.",
+    "Image": "images/atlantis.png"
+  },
+  "Montrosian Government Offices": {
+    "X": -66,
+    "Z": -53,
+    "District": "Montrose",
+    "Description": "",
+    "Image": "images/montroseoffice.png"
   }
 }
