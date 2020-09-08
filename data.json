@@ -9,8 +9,8 @@
   "Baguette": {
     "X": 164,
     "Z": 245,
-    "District": "Baguette & Inquisition",
-    "Description": "The northern half of Baguette & Inquisition.",
+    "District": "Yugoslavia",
+    "Description": "The northern territory of MasterInventor's Yugoslavian state.",
     "Image": "images/baguette.png"
   },
   "Banapo": {
@@ -38,7 +38,7 @@
     "X": -357,
     "Z": -88,
     "District": "Cascadia",
-    "Description": "Cascadia is a peaceful nation focused on environmentalism, international relations, and science. Located in the birch forests of the West, it is a nation dedicated to making the world a better place.",
+    "Description": "Cascadia is a peaceful Yugoslavian state in the birch forests of the West. Its calm landscape features several cultural monuments along with the famed dark prismarine mob grinder.",
     "Image": "images/cascadia.png"
   },
   "Castle Montrose": {
@@ -97,7 +97,7 @@
     "Description": "The famed PVP arena located in the southern part of Fianna.",
     "Image": "images/falcon.png"
   },
-  "Farnough": {
+  "South Farnough": {
     "X": 317,
     "Z": 313,
     "District": "Farnough",
@@ -192,35 +192,35 @@
     "X": -58,
     "Z": 182,
     "District": "Vailan",
-    "Description": "",
+    "Description": "Vailan's historic Hunger Games territory.",
     "Image": "images/hunger.png"
   },
   "Hybrasil": {
     "X": -231,
     "Z": 348,
     "District": "Hybrasil",
-    "Description": "A splinter state of Yugoslavia, Hybrasil is located in the southwest sea, containing several sizable farms (prismarine, cactus, and iron).",
+    "Description": "Hybrasil is a state of Yugoslavia, inhabited by Katawicz and focused on large-scale resource production.",
     "Image": "images/hybrasil.png"
   },
   "Icedale Tavern": {
     "X": -96,
     "Z": 117,
     "District": "Rhett",
-    "Description": "",
+    "Description": "A historic location and IBWH site of the Icedale Guild.",
     "Image": "images/icedale.png"
   },
   "Ilyrdom": {
     "X": 6,
     "Z": 190,
-    "District": "PRS",
-    "Description": "",
+    "District": "Schevakia",
+    "Description": "The historic city of Ilyrdom, now occupied by the Schevakian Empire.",
     "Image": "images/ilyrdom.png"
   },
   "Inquisition": {
     "X": 149,
     "Z": 283,
-    "District": "Baguette",
-    "Description": "The southern half of Baguette & Inquisition.",
+    "District": "Yugoslavia",
+    "Description": "The southern territories of MasterInventor's Yugoslavian state.",
     "Image": "images/inquisition.png"
   },
   "Iris": {
@@ -241,7 +241,7 @@
     "X": 309,
     "Z": -261,
     "District": "Krabbatoah",
-    "Description": "Featuring many landmarks and many large builds that makeup the nation, Krabbatoah consists of many different biomes (such as swamps, rivers, and savannas) and cities (such as Krabbothia and Cheeston).",
+    "Description": "The historic nation of Krabbatoah.",
     "Image": "images/krab.png"
   },
   "Montrose Industrial District": {
@@ -262,7 +262,7 @@
     "X": -96,
     "Z": 222,
     "District": "Montrose",
-    "Description": "",
+    "Description": "Montrose's prismarine farm in the south seas.",
     "Image": "images/mpf.png"
   },
   "Montrosian Production Emporium": {
@@ -282,8 +282,8 @@
   "Northbay": {
     "X": -60,
     "Z": 252,
-    "District": "Wohlstand",
-    "Description": "",
+    "District": "Schevakia",
+    "Description": "The former Wohlstandian village of Northbay.",
     "Image": "images/northbay.png"
   },
   "Novosibirsk": {
@@ -293,7 +293,7 @@
     "Description": "A project by DoctorProck, it is an underground city built into a ravine in the southeastern Botanian Isles and is the only permanent settlement there. It connects via underwater tunnel to Rapture and Vailan-owned Atlantis.",
     "Image": "images/novo.png"
   },
-  "North UAC, The Capital": {
+  "North UAC": {
     "X": 224,
     "Z": -356,
     "District": "UAC",
@@ -318,10 +318,10 @@
     "X": -132,
     "Z": 132,
     "District": "Goomlandia",
-    "Description": "MTJNC's underwater glass dome",
+    "Description": "MTJNC's underwater glass dome.",
     "Image": "images/rapture.png"
   },
-  "Rhett": {
+  "Rhett Island": {
     "X": -37,
     "Z": 78,
     "District": "Rhett",
@@ -352,8 +352,8 @@
   "Schenektengrad": {
     "X": 56,
     "Z": 193,
-    "District": "CSA",
-    "Description": "One of the most populated cities on the landscape, Schenektengrad is also one of the most war-torn, suffering significant fire damage during the Balkan Troubles. It is currently split between the Schevakian splinter states.",
+    "District": "Schevakia",
+    "Description": "One of the most populated cities on the landscape, Schenektengrad is also one of the most war-torn, suffering significant fire damage during the Balkan Troubles.",
     "Image": "https://vignette.wikia.nocookie.net/lgsmc/images/b/b6/Screenshot_%2810%29.png"
   },
   "Soleil Islands": {
@@ -373,7 +373,7 @@
   "South Polgolas": {
     "X": 54,
     "Z": 259,
-    "District": "CSA",
+    "District": "Schevakia",
     "Description": "South Polgolas (also known as Satama and Schavick) is the southernmost city in the CSA. Having suffered destruction during the Balkan Troubles, it is currently being rebuilt.",
     "Image": "images/southpolgolas.png"
   },
@@ -395,7 +395,7 @@
     "X": 135,
     "Z": -349,
     "District": "Farnough",
-    "Description": "The Northen Village of Farnough.",
+    "Description": "The northern village of Farnough.",
     "Image": ""
   },
   "Stemtown": {
@@ -441,10 +441,10 @@
     "Image": "images/toe.png"
   },
   "Tsarevets": {
-    "X": 90,
-    "Z": 112,
+    "X": 97,
+    "Z": 117,
     "District": "IBWH",
-    "Description": "",
+    "Description": "The headquarters of the IBWH, Tsarevets is a significant historic landmark and recently restored village.",
     "Image": "images/tsarevets.png"
   },
   "Twiceland": {
@@ -454,25 +454,25 @@
     "Description": "Twiceland is the pinnacle of Gothic architecture in LGS, featuring beautiful cathedrals and towering stone structures.",
     "Image": "images/twiceland.png"
   },
-  "UAC": {
+  "South UAC": {
     "X": 218,
     "Z": -253,
     "District": "UAC",
     "Description": "The Union of Allied Countries main portal.",
     "Image": ""
   },
-  "UFYSR": {
+  "Yugoslavia": {
     "X": 156,
     "Z": 120,
-    "District": "UFYSR",
-    "Description": "The United Former Yugoslav Socialist Republics is a reformation of former Yugoslavia.",
+    "District": "Yugoslavia",
+    "Description": "",
     "Image": "images/ufysr.png"
   },
   "Vailan": {
     "X": -120,
     "Z": -169,
     "District": "Vailan",
-    "Description": "Vailan is a partially isolationist nation in the North, containing many beautifully constructed cities and villages, and serving as the main force behing the Northern Alliance. It is the primary nation holding to the beliefs of Oarfanism.",
+    "Description": "Vailan is an isolationist nation in the North, containing many beautifully constructed cities and villages, and serving as the main force behing the Northern Alliance. It is the primary nation holding to the beliefs of Oarfanism.",
     "Image": "https://vignette.wikia.nocookie.net/lgsmc/images/8/86/Ailan.png"
   },
   "Vietsnom": {
@@ -506,15 +506,15 @@
   "Wohlstand": {
     "X": -84,
     "Z": 284,
-    "District": "Wohlstand",
+    "District": "Schevakia",
     "Description": "",
     "Image": "images/wohlstand.png"
   },
   "Ambrosia": {
     "X": 43,
     "Z": 185,
-    "District": "DRA",
-    "Description": "The Democratic Republic of Ambrosia",
+    "District": "Schevakia",
+    "Description": "The Schevakian city of Ambrosia",
     "Image": ""
   },
   "MBL & MVPC": {
@@ -527,7 +527,7 @@
   "Vigi": {
     "X": 227,
     "Z": 372,
-    "District": "Wohlstand",
+    "District": "Schevakia",
     "Description": "A Wohlstandian village in the Far South.",
     "Image": "images/vigi.png"
   },
@@ -551,5 +551,26 @@
     "District": "Montrose",
     "Description": "",
     "Image": "images/montroseoffice.png"
+  },
+  "Vilnius": {
+    "X": 313,
+    "Z": 30,
+    "District": "Goomlandia",
+    "Description": "",
+    "Image": ""
+  },
+  "Vladivostok": {
+    "X": 142,
+    "Z": 203,
+    "District": "Yugoslavia",
+    "Description": "",
+    "Image": ""
+  },
+  "HomeofBrave": {
+    "X": 21,
+    "Z": -276,
+    "District": "HomeofBrave",
+    "Description": "",
+    "Image": ""
   }
 }
