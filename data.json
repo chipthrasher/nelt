@@ -1,18 +1,4 @@
 {
-  "Archives of Montrose": {
-    "X": -76,
-    "Z": -78,
-    "District": "Montrose",
-    "Description": "Montrose's public archives.",
-    "Image": "images/archivesofmontrose.png"
-  },
-  "Baguette": {
-    "X": 164,
-    "Z": 245,
-    "District": "Yugoslavia",
-    "Description": "The northern territory of MasterInventor's Yugoslavian state.",
-    "Image": "images/baguette.png"
-  },
   "Banapo": {
     "X": -35,
     "Z": -109,
@@ -27,13 +13,6 @@
     "Description": "Bialya is a small country in the southeast corner of the map. Its mission is to have the largest farms and undercut every other nations' prices, and is always looking for new members and allies.",
     "Image": "images/bialya.png"
   },
-  "Botania": {
-    "X": -190,
-    "Z": 90,
-    "District": "Goomlandia",
-    "Description": "This archipelago of 7 islands was gifted to Goomlandia by Vanskovich and heavily developed as a \"vacation paradise\" before being bombed extensively in the Vansk-Fiannan War and subsequently being abandoned. However, Novosibirsk remains as an underground city on the southeasternmost island.",
-    "Image": "images/botania.png"
-  },
   "Cascadia": {
     "X": -357,
     "Z": -88,
@@ -41,12 +20,47 @@
     "Description": "Cascadia is a peaceful Yugoslavian state in the birch forests of the West. Its calm landscape features several cultural monuments along with the famed dark prismarine mob grinder.",
     "Image": "images/cascadia.png"
   },
-  "Castle Montrose": {
-    "X": -69,
+  "Championis": {
+    "X": 178,
     "Z": -74,
-    "District": "Montrose",
-    "Description": "The original building in Montrose, Castle Montrose holds the main storage for Montrosian citizens, as well as a variety of workbenches and functional blocks.",
-    "Image": "images/castlemontrose.png"
+    "District": "Championis",
+    "Description": "A state formed by Pawnch_ when his wilderness base was exposed by MiksaSerbia.",
+    "Image": "images/championis.png"
+  },
+  "South Farnough": {
+    "X": 317,
+    "Z": 313,
+    "District": "Farnough",
+    "Description": "The Beachdom of Farnough, led by ArcherAce, is a desert kingdom in the far South.",
+    "Image": "images/farnough.png"
+  },
+  "Squarenough": {
+    "X": 135,
+    "Z": -349,
+    "District": "Farnough",
+    "Description": "The northern village of Farnough.",
+    "Image": ""
+  },
+  "Falcon's Nest": {
+    "X": 56,
+    "Z": 85,
+    "District": "Fianna",
+    "Description": "The famed PVP arena located in the southern part of Fianna.",
+    "Image": "images/falcon.png"
+  },
+  "Fianna": {
+    "X": 3,
+    "Z": 36,
+    "District": "Fianna",
+    "Description": "Fianna is a kingdom located on Dwarf Island.",
+    "Image": "https://vignette.wikia.nocookie.net/lgsmc/images/7/72/Fianna.png/revision/latest/scale-to-width-down/1000?cb=20191108040454"
+  },
+  "Botania": {
+    "X": -190,
+    "Z": 90,
+    "District": "Goomlandia",
+    "Description": "This archipelago of 7 islands was gifted to Goomlandia by Vanskovich and heavily developed as a \"vacation paradise\" before being bombed extensively in the Vansk-Fiannan War and subsequently being abandoned. However, Novosibirsk remains as an underground city on the southeasternmost island.",
+    "Image": "images/botania.png"
   },
   "Cattlehead": {
     "X": 44,
@@ -62,82 +76,12 @@
     "Description": "A suburb east of Goomtown, it is the longtime home of Grooge64 and the second-oldest settlement in Goomlandia, being constructed as a home for villagers just after Bageltown was founded in December 2018. It features several Gabe heads and stands at the crossroads of the Goomlandian Mesa and Goomtown.",
     "Image": "https://vignette.wikia.nocookie.net/lgsmc/images/2/22/Capture_d%E2%80%99%C3%A9cran_%281061%29.png/revision/latest/scale-to-width-down/620?cb=20200106224215"
   },
-  "Championis": {
-    "X": 178,
-    "Z": -74,
-    "District": "Championis",
-    "Description": "A state formed by Pawnch_ when his wilderness base was exposed by MiksaSerbia.",
-    "Image": "images/championis.png"
-  },
-  "Cob Castle": {
-    "X": 44,
-    "Z": -76,
-    "District": "Voidnest",
-    "Description": "Cob Castle is one of the newest structures in Voidnest, built by c0baltblue.",
-    "Image": "images/cob.png"
-  },
   "East Goomtown": {
-    "X": 64,
+    "X": 71,
     "Z": -37,
     "District": "Goomlandia",
     "Description": "A neighborhood of Goomtown, it is really the south-central of the city, despite the name. It is mostly residential but has several businesses and storages.",
     "Image": "https://vignette.wikia.nocookie.net/lgsmc/images/1/14/Capture_d%E2%80%99%C3%A9cran_%281928%29.png/revision/latest?cb=20200716053637"
-  },
-  "East Taiga": {
-    "X": 193,
-    "Z": 189,
-    "District": "HUM",
-    "Description": "A colony in the South owned by HUM, containing the Tautona bunker.",
-    "Image": "images/etaiga.png"
-  },
-  "Falcon's Nest": {
-    "X": 56,
-    "Z": 85,
-    "District": "Fianna",
-    "Description": "The famed PVP arena located in the southern part of Fianna.",
-    "Image": "images/falcon.png"
-  },
-  "South Farnough": {
-    "X": 317,
-    "Z": 313,
-    "District": "Farnough",
-    "Description": "The Beachdom of Farnough, led by ArcherAce, is a desert kingdom in the far South.",
-    "Image": "images/farnough.png"
-  },
-  "Federal Province": {
-    "X": -104,
-    "Z": 5,
-    "District": "Sylvia",
-    "Description": "The Sylvian Union Federal Province is the federal land of the Sylvian Union.",
-    "Image": "images/sufp.png"
-  },
-  "Fianna": {
-    "X": 3,
-    "Z": 36,
-    "District": "Fianna",
-    "Description": "Fianna is a kingdom located on Dwarf Island.",
-    "Image": "https://vignette.wikia.nocookie.net/lgsmc/images/7/72/Fianna.png/revision/latest/scale-to-width-down/1000?cb=20191108040454"
-  },
-  "Fort Skardaz": {
-    "X": -217,
-    "Z": 194,
-    "District": "Montrose",
-    "Description": "",
-    "Image": "images/skardaz.png"
-  },
-  "Gabeford": {
-    "X": -106,
-    "Z": -66,
-    "District": "Montrose",
-    "Description": "Gabeford is one of the oldest personal estates on the server, owned by Header of Montrose FlyingGMM. It contains several farms and secondary buildings, a dock, and FlyingGMM's signature square cobblestone house.",
-    "Image": "images/gabeford.png"
-  },
-  "Gateway City": {
-    "X": 96,
-    "Z": -241,
-    "District": "",
-    "Description": "The ruins of Nyania.",
-    "Image": "images/gateway.png"
   },
   "Glavnaya": {
     "X": -240,
@@ -145,20 +89,6 @@
     "District": "Goomlandia",
     "Description": "The historical and cultural capital of Vanskovich, it has seen many battles and changed hands many times throughout history. Also partially destroyed in the Vansk-Fiannan War, it has since been rebuilt and is a thriving Goomlandian city-island.",
     "Image": "images/glavnaya.png"
-  },
-  "Global Crossroad, Yanshu Dynasty": {
-    "X": 240,
-    "Z": 170,
-    "District": "Yanshu",
-    "Description": "",
-    "Image": "images/yanshu.png"
-  },
-  "GoatWear Island": {
-    "X": -214,
-    "Z": 147,
-    "District": "HUM",
-    "Description": "The only mushroom island in the world.",
-    "Image": "images/goatwear.png"
   },
   "Goomlandian End Portal": {
     "X": 241,
@@ -181,6 +111,104 @@
     "Description": "A large Goomlandian forest colony and the site of Propaganda Island. The city of Vilnius lies to the south, settled by crazyjuplup.",
     "Image": "images/groogelandia.png"
   },
+  "Isle of Gold": {
+    "X": 150,
+    "Z": 15,
+    "District": "Goomlandia",
+    "Description": "The easternmost part of the Goomlandian province of Gold Coast, Isle of Gold is shaded by the World Tree located on the Grove Tribe-owned plateau above the island.",
+    "Image": "images/isle.png"
+  },
+  "New Toeland": {
+    "X": 102,
+    "Z": 38,
+    "District": "Goomlandia",
+    "Description": "Once part of the small nation of Banastair before it migrated to become modern-day Banapo, New Toeland has changed hands many times throughout history, but remains still uninhabited. The province's only permanent settlement is Stemtown in the northwest.",
+    "Image": "images/toeland.png"
+  },
+  "Novosibirsk": {
+    "X": -149,
+    "Z": 113,
+    "District": "Goomlandia",
+    "Description": "A project by DoctorProck, it is an underground city built into a ravine in the southeastern Botanian Isles and is the only permanent settlement there. It connects via underwater tunnel to Rapture and Vailan-owned Atlantis.",
+    "Image": "images/novo.png"
+  },
+  "Rapture": {
+    "X": -132,
+    "Z": 132,
+    "District": "Goomlandia",
+    "Description": "MTJNC's underwater glass dome.",
+    "Image": "images/rapture.png"
+  },
+  "Richard": {
+    "X": 105,
+    "Z": -44,
+    "District": "Goomlandia",
+    "Description": "The most developed of the Goomlandian mesa provinces, it hosts several fortifications, an airstrip, redstone projects, ancient habitations, and a giant woolen Goomy billboard. It was once an independent nation under Carpo_Diem, which later merged into Mesadonia and moved southward to Mesadonia2.",
+    "Image": "https://vignette.wikia.nocookie.net/lgsmc/images/0/0a/Richard.PNG/revision/latest?cb=20200506132021"
+  },
+  "Sable-Rouge": {
+    "X": 100,
+    "Z": -12,
+    "District": "Goomlandia",
+    "Description": "An ancient ghost town in southeastern Clappia that was built to assert Goomlandian presence in that province that had been recently purchased from ClapYoThighs, it was once as busy and bustling as Goomtown (then called Bageltown) but faded in importance as Bageltown became the center of commerce and culture.",
+    "Image": "images/sable.png"
+  },
+  "Soleil Islands": {
+    "X": 143,
+    "Z": 57,
+    "District": "Goomlandia",
+    "Description": "These islands have been Soraryian, Yugoslavian, and now Goomlandian, currently housing awesome_ketchup's small fishing village.",
+    "Image": "images/soleil.png"
+  },
+  "Stemtown": {
+    "X": 83,
+    "Z": 15,
+    "District": "Goomlandia",
+    "Description": "A ghost town in the Goomlandian province of New Toeland. Constructed as a joint project with HUM, the endeavor was abandoned when HUM did not develop their half of the town. HUM's half became Toe Gang and was later re-purchased by Goomlandia.",
+    "Image": "images/stemtown.png"
+  },
+  "Vilnius": {
+    "X": 313,
+    "Z": 30,
+    "District": "Goomlandia",
+    "Description": "",
+    "Image": ""
+  },
+  "Bowilla's Basement": {
+    "X": 57,
+    "Z": -44,
+    "District": "Goomlandia",
+    "Description": "",
+    "Image": ""
+  },
+  "Cratertown": {
+    "X": 64,
+    "Z": -43,
+    "District": "Goomlandia",
+    "Description": "",
+    "Image": ""
+  },
+  "HomeofBrave": {
+    "X": 21,
+    "Z": -276,
+    "District": "HomeofBrave",
+    "Description": "",
+    "Image": ""
+  },
+  "East Taiga": {
+    "X": 193,
+    "Z": 189,
+    "District": "HUM",
+    "Description": "A colony in the South owned by HUM, containing the Tautona bunker.",
+    "Image": "images/etaiga.png"
+  },
+  "GoatWear Island": {
+    "X": -214,
+    "Z": 147,
+    "District": "HUM",
+    "Description": "The only mushroom island in the world.",
+    "Image": "images/goatwear.png"
+  },
   "HUM": {
     "X": -36,
     "Z": -36,
@@ -188,12 +216,19 @@
     "Description": "Properopolis is the capital of HUM, the oldest nation in the world. HUM has historically operated a confidential banking service based in Properopolis, providing non-partisan safe storage and interest-gaining accounts which has made the state quite wealthy.",
     "Image": "images/hum.png"
   },
-  "Hunger Games Island": {
-    "X": -58,
-    "Z": 182,
-    "District": "Vailan",
-    "Description": "Vailan's historic Hunger Games territory.",
-    "Image": "images/hunger.png"
+  "South East Taiga": {
+    "X": 212,
+    "Z": 205,
+    "District": "HUM",
+    "Description": "",
+    "Image": "images/setaiga.png"
+  },
+  "Tautona": {
+    "X": 222,
+    "Z": 222,
+    "District": "HUM",
+    "Description": "An underground bunker & former satellite state of Sylvia, now part of the East Taiga lands owned by HUM.",
+    "Image": "https://vignette.wikia.nocookie.net/lgsmc/images/7/7e/Tautona_api.png"
   },
   "Hybrasil": {
     "X": -231,
@@ -202,40 +237,12 @@
     "Description": "Hybrasil is a state of Yugoslavia, inhabited by Katawicz and focused on large-scale resource production.",
     "Image": "images/hybrasil.png"
   },
-  "Icedale Tavern": {
-    "X": -96,
+  "Tsarevets": {
+    "X": 97,
     "Z": 117,
-    "District": "Rhett",
-    "Description": "A historic location and IBWH site of the Icedale Guild.",
-    "Image": "images/icedale.png"
-  },
-  "Ilyrdom": {
-    "X": 6,
-    "Z": 190,
-    "District": "Schevakia",
-    "Description": "The historic city of Ilyrdom, now occupied by the Schevakian Empire.",
-    "Image": "images/ilyrdom.png"
-  },
-  "Inquisition": {
-    "X": 149,
-    "Z": 283,
-    "District": "Yugoslavia",
-    "Description": "The southern territories of MasterInventor's Yugoslavian state.",
-    "Image": "images/inquisition.png"
-  },
-  "Iris": {
-    "X": -96,
-    "Z": -53,
-    "District": "Montrose",
-    "Description": "The Montrosian estate of argetlam04.",
-    "Image": "https://vignette.wikia.nocookie.net/lgsmc/images/0/02/2020-03-05_19.44.35.png"
-  },
-  "Isle of Gold": {
-    "X": 150,
-    "Z": 15,
-    "District": "Goomlandia",
-    "Description": "The easternmost part of the Goomlandian province of Gold Coast, Isle of Gold is shaded by the World Tree located on the Grove Tribe-owned plateau above the island.",
-    "Image": "images/isle.png"
+    "District": "IBWH",
+    "Description": "The headquarters of the IBWH, Tsarevets is a significant historic landmark and recently restored village.",
+    "Image": "images/tsarevets.png"
   },
   "Krabbatoah": {
     "X": 309,
@@ -244,18 +251,53 @@
     "Description": "The historic nation of Krabbatoah.",
     "Image": "images/krab.png"
   },
-  "Montrose Industrial District": {
+  "Archives of Montrose": {
+    "X": -76,
+    "Z": -78,
+    "District": "Montrose",
+    "Description": "Montrose's public archives.",
+    "Image": "images/archivesofmontrose.png"
+  },
+  "Castle Montrose": {
+    "X": -63,
+    "Z": -74,
+    "District": "Montrose",
+    "Description": "The original building in Montrose, Castle Montrose holds the main storage for Montrosian citizens, as well as a variety of workbenches and functional blocks.",
+    "Image": "images/castlemontrose.png"
+  },
+  "Fort Skardaz": {
+    "X": -217,
+    "Z": 194,
+    "District": "Montrose",
+    "Description": "",
+    "Image": "images/skardaz.png"
+  },
+  "Gabeford": {
+    "X": -109,
+    "Z": -61,
+    "District": "Montrose",
+    "Description": "Gabeford is one of the oldest personal estates on the server, owned by Header of Montrose FlyingGMM. It contains several farms and secondary buildings, a dock, and FlyingGMM's signature square cobblestone house.",
+    "Image": "images/gabeford.png"
+  },
+  "Iris": {
+    "X": -96,
+    "Z": -53,
+    "District": "Montrose",
+    "Description": "The Montrosian estate of argetlam04.",
+    "Image": "https://vignette.wikia.nocookie.net/lgsmc/images/0/02/2020-03-05_19.44.35.png"
+  },
+  "MID": {
     "X": -82,
     "Z": -118,
     "District": "Montrose",
     "Description": "The Montrose Industrial District (MID for short) is Montrose's industrial hub, featuring a mob grinder, pumpkin farm, villager breeder, and iron farm.",
     "Image": "images/mid.png"
   },
-  "Montrose Institute of Technology": {
-    "X": -86,
-    "Z": -92,
+  "MIT": {
+    "X": -82,
+    "Z": -91,
     "District": "Montrose",
-    "Description": "",
+    "Description": "Montrose Institute of Technology",
     "Image": "images/mit.png"
   },
   "Montrosian Prismarine Farm": {
@@ -272,33 +314,47 @@
     "Description": "A production facility which aims to produce every resource that can be produced passively. It serves as a 'living seed bank', providing public access to each type of crop and livestock for individuals to found their own farms.",
     "Image": "https://vignette.wikia.nocookie.net/lgsmc/images/5/5b/MPE-Isometric.png/revision/latest?cb=20190722031003"
   },
-  "New Toeland": {
-    "X": 102,
-    "Z": 38,
-    "District": "Goomlandia",
-    "Description": "Once part of the small nation of Banastair before it migrated to become modern-day Banapo, New Toeland has changed hands many times throughout history, but remains still uninhabited. The province's only permanent settlement is Stemtown in the northwest.",
-    "Image": "images/toeland.png"
+  "Prosperity League HQ": {
+    "X": -64,
+    "Z": -25,
+    "District": "Montrose",
+    "Description": "The headquarters of the former Prosperity League, a multinational alliance including Montrose, HUM, Rhett, Bagelonia, The Guardian State, and Lucas.",
+    "Image": "images/pl.png"
   },
-  "Northbay": {
-    "X": -60,
-    "Z": 252,
-    "District": "Schevakia",
-    "Description": "The former Wohlstandian village of Northbay.",
-    "Image": "images/northbay.png"
+  "Spruceville": {
+    "X": -112,
+    "Z": -78,
+    "District": "Montrose",
+    "Description": "A historic village in the lush spruce forests of northern Montrose.",
+    "Image": "images/spruceville.png"
   },
-  "Novosibirsk": {
-    "X": -149,
-    "Z": 113,
-    "District": "Goomlandia",
-    "Description": "A project by DoctorProck, it is an underground city built into a ravine in the southeastern Botanian Isles and is the only permanent settlement there. It connects via underwater tunnel to Rapture and Vailan-owned Atlantis.",
-    "Image": "images/novo.png"
+  "Sunflame's House": {
+    "X": -130,
+    "Z": -74,
+    "District": "Montrose",
+    "Description": "The island estate of Montrosian citizen Sunflame_is_DED.",
+    "Image": "images/sunflame.png"
   },
-  "North UAC": {
-    "X": 224,
-    "Z": -356,
-    "District": "UAC",
-    "Description": "The northern portion of the Union of Allied Countries, home of the Capital.",
-    "Image": ""
+  "MBL & MVPC": {
+    "X": -89,
+    "Z": -111,
+    "District": "Montrose",
+    "Description": "Montrosian Bureau of Logistics & Villager Production Co.",
+    "Image": "images/mbl.png"
+  },
+  "Montrose Ice Farm": {
+    "X": -129,
+    "Z": -133,
+    "District": "Montrose",
+    "Description": "The ice farm employed by the Montrose Nether Company.",
+    "Image": "images/montroseice.png"
+  },
+  "Montrosian Government Offices": {
+    "X": -66,
+    "Z": -53,
+    "District": "Montrose",
+    "Description": "",
+    "Image": "images/montroseoffice.png"
   },
   "Ozai": {
     "X": -366,
@@ -307,19 +363,12 @@
     "Description": "",
     "Image": "images/ozai.png"
   },
-  "Prosperity League HQ": {
-    "X": -64,
-    "Z": -25,
-    "District": "Montrose",
-    "Description": "The headquarters of the former Prosperity League, a multinational alliance including Montrose, HUM, Rhett, Bagelonia, The Guardian State, and Lucas.",
-    "Image": "images/pl.png"
-  },
-  "Rapture": {
-    "X": -132,
-    "Z": 132,
-    "District": "Goomlandia",
-    "Description": "MTJNC's underwater glass dome.",
-    "Image": "images/rapture.png"
+  "Icedale Tavern": {
+    "X": -96,
+    "Z": 117,
+    "District": "Rhett",
+    "Description": "A historic location and IBWH site of the Icedale Guild.",
+    "Image": "images/icedale.png"
   },
   "Rhett Island": {
     "X": -37,
@@ -335,19 +384,19 @@
     "Description": "",
     "Image": "images/tropical.png"
   },
-  "Richard": {
-    "X": 105,
-    "Z": -44,
-    "District": "Goomlandia",
-    "Description": "The most developed of the Goomlandian mesa provinces, it hosts several fortifications, an airstrip, redstone projects, ancient habitations, and a giant woolen Goomy billboard. It was once an independent nation under Carpo_Diem, which later merged into Mesadonia and moved southward to Mesadonia2.",
-    "Image": "https://vignette.wikia.nocookie.net/lgsmc/images/0/0a/Richard.PNG/revision/latest?cb=20200506132021"
+  "Ilyrdom": {
+    "X": 6,
+    "Z": 190,
+    "District": "Schevakia",
+    "Description": "The historic city of Ilyrdom, now occupied by the Schevakian Empire.",
+    "Image": "images/ilyrdom.png"
   },
-  "Sable-Rouge": {
-    "X": 100,
-    "Z": -12,
-    "District": "Goomlandia",
-    "Description": "An ancient ghost town in southeastern Clappia that was built to assert Goomlandian presence in that province that had been recently purchased from ClapYoThighs, it was once as busy and bustling as Goomtown (then called Bageltown) but faded in importance as Bageltown became the center of commerce and culture.",
-    "Image": "images/sable.png"
+  "Northbay": {
+    "X": -60,
+    "Z": 252,
+    "District": "Schevakia",
+    "Description": "The former Wohlstandian village of Northbay.",
+    "Image": "images/northbay.png"
   },
   "Schenektengrad": {
     "X": 56,
@@ -356,26 +405,26 @@
     "Description": "One of the most populated cities on the landscape, Schenektengrad is also one of the most war-torn, suffering significant fire damage during the Balkan Troubles.",
     "Image": "https://vignette.wikia.nocookie.net/lgsmc/images/b/b6/Screenshot_%2810%29.png"
   },
-  "Soleil Islands": {
-    "X": 143,
-    "Z": 57,
-    "District": "Goomlandia",
-    "Description": "These islands have been Soraryian, Yugoslavian, and now Goomlandian, currently housing awesome_ketchup's small fishing village.",
-    "Image": "images/soleil.png"
-  },
-  "South East Taiga": {
-    "X": 212,
-    "Z": 205,
-    "District": "HUM",
-    "Description": "",
-    "Image": "images/setaiga.png"
-  },
   "South Polgolas": {
     "X": 54,
     "Z": 259,
     "District": "Schevakia",
     "Description": "South Polgolas (also known as Satama and Schavick) is the southernmost city in the CSA. Having suffered destruction during the Balkan Troubles, it is currently being rebuilt.",
     "Image": "images/southpolgolas.png"
+  },
+  "Ambrosia": {
+    "X": 43,
+    "Z": 185,
+    "District": "Schevakia",
+    "Description": "The Schevakian city of Ambrosia",
+    "Image": ""
+  },
+  "Vigi": {
+    "X": 227,
+    "Z": 372,
+    "District": "Schevakia",
+    "Description": "A Wohlstandian village in the Far South.",
+    "Image": "images/vigi.png"
   },
   "Spawn": {
     "X": -30,
@@ -384,40 +433,12 @@
     "Description": "The server's spawn island.",
     "Image": "images/spawn.png"
   },
-  "Spruceville": {
-    "X": -111,
-    "Z": -78,
-    "District": "Montrose",
-    "Description": "A historic village in the lush spruce forests of northern Montrose.",
-    "Image": "images/spruceville.png"
-  },
-  "Squarenough": {
-    "X": 135,
-    "Z": -349,
-    "District": "Farnough",
-    "Description": "The northern village of Farnough.",
-    "Image": ""
-  },
-  "Stemtown": {
-    "X": 83,
-    "Z": 15,
-    "District": "Goomlandia",
-    "Description": "A ghost town in the Goomlandian province of New Toeland. Constructed as a joint project with HUM, the endeavor was abandoned when HUM did not develop their half of the town. HUM's half became Toe Gang and was later re-purchased by Goomlandia.",
-    "Image": "images/stemtown.png"
-  },
-  "Stradova": {
-    "X": 96,
-    "Z": -175,
-    "District": "Vailan",
-    "Description": "",
-    "Image": "images/stradova.png"
-  },
-  "Sunflame's House": {
-    "X": -131,
-    "Z": -72,
-    "District": "Montrose",
-    "Description": "The island estate of Montrosian citizen Sunflame_is_DED.",
-    "Image": "images/sunflame.png"
+  "Federal Province": {
+    "X": -104,
+    "Z": 5,
+    "District": "Sylvia",
+    "Description": "The Sylvian Union Federal Province is the federal land of the Sylvian Union.",
+    "Image": "images/sufp.png"
   },
   "Western End Portal": {
     "X": -100,
@@ -426,26 +447,12 @@
     "Description": "The stronghold claimed by the Sylvian Union.",
     "Image": "images/sylvianend.png"
   },
-  "Tautona": {
-    "X": 222,
-    "Z": 222,
-    "District": "HUM",
-    "Description": "An underground bunker & former satellite state of Sylvia, now part of the East Taiga lands owned by HUM.",
-    "Image": "https://vignette.wikia.nocookie.net/lgsmc/images/7/7e/Tautona_api.png"
-  },
   "Toe Gang": {
     "X": 4,
     "Z": 92,
     "District": "Toe Gang",
     "Description": "The iconic lands owned by hongstoes and ongstoes.",
     "Image": "images/toe.png"
-  },
-  "Tsarevets": {
-    "X": 97,
-    "Z": 117,
-    "District": "IBWH",
-    "Description": "The headquarters of the IBWH, Tsarevets is a significant historic landmark and recently restored village.",
-    "Image": "images/tsarevets.png"
   },
   "Twiceland": {
     "X": -300,
@@ -454,6 +461,13 @@
     "Description": "Twiceland is the pinnacle of Gothic architecture in LGS, featuring beautiful cathedrals and towering stone structures.",
     "Image": "images/twiceland.png"
   },
+  "North UAC": {
+    "X": 224,
+    "Z": -356,
+    "District": "UAC",
+    "Description": "The northern portion of the Union of Allied Countries, home of the Capital.",
+    "Image": ""
+  },
   "South UAC": {
     "X": 218,
     "Z": -253,
@@ -461,12 +475,19 @@
     "Description": "The Union of Allied Countries main portal.",
     "Image": ""
   },
-  "Yugoslavia": {
-    "X": 156,
-    "Z": 120,
-    "District": "Yugoslavia",
+  "Hunger Games Island": {
+    "X": -58,
+    "Z": 182,
+    "District": "Vailan",
+    "Description": "Vailan's historic Hunger Games territory.",
+    "Image": "images/hunger.png"
+  },
+  "Stradova": {
+    "X": 96,
+    "Z": -175,
+    "District": "Vailan",
     "Description": "",
-    "Image": "images/ufysr.png"
+    "Image": "images/stradova.png"
   },
   "Vailan": {
     "X": -120,
@@ -474,6 +495,20 @@
     "District": "Vailan",
     "Description": "Vailan is an isolationist nation in the North, containing many beautifully constructed cities and villages, and serving as the main force behing the Northern Alliance. It is the primary nation holding to the beliefs of Oarfanism.",
     "Image": "https://vignette.wikia.nocookie.net/lgsmc/images/8/86/Ailan.png"
+  },
+  "Winterfell": {
+    "X": -236,
+    "Z": -8,
+    "District": "Vailan",
+    "Description": "Winterfell is a Vailic city built by MiksaSerbia, featuring dark towers and a PVP arena.",
+    "Image": "https://vignette.wikia.nocookie.net/lgsmc/images/7/76/Winterfell.png"
+  },
+  "Atlantis City": {
+    "X": -187,
+    "Z": 223,
+    "District": "Vailan",
+    "Description": "An underwater city enclosed in a glass dome.",
+    "Image": "images/atlantis.png"
   },
   "Vietsnom": {
     "X": -329,
@@ -489,6 +524,13 @@
     "Description": "",
     "Image": "images/vietsnomice.png"
   },
+  "Cob Castle": {
+    "X": 44,
+    "Z": -76,
+    "District": "Voidnest",
+    "Description": "Cob Castle is one of the newest structures in Voidnest, built by c0baltblue.",
+    "Image": "images/cob.png"
+  },
   "Voidnest": {
     "X": 51,
     "Z": -67,
@@ -496,68 +538,47 @@
     "Description": "",
     "Image": "images/voidnest.png"
   },
-  "Winterfell": {
-    "X": -236,
-    "Z": -8,
-    "District": "Vailan",
-    "Description": "Winterfell is a Vailic city built by MiksaSerbia, featuring dark towers and a PVP arena.",
-    "Image": "https://vignette.wikia.nocookie.net/lgsmc/images/7/76/Winterfell.png"
-  },
   "Wohlstand": {
-    "X": -84,
-    "Z": 284,
-    "District": "Schevakia",
+    "X": -75,
+    "Z": 280,
+    "District": "Wohlstand",
     "Description": "",
     "Image": "images/wohlstand.png"
   },
-  "Ambrosia": {
-    "X": 43,
-    "Z": 185,
-    "District": "Schevakia",
-    "Description": "The Schevakian city of Ambrosia",
-    "Image": ""
-  },
-  "MBL & MVPC": {
-    "X": -89,
-    "Z": -111,
-    "District": "Montrose",
-    "Description": "Montrosian Bureau of Logistics & Villager Production Co.",
-    "Image": "images/mbl.png"
-  },
-  "Vigi": {
-    "X": 227,
-    "Z": 372,
-    "District": "Schevakia",
-    "Description": "A Wohlstandian village in the Far South.",
-    "Image": "images/vigi.png"
-  },
-  "Montrose Ice Farm": {
-    "X": -129,
-    "Z": -133,
-    "District": "Montrose",
-    "Description": "The ice farm employed by the Montrose Nether Company.",
-    "Image": "images/montroseice.png"
-  },
-  "Atlantis City": {
-    "X": -187,
-    "Z": 223,
-    "District": "Vailan",
-    "Description": "An underwater city enclosed in a glass dome.",
-    "Image": "images/atlantis.png"
-  },
-  "Montrosian Government Offices": {
-    "X": -66,
-    "Z": -53,
-    "District": "Montrose",
-    "Description": "",
-    "Image": "images/montroseoffice.png"
-  },
-  "Vilnius": {
-    "X": 313,
-    "Z": 30,
-    "District": "Goomlandia",
+  "Shipyard": {
+    "X": -97,
+    "Z": 290,
+    "District": "Wohlstand",
     "Description": "",
     "Image": ""
+  },
+  "Global Crossroad, Yanshu Dynasty": {
+    "X": 240,
+    "Z": 170,
+    "District": "Yanshu",
+    "Description": "",
+    "Image": "images/yanshu.png"
+  },
+  "Baguette": {
+    "X": 164,
+    "Z": 245,
+    "District": "Yugoslavia",
+    "Description": "The northern territory of MasterInventor's Yugoslavian state.",
+    "Image": "images/baguette.png"
+  },
+  "Inquisition": {
+    "X": 149,
+    "Z": 283,
+    "District": "Yugoslavia",
+    "Description": "The southern territories of MasterInventor's Yugoslavian state.",
+    "Image": "images/inquisition.png"
+  },
+  "Yugoslavia": {
+    "X": 156,
+    "Z": 120,
+    "District": "Yugoslavia",
+    "Description": "",
+    "Image": "images/ufysr.png"
   },
   "Vladivostok": {
     "X": 142,
@@ -566,11 +587,11 @@
     "Description": "",
     "Image": ""
   },
-  "HomeofBrave": {
-    "X": 21,
-    "Z": -276,
-    "District": "HomeofBrave",
-    "Description": "",
-    "Image": ""
+  "Gateway City": {
+    "X": 96,
+    "Z": -241,
+    "District": "",
+    "Description": "The ruins of Nyania.",
+    "Image": "images/gateway.png"
   }
 }
