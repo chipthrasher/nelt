@@ -156,6 +156,7 @@
           $.each(data, function(name, info) {
             // Circle with built-in data
 
+            if(parseInt(info['Hide']) === 1) return;
             if(info['Image'].toString !== "") image = info['Image'];
             if(info['Description'].toString !== "") description = info['Description'];
             x = parseInt(info['X']);
@@ -169,14 +170,13 @@
               "Inquisition": { "X": 165 },
               "East Goomtown": { "Z": -35 },
               "Goomtown": { "Z": -35 },
-              "Hybrasil": { "X": -231 },
               "Cattlehead": { "X": 46 },
               "Champignon": { "Z": -35 },
-              "Bowilla's Basement": { "Z": -35 },
+              "Bowilla's Basedments": { "Z": -35 },
               "Cratertown": { "Z": -35 },
-              "Cob Castle": { "X": 46 },
-              "Vietsnom": { "Z": -200 },
-              "Voidnest": { "X": 46 },
+              "the grey sanctum": { "X": 46 },
+              "Voidmouth": { "X": 46 },
+              "Shawtyville": { "X": 46 },
               "Montrosian Government Offices": { "Z": -74 },
               "Spruceville": { "Z": -74 },
               "Gabeford": { "Z": -74 },
