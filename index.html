@@ -17,17 +17,18 @@
     </div>
     <div class="right">
       <div class="title">NELT Map</div>
-      <div class="image"><img src="https://vignette.wikia.nocookie.net/lgsmc/images/5/5f/Castle_montrose.JPG"></div>
+      <div class="image"><img src=""></div>
       <div class="content">
-        <div class="name">Vailan</div>
-        <div class="entity">Innternational Board of World Heritage</div>
-        <div class="coords">-63, -74</div>
-        <div class="description">Vailan is a big nation, and its capital city, Fjall, has huge buildings. It is known for itsbuilding and large laim cland. Vailan is a big nation, and its capital city, Fjall, has huge buildings. It is known for itsbuilding and large laim cland.</div>
+        <div class="name"></div>
+        <div class="entity">Select an exit for more information.</div>
+        <div class="coords"></div>
+        <div class="description"></div>
       </div>
       <div class="footer">
         <i class="ibwh fas fa-globe" title="This exit is designated as an official IBWH site."></i>
         <i class="nation fas fa-flag" title="This is the official exit for its nation or political entity."></i>
         <i class="end fas fa-atom" title="This exit leads to a public-access End Portal."></i>
+        <i class="unsafe fas fa-exclamation-triangle" title="This exit is marked as unsafe. Proceed with caution."></i>
       </div>
       <!-- <div class="controls">
         <input type="checkbox" checked id="stops" name="stops"/><label for="stops">Stops</label><br>
@@ -146,11 +147,21 @@
                 z = info['Z'],
                 entity = info['Political Entity'],
                 description = info['Description'],
+                image = info['Image URL'],
                 national = info['National'],
                 ibwh = info['IBWH'],
-                end = info['End'];
+                end = info['End'],
+                unsafe = info['Unsafe'];
+
             $('.content .name').html(name);
             $('.content .coords').html(`${x}, ${z}`);
+
+            if(image != '') {
+              $('.image img').attr('src', image);
+              $('.image').show(0);
+            } else {
+              $('.image').hide(0);
+            }
 
             if(entity != '') {
               $('.content .entity').html(entity);
@@ -175,6 +186,10 @@
             if(end == 1) {
               $('.end').show(0);
             } else $('.end').hide(0);
+
+            if(unsafe == 1) {
+              $('.unsafe').show(0);
+            } else $('.unsafe').hide(0);
           });
         });
       });

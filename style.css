@@ -36,6 +36,7 @@
     margin-bottom: 25px;
     width: 100%;
     height: 160px;
+    display: none;
   }
   .image img {
     width: 100%;
@@ -73,17 +74,20 @@
   .footer {
     position: fixed;
     bottom: 30px;
+    width: auto;
     color: #aaa;
   }
   .footer i {
     font-size: 25px;
     transition: linear 0.1s all;
+    display: inline;
     margin-right: 10px;
   }
-  .ibwh, .nation, .end { display: none; }
+  /* .ibwh, .nation, .end, .unsafe { display: none; } */
   .ibwh:hover { color: #68b3e8; }
   .nation:hover { color: #66bb6b; }
   .end:hover { color: #a066bb; }
+  .unsafe:hover { color: #e65c46; }
 
   /* Sizing & layering */
 
