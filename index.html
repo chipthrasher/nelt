@@ -5,130 +5,42 @@
     <title>Interactive NELT Map</title>
     <script src="leaflet/leaflet.js"></script>
     <script src="leaflet/coords.js"></script>
+    <script src="https://kit.fontawesome.com/64fcc6f5cf.js" crossorigin="anonymous"></script>
     <meta property="og:title" content="NELT Map">
     <meta property="og:image" content="https://repository-images.githubusercontent.com/257634653/b98f6b00-d7c3-11ea-940c-6ec0402654f5">
     <link rel="icon" href="favicon.png" type="image/png"/>
-    <style>
-    @import url('https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css');
-    @import url('leaflet/leaflet.css');
-    @import url('leaflet/coords.css');
-    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-      body {
-        background: #E5E5E5;
-        font-family: "Roboto", sans-serif;
-        margin: 0px;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-      }
-      div.controls {
-        font-weight: 700;
-        position: fixed;
-        right: 0px;
-        padding: 25px;
-        color: #ddd;
-        background: #222;
-        line-height: 1.5;
-        z-index: 7;
-      }
-      div.controls input {
-        margin-bottom: 15px;
-      }
-      .title {
-        font-size: 30px;
-        font-weight: 900;
-        font-style: italic;
-        text-align: center;
-      }
-      label {
-        margin-left: 5px;
-      }
-
-      /* Sizing & layering */
-
-      .layers {
-        margin: auto;
-        width: 100vw;
-        height: 100vh;
-        position: relative;
-        background: inherit;
-        z-index: 1;
-      }
-
-      .stops { z-index: 4; }
-      .lines { z-index: 2; }
-      .countries { z-index: 1; opacity: 0.6; }
-      .dynmap { z-index: 0; opacity: 0.1; }
-
-      @media screen and (max-height: 800px) and (min-width: 800px) {
-        .layers .layer {
-          width: 100vh;
-          height: 100vh;
-        }
-      }
-      @media screen and (max-width: 800px) {
-        .layers .layer {
-          width: 100vw;
-          height: 100vw;
-        }
-      }
-
-      /* SVG Styling */
-
-      .circle {
-        transition: 0.2s all;
-        stroke: transparent;
-        stroke-width: 10;
-        fill: black;
-      }
-      .circle:hover {
-
-      }
-      line {
-        stroke-width: 1;
-        stroke: black;
-      }
-      .leaflet-control {
-        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
-      }
-      .leaflet-control-coordinates {
-        padding: 10px;
-      }
-
-      /* jQuery Tooltip */
-
-      .ui-tooltip {
-        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
-        font-family: inherit;
-        border: none!important;
-        border-radius: 4px;
-        padding: 20px;
-        margin: 0px;
-        color: #ddd;
-        background: #222;
-        overflow: hidden;
-      }
-      .name {
-        font-weight: 500;
-        font-size: 17px;
-      }
-      .coords {
-        font-family: "Roboto Mono", monospace;
-        color: #999;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div id="layers" class="layers"></div>
-    <div class="controls">
-      <div class="title">NELT</div>
-      <input type="checkbox" checked id="stops" name="stops"/><label for="stops">Stops</label><br>
-      <input type="checkbox" checked id="lines" name="lines"/><label for="lines">Lines</label><br>
-      Countries<br><input type="range" min="0" max="1" step="0.01" value="0.6" id="country" name="country"/><br>
-      Dynmap<br><input type="range" min="0" max="0.9" step="0.01" value="0.1" id="dynmap" name="dynmap"/>
+    <div class="left">
+      <div id="layers" class="layers"></div>
+    </div>
+    <div class="right">
+      <div class="title">NELT Map</div>
+      <div class="image"><img src="https://vignette.wikia.nocookie.net/lgsmc/images/5/5f/Castle_montrose.JPG"></div>
+      <div class="content">
+        <div class="name">Vailan</div>
+        <div class="entity">Innternational Board of World Heritage</div>
+        <div class="coords">-63, -74</div>
+        <div class="description">Vailan is a big nation, and its capital city, Fjall, has huge buildings. It is known for itsbuilding and large laim cland. Vailan is a big nation, and its capital city, Fjall, has huge buildings. It is known for itsbuilding and large laim cland.</div>
+      </div>
+      <div class="footer">
+        <i class="ibwh fas fa-globe" title="This exit is designated as an official IBWH site."></i>
+        <i class="nation fas fa-flag" title="This is the official exit for its nation or political entity."></i>
+        <i class="end fas fa-atom" title="This exit leads to a public-access End Portal."></i>
+      </div>
+      <!-- <div class="controls">
+        <input type="checkbox" checked id="stops" name="stops"/><label for="stops">Stops</label><br>
+        <input type="checkbox" checked id="lines" name="lines"/><label for="lines">Lines</label><br>
+        <div class="control">
+          Countries<br>
+          <input type="range" min="0" max="1" step="0.01" value="0.6" id="country" name="country"/><br>
+        </div>
+        <div class="control">
+          Dynmap<br>
+          <input type="range" min="0" max="0.9" step="0.01" value="0.1" id="dynmap" name="dynmap"/>
+        </div>
+      </div> -->
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
@@ -136,9 +48,11 @@
       $(document).ready(function(e) {
         var exits = {}, content = "";
 
-        /* Render initial map */
+        $('.footer i').tooltip();
 
         $.getJSON("data.json", function(data) {
+
+          /* Generate map content */
 
           $.each(data, function(name, info) {
 
@@ -147,11 +61,7 @@
             var x = info['X'],
                 z = info['Z'],
                 specialX = info['X Connector'],
-                specialZ = info['Z Connector'],
-                description = info['Description'],
-                national = info['National'],
-                ibwh = info['IBWH'],
-                end = info['End'];
+                specialZ = info['Z Connector'];
 
             exits[name] = info;
 
@@ -188,7 +98,7 @@
             }
           });
 
-          /* Render map */
+          /* Render map with Leaflet */
 
           var map = L.map('layers', {
             crs: L.CRS.Simple,
@@ -213,53 +123,95 @@
 
           map.panTo([0, 0]);
 
+          /* Create hover tooltips */
+
           $(".circle").tooltip({
             content: function() {
               var name = $(this).data('name'),
-                  tooltip = exits[name],
+                  info = exits[name],
                   x = exits[name]['X'],
                   z = exits[name]['Z'];
-
-              console.log('User hovered over' + name);
 
               var content = `<div><div class="name">${name} <div class="coords">${x}, ${z}</div></div>`;
               return content;
             }
           });
+
+          /* Display info on sidebar */
+
+          $('.circle').click(function() {
+            var name = $(this).data('name'),
+                info = exits[name],
+                x = info['X'],
+                z = info['Z'],
+                entity = info['Political Entity'],
+                description = info['Description'],
+                national = info['National'],
+                ibwh = info['IBWH'],
+                end = info['End'];
+            $('.content .name').html(name);
+            $('.content .coords').html(`${x}, ${z}`);
+
+            if(entity != '') {
+              $('.content .entity').html(entity);
+            } else {
+              $('.content .entity').html('');
+            }
+
+            if(description != '') {
+              $('.content .description').html(description);
+            } else {
+              $('.content .description').html('');
+            }
+
+            if(national == 1) {
+              $('.nation').show(0);
+            } else $('.nation').hide(0);
+
+            if(ibwh == 1) {
+              $('.ibwh').show(0);
+            } else $('.ibwh').hide(0);
+
+            if(end == 1) {
+              $('.end').show(0);
+            } else $('.end').hide(0);
+          });
         });
       });
 
-      var duration = 0;
-
-      $('#lines').click(function() { // Line button
-        if($('.lines').is(':visible')) { // Line image
-          $('.lines').fadeOut(duration); // Line image
-          $('.line').fadeOut(duration); // All lines have .line
-        } else {
-          $('.lines').fadeIn(duration);
-          if($('.circle').is(':visible')) $('.line').fadeIn(duration);
-        }
-      });
-
-      $('#stops').click(function() {
-        if($('.circle').is(':visible')) {
-          $('.circle').fadeOut(duration);
-          $('.line').fadeOut(duration);
-        } else {
-          $('.circle').fadeIn(duration);
-          if($('.lines').is(':visible')) { // Exit lines
-            $('.line').fadeIn(duration);
-          }
-        }
-      });
-
-      $('#dynmap').on('input', function() {
-        $('img.dynmap').css('opacity', this.value);
-      });
-
-      $('#country').on('input', function() {
-        $('img.countries').css('opacity', this.value);
-      });
+      // CONTROLS
+      //
+      // var duration = 0;
+      //
+      // $('#lines').click(function() { // Line button
+      //   if($('.lines').is(':visible')) { // Line image
+      //     $('.lines').fadeOut(duration); // Line image
+      //     $('.line').fadeOut(duration); // All lines have .line
+      //   } else {
+      //     $('.lines').fadeIn(duration);
+      //     if($('.circle').is(':visible')) $('.line').fadeIn(duration);
+      //   }
+      // });
+      //
+      // $('#stops').click(function() {
+      //   if($('.circle').is(':visible')) {
+      //     $('.circle').fadeOut(duration);
+      //     $('.line').fadeOut(duration);
+      //   } else {
+      //     $('.circle').fadeIn(duration);
+      //     if($('.lines').is(':visible')) { // Exit lines
+      //       $('.line').fadeIn(duration);
+      //     }
+      //   }
+      // });
+      //
+      // $('#dynmap').on('input', function() {
+      //   $('img.dynmap').css('opacity', this.value);
+      // });
+      //
+      // $('#country').on('input', function() {
+      //   $('img.countries').css('opacity', this.value);
+      // });
 
     </script>
   </body>
