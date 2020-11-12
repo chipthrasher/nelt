@@ -3,19 +3,20 @@
   <head>
     <meta charset="utf-8">
     <title>Interactive NELT Map</title>
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-    <link rel="stylesheet" href="leaflet/leaflet.css"/>
-    <link rel="stylesheet" href="leaflet/coords.css"/>
     <script src="leaflet/leaflet.js"></script>
     <script src="leaflet/coords.js"></script>
     <meta property="og:title" content="NELT Map">
     <meta property="og:image" content="https://repository-images.githubusercontent.com/257634653/b98f6b00-d7c3-11ea-940c-6ec0402654f5">
-    <link rel="icon" href="favicon.png" type="image/png" />
+    <link rel="icon" href="favicon.png" type="image/png"/>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,700;1,400;1,700;1,900&display=swap');
+    @import url('https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css');
+    @import url('leaflet/leaflet.css');
+    @import url('leaflet/coords.css');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
       body {
         background: #E5E5E5;
-        font-family: "Barlow", sans-serif;
+        font-family: "Roboto", sans-serif;
         margin: 0px;
         height: 100vh;
         display: flex;
@@ -97,44 +98,26 @@
         padding: 10px;
       }
 
-      /* jQuery Tooltips */
+      /* jQuery Tooltip */
 
       .ui-tooltip {
-        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
         font-family: inherit;
         border: none!important;
         border-radius: 4px;
-        padding: 0px;
+        padding: 20px;
         margin: 0px;
         color: #ddd;
         background: #222;
         overflow: hidden;
       }
-      div.image {
-        margin: 0px;
-        padding: 0px;
-      }
-      div.image img {
-        border-radius: 3px;
-        max-width: 100%;
-      }
-      div.content {
-        padding: 25px;
-      }
-      div.name {
-        font-weight: bold;
-        font-size: 18px;
-        text-align: center;
-      }
-      div.description {
-        font-size: 15px;
-        word-wrap: break-word;
-        line-height: 1.5;
-        color: #b9bbbe;
-        padding-top: 25px;
+      .name {
+        font-weight: 500;
+        font-size: 17px;
       }
       .coords {
-        color: #b9bbbe;
+        font-family: "Roboto Mono", monospace;
+        color: #999;
       }
     </style>
   </head>
@@ -151,82 +134,67 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script>
       $(document).ready(function(e) {
+        var exits = {}, content = "";
+
+        /* Render initial map */
+
         $.getJSON("data.json", function(data) {
-          var image, description, url, content, desc, x, y;
+
           $.each(data, function(name, info) {
-            // Circle with built-in data
 
-            if(parseInt(info['Hide']) === 1) return;
-            if(info['Image'].toString !== "") image = info['Image'];
-            if(info['Description'].toString !== "") description = info['Description'];
-            x = parseInt(info['X']);
-            z = parseInt(info['Z']);
-            content += `<circle class="circle" r="4" data-image="${image}" data-description="${description}" data-location="${info['District']}" title="${name}" data-x="${x}" data-z="${z}" cx="${(375 + info['X'])}" cy="${(375 + info['Z'])}"/>`;
+            if(info['Hide'] == 1) return;
 
-            // Exit lines
+            var x = info['X'],
+                z = info['Z'],
+                specialX = info['X Connector'],
+                specialZ = info['Z Connector'],
+                description = info['Description'],
+                national = info['National'],
+                ibwh = info['IBWH'],
+                end = info['End'];
 
-            var special = {
-              "Baguette": { "X": 165 },
-              "Inquisition": { "X": 165 },
-              "East Goomtown": { "Z": -35 },
-              "Goomtown": { "Z": -35 },
-              "Cattlehead": { "X": 46 },
-              "Champignon": { "Z": -35 },
-              "Bowilla's Basedments": { "Z": -35 },
-              "Cratertown": { "Z": -35 },
-              "the grey sanctum": { "X": 46 },
-              "Voidmouth": { "X": 46 },
-              "Shawtyville": { "X": 46 },
-              "Montrosian Government Offices": { "Z": -74 },
-              "Spruceville": { "Z": -74 },
-              "Gabeford": { "Z": -74 },
-              "Sunflame's House": { "X": -100 },
-              "MBL & MVPC": { "X": -82 },
-              "MIT": { "Z": -74 },
-              "Castle Montrose": { "X": -100 },
-              "Squarenough": { "Z": -351 }
-            };
-            var specialPresence = 0, specialName;
-            // Find if name's exit is anywhere in the special object
-            $.each(special, function(specialName, specialInfo) {
-              if(specialName == name) {
-                specialPresence = 1;
-                return;
-              }
-            });
-            if(specialPresence == 1) { // If it needs to be custom
-              if(special[name]['Z']) {
-                content +=`<line class="line" x1="${375 + x}" y1="${375 + z}" x2="${375 + x}" y2="${375 + special[name]['Z']}"/>`;
-              } else {
-                content +=`<line class="line" x1="${375 + x}" y1="${375 + z}" x2="${375 + special[name]['X']}" y2="${375 + z}"/>`;
-              }
+            exits[name] = info;
 
+            /* Render SVG circles */
 
-            } else { // Otherwise, it can auto map to the nearest line.
-              const findClosest = (num) => { // Let's make a way to find the closest line!
-                let arr = [-200,-100,0,100,200];
-                let closest = arr[0];
-                for(let item of arr) {
-                  if(Math.abs(item - num)<Math.abs(closest - num)) closest = item;
+            content += `<circle class="circle" r="4" cx="${375 + x}" cy="${375 + z}" data-name="${name}" title/>`;
+
+            /* Render lines */
+
+            if(specialX != '') {
+
+              content +=`<line class="line" x1="${375 + x}" y1="${375 + z}" x2="${375 + specialX}" y2="${375 + z}"/>`;
+
+            } else if(specialZ != '') {
+
+              content +=`<line class="line" x1="${375 + x}" y1="${375 + z}" x2="${375 + x}" y2="${375 + specialZ}"/>`;
+
+            } else {
+
+              function findClosest(num) {
+                let lines = [-200,-100,0,100,200];
+                let closestLine = lines[0];
+                for(let item of lines) {
+                  if(Math.abs(item - num) < Math.abs(closestLine - num)) closestLine = item;
                 }
-                return closest;
+                return closestLine;
               }
 
               if(Math.abs(x - findClosest(x)) < Math.abs(z - findClosest(z))) {
-                // console.log(name, 'should find a horiontal line!');
                 content +=`<line class="line" x1="${375 + x}" y1="${375 + z}" x2="${375 + findClosest(x)}" y2="${375 + z}"/>`;
               } else {
-                // console.log(name, 'should find a vertical line!');
                 content +=`<line class="line" x1="${375 + x}" y1="${375 + z}" x2="${375 + x}" y2="${375 + findClosest(z)}"/>`;
               }
             }
-            // Use special[name]. If it has Z, then map to the Z. If it contains X, then map to the X.
           });
+
+          /* Render map */
+
           var map = L.map('layers', {
             crs: L.CRS.Simple,
             zoom: -3,
-            minZoom: -5,
-            maxZoom: 10
+            minZoom: -4,
+            maxZoom: 0
           });
 
           var topleft = [-3000, -3000];
@@ -237,49 +205,32 @@
           L.imageOverlay('lines.svg', [topleft, bottomright], { className: 'lines', zIndex: 3 }).addTo(map);
 
           var svgElement = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-          svgElement.setAttribute('xmlns', "http://www.w3.org/2000/svg");
           svgElement.setAttribute('viewBox', "0 0 750 750");
           svgElement.innerHTML = content;
           L.svgOverlay(svgElement, [topleft, bottomright], {
             interactive: true, zIndex: 5
           }).addTo(map);
 
-          // L.Control({
-          //   position: 'topleft'
-          // }).addTo(map);
           map.panTo([0, 0]);
 
-          var c = new L.Control.Coordinates({
-            position: 'topleft'
-          });
-          c.addTo(map);
-
-          map.on('mousemove', function(e) {
-          	c.setCoordinates(e);
-          });
-
-          $("circle").tooltip({
+          $(".circle").tooltip({
             content: function() {
-              if($(this).data('image') !== "") {
-                url = `<img src="${$(this).data('image')}">`;
-              } else url = "";
-              if($(this).data('description') !== "") {
-                desc = `<div class="description">${$(this).data('description')}</div>`;
-              } else {
-                desc = ""
-                $('.image').css({
-                  'border-radius': '2px'
-                })
-              };
-              var content = `<div><div class="image">${url}</div><div class="content"><div class="name">${$(this).attr('title')} <span class="coords">(${$(this).data('x')}, ${$(this).data('z')})</span></div>${desc}</div>`;
+              var name = $(this).data('name'),
+                  tooltip = exits[name],
+                  x = exits[name]['X'],
+                  z = exits[name]['Z'];
+
+              console.log('User hovered over' + name);
+
+              var content = `<div><div class="name">${name} <div class="coords">${x}, ${z}</div></div>`;
               return content;
             }
           });
         });
-
       });
 
       var duration = 0;
+
       $('#lines').click(function() { // Line button
         if($('.lines').is(':visible')) { // Line image
           $('.lines').fadeOut(duration); // Line image
@@ -289,6 +240,7 @@
           if($('.circle').is(':visible')) $('.line').fadeIn(duration);
         }
       });
+
       $('#stops').click(function() {
         if($('.circle').is(':visible')) {
           $('.circle').fadeOut(duration);
@@ -300,9 +252,11 @@
           }
         }
       });
+
       $('#dynmap').on('input', function() {
         $('img.dynmap').css('opacity', this.value);
       });
+
       $('#country').on('input', function() {
         $('img.countries').css('opacity', this.value);
       });
