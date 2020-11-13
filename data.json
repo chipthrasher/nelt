@@ -5,13 +5,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Schevakian Empire",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Archives of Montrose": {
     "X": -76,
@@ -19,13 +19,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Sylvian Union",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": 1,
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Atlantis": {
     "X": -187,
@@ -33,13 +33,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Kingdom of Vailan",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Azrainir": {
     "X": 360,
@@ -47,13 +47,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Azrainir",
-    "Description": "",
-    "Image URL": "images/azrainir.png",
     "National": 1,
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": "images/azrainir.png"
   },
   "Baguette": {
     "X": 164,
@@ -61,13 +61,13 @@
     "X Connector": 164,
     "Z Connector": "",
     "Political Entity": "Baguette & Inquisition",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Banapo": {
     "X": -35,
@@ -75,13 +75,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Banapo",
-    "Description": "",
-    "Image URL": "",
     "National": 1,
     "IBWH": "",
     "End": "",
     "Hide": 1,
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Bialya": {
     "X": 248,
@@ -89,13 +89,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "",
-    "Description": "",
-    "Image URL": "",
     "National": 1,
     "IBWH": "",
     "End": "",
     "Hide": 1,
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Black Dot Empire": {
     "X": -47,
@@ -103,13 +103,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Black Dot Empire",
-    "Description": "",
-    "Image URL": "",
     "National": 1,
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Botania": {
     "X": -190,
@@ -117,13 +117,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Goomlandia",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": 1,
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Bowilla's Basedments": {
     "X": 57,
@@ -131,13 +131,13 @@
     "X Connector": "",
     "Z Connector": -35,
     "Political Entity": "Goomlandia",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Cascadia": {
     "X": -357,
@@ -145,13 +145,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Jugoslavija",
-    "Description": "",
-    "Image URL": "images/cascadia.png",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": "Jugoslavija has closed borders. Do not enter without formal permission."
+    "Warning": "Jugoslavija has closed borders. Do not enter without formal permission.",
+    "Description": "Cascadia (formally known as Republika Kaskadija) is a small Jugoslavijan state in the birch forests of the West. Originally founded as a nation by Chipt, it adopted an internationally focused mindset, aiming to leave a positive mark on the world through international polls and restoration projects. It is home to a variety of architecture inspired by cultures across the world, such as the Yanshu Monument, as well as the world’s only ink farm.",
+    "Image URL": "images/cascadia.png"
   },
   "Castle Montrose": {
     "X": -63,
@@ -159,13 +159,13 @@
     "X Connector": -100,
     "Z Connector": "",
     "Political Entity": "Sylvian Union",
-    "Description": "",
-    "Image URL": "",
     "National": 1,
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": "images/castlemontrose.png"
   },
   "Cattlehead": {
     "X": 44,
@@ -173,13 +173,13 @@
     "X Connector": 46,
     "Z Connector": "",
     "Political Entity": "Goomlandia",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Champignon": {
     "X": 85,
@@ -187,13 +187,13 @@
     "X Connector": "",
     "Z Connector": -35,
     "Political Entity": "Goomlandia",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Championis": {
     "X": 178,
@@ -201,13 +201,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Comus": {
     "X": 342,
@@ -215,13 +215,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Jugoslavija",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": "Jugoslavija has closed borders. Do not enter without formal permission."
+    "Warning": "Jugoslavija has closed borders. Do not enter without formal permission.",
+    "Description": "",
+    "Image URL": ""
   },
   "Cratertown": {
     "X": 64,
@@ -229,13 +229,13 @@
     "X Connector": "",
     "Z Connector": -35,
     "Political Entity": "Goomlandia",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "East Goomtown": {
     "X": 71,
@@ -243,13 +243,13 @@
     "X Connector": "",
     "Z Connector": -35,
     "Political Entity": "Goomlandia",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "East Taiga": {
     "X": 193,
@@ -257,13 +257,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Sylvian Union",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Emerald Enclave": {
     "X": -357,
@@ -271,13 +271,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Emerald Enclave",
-    "Description": "",
-    "Image URL": "",
     "National": 1,
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Falcon's Nest": {
     "X": 56,
@@ -285,13 +285,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Kingdom of Fianna",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Fianna": {
     "X": 3,
@@ -299,13 +299,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Kingdom of Fianna",
-    "Description": "",
-    "Image URL": "images/fianna.png",
     "National": 1,
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": "images/fianna.png"
   },
   "Fort Graham Area": {
     "X": -82,
@@ -313,13 +313,13 @@
     "X Connector": "",
     "Z Connector": -74,
     "Political Entity": "Sylvian Union",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": 1,
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Fort Skardaz": {
     "X": -217,
@@ -327,13 +327,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Sylvian Union",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Gabeford": {
     "X": -109,
@@ -341,13 +341,13 @@
     "X Connector": "",
     "Z Connector": -74,
     "Political Entity": "Sylvian Union",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Gateway City": {
     "X": 96,
@@ -355,13 +355,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": 1,
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Glavnaya": {
     "X": -240,
@@ -369,13 +369,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Goomlandia",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Global Crossroad, Yanshu Dynasty": {
     "X": 240,
@@ -383,13 +383,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": 1,
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "GoatWear Island": {
     "X": -214,
@@ -397,13 +397,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Sylvian Union",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Goomlandian End Portal": {
     "X": 241,
@@ -411,13 +411,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Goomlandia",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": 1,
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Goomtown": {
     "X": 44,
@@ -425,13 +425,13 @@
     "X Connector": "",
     "Z Connector": -35,
     "Political Entity": "Goomlandia",
-    "Description": "",
-    "Image URL": "",
     "National": 1,
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "Goomtown is the capital city of Goomlandia, as well as the largest and most populated city in the world. It is a thriving cultural center, featuring the Goomlandian Capitol building (with its signature diamond dome) and the public Goomtown Library.",
+    "Image URL": "images/goomtown.png"
   },
   "Groogelandia": {
     "X": 290,
@@ -439,13 +439,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Goomlandia",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "HomeofBrave": {
     "X": 21,
@@ -453,13 +453,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "",
-    "Description": "",
-    "Image URL": "",
     "National": 1,
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Hunger Games Island": {
     "X": -58,
@@ -467,13 +467,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Kingdom of Vailan",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": 1,
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Hybrasil": {
     "X": -231,
@@ -481,13 +481,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Jugoslavija",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": "Jugoslavija has closed borders. Do not enter without formal permission."
+    "Warning": "Jugoslavija has closed borders. Do not enter without formal permission.",
+    "Description": "",
+    "Image URL": ""
   },
   "Icedale Tavern": {
     "X": -96,
@@ -495,13 +495,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Sylvian Union",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": 1,
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Ilyrdom": {
     "X": 6,
@@ -509,13 +509,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Schevakian Empire",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": 1,
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Inquisition": {
     "X": 149,
@@ -523,13 +523,13 @@
     "X Connector": 164,
     "Z Connector": "",
     "Political Entity": "Baguette & Inquisition",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Iris": {
     "X": -96,
@@ -537,13 +537,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Sylvian Union",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Isle of Gold": {
     "X": 150,
@@ -551,13 +551,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Goomlandia",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": 1,
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Kaab": {
     "X": -346,
@@ -565,13 +565,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Kaab",
-    "Description": "",
-    "Image URL": "images/kaab.png",
     "National": 1,
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": "images/kaab.png"
   },
   "Krabbatoah": {
     "X": 309,
@@ -579,13 +579,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "",
-    "Description": "",
-    "Image URL": "",
     "National": 1,
     "IBWH": "",
     "End": "",
     "Hide": 1,
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Lazarica": {
     "X": 156,
@@ -593,13 +593,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Jugoslavija",
-    "Description": "",
-    "Image URL": "",
     "National": 1,
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": "Jugoslavija has closed borders. Do not enter without formal permission."
+    "Warning": "Jugoslavija has closed borders. Do not enter without formal permission.",
+    "Description": "",
+    "Image URL": ""
   },
   "MBL & MVPC": {
     "X": -89,
@@ -607,13 +607,13 @@
     "X Connector": -82,
     "Z Connector": "",
     "Political Entity": "Sylvian Union",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "MID": {
     "X": -82,
@@ -621,13 +621,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Sylvian Union",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Montrose Ice Farm": {
     "X": -129,
@@ -635,13 +635,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Sylvian Union",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Montrosian Government Offices": {
     "X": -66,
@@ -649,13 +649,13 @@
     "X Connector": "",
     "Z Connector": -74,
     "Political Entity": "Sylvian Union",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Montrosian Prismarine Farm": {
     "X": -96,
@@ -663,13 +663,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Sylvian Union",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Montrosian Production Emporium": {
     "X": -51,
@@ -677,13 +677,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Sylvian Union",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": "images/mpe.png"
   },
   "New Toeland": {
     "X": 102,
@@ -691,13 +691,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Goomlandia",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": 1,
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "North UAC": {
     "X": 224,
@@ -705,13 +705,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Union of Allied Countries",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Northbay": {
     "X": -60,
@@ -719,13 +719,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": 1,
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Novosibirsk": {
     "X": -149,
@@ -733,13 +733,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Goomlandia",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": 1,
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Old Cascadia": {
     "X": -215,
@@ -747,13 +747,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Sylvian Union",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Caracalistan": {
     "X": -366,
@@ -761,13 +761,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Caracalistan",
-    "Description": "",
-    "Image URL": "",
     "National": 1,
     "IBWH": "",
     "End": "",
     "Hide": 1,
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Properopolis": {
     "X": -36,
@@ -775,13 +775,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Sylvian Union",
-    "Description": "",
-    "Image URL": "",
     "National": 1,
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Prosperity League HQ": {
     "X": -64,
@@ -789,13 +789,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Sylvian Union",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Rapture": {
     "X": -132,
@@ -803,13 +803,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Goomlandia",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Rhett Island": {
     "X": -37,
@@ -817,13 +817,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Sylvian Union",
-    "Description": "",
-    "Image URL": "",
     "National": 1,
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Rhett Tropical": {
     "X": -123,
@@ -831,13 +831,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Sylvian Union",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Richard": {
     "X": 105,
@@ -845,13 +845,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Goomlandia",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": 1,
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Sable-Rouge": {
     "X": 100,
@@ -859,13 +859,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Goomlandia",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": 1,
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Schenektengrad": {
     "X": 56,
@@ -873,13 +873,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Schevakian Empire",
-    "Description": "",
-    "Image URL": "",
     "National": 1,
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Shawtyville": {
     "X": 37,
@@ -887,13 +887,13 @@
     "X Connector": 46,
     "Z Connector": "",
     "Political Entity": "Voidnest",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Shipyard": {
     "X": -75,
@@ -901,13 +901,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": 1,
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Soleil Islands": {
     "X": 143,
@@ -915,13 +915,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Goomlandia",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": 1,
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "South East Taiga": {
     "X": 212,
@@ -929,13 +929,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Sylvian Union",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": 1,
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "South Farnough": {
     "X": 317,
@@ -943,27 +943,27 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Beachdom of Farnough",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "South Polgolas": {
     "X": 54,
     "Z": 259,
-    "X Connector": "",
+    "X Connector": 100,
     "Z Connector": "",
     "Political Entity": "Schevakian Empire",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "South UAC": {
     "X": 218,
@@ -971,13 +971,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Union of Allied Countries",
-    "Description": "",
-    "Image URL": "",
     "National": 1,
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Spawn": {
     "X": -30,
@@ -985,13 +985,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Spruceville": {
     "X": -112,
@@ -999,13 +999,13 @@
     "X Connector": "",
     "Z Connector": -74,
     "Political Entity": "Sylvian Union",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Squarenough": {
     "X": 135,
@@ -1013,13 +1013,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Beachdom of Farnough",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "SquishMellow": {
     "X": 342,
@@ -1027,13 +1027,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "SquishMellow",
-    "Description": "",
-    "Image URL": "",
     "National": 1,
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Stemtown": {
     "X": 83,
@@ -1041,13 +1041,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Goomlandia",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": 1,
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Stradova": {
     "X": 96,
@@ -1055,13 +1055,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Kingdom of Vailan",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Sunflame's House": {
     "X": -130,
@@ -1069,13 +1069,13 @@
     "X Connector": -100,
     "Z Connector": "",
     "Political Entity": "Sylvian Union",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Sylvian Union Federal Province": {
     "X": -104,
@@ -1083,13 +1083,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Sylvian Union",
-    "Description": "",
-    "Image URL": "",
     "National": 1,
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Tautona": {
     "X": 222,
@@ -1097,13 +1097,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Sylvian Union",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": 1,
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "the grey sanctum": {
     "X": 44,
@@ -1111,13 +1111,13 @@
     "X Connector": 46,
     "Z Connector": "",
     "Political Entity": "Voidnest",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "toeGANG": {
     "X": 4,
@@ -1125,13 +1125,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "toeGANG",
-    "Description": "",
-    "Image URL": "",
     "National": 1,
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Tsarevets": {
     "X": 97,
@@ -1139,13 +1139,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "International Board of World Heritage",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": 1,
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Twiceland": {
     "X": -286,
@@ -1153,27 +1153,27 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Twiceland",
-    "Description": "",
-    "Image URL": "",
     "National": 1,
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
-  "Vailan": {
+  "Fjall": {
     "X": -120,
     "Z": -169,
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Kingdom of Vailan",
-    "Description": "",
-    "Image URL": "images/vailan.png",
     "National": 1,
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": "images/vailan.png"
   },
   "Vietsnom": {
     "X": -329,
@@ -1181,13 +1181,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": 1,
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Vietsnom Ice Sea Outpost": {
     "X": 256,
@@ -1195,13 +1195,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": 1,
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Vigi": {
     "X": 227,
@@ -1209,13 +1209,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": 1,
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Vilnius": {
     "X": 313,
@@ -1223,13 +1223,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Goomlandia",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Vladivostok": {
     "X": 142,
@@ -1237,13 +1237,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Vostok",
-    "Description": "",
-    "Image URL": "images/vostok.png",
     "National": 1,
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": "images/vostok.png"
   },
   "Voidmouth": {
     "X": 52,
@@ -1251,13 +1251,13 @@
     "X Connector": 46,
     "Z Connector": "",
     "Political Entity": "Voidnest",
-    "Description": "",
-    "Image URL": "",
     "National": 1,
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Western End Portal": {
     "X": -100,
@@ -1265,13 +1265,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Sylvian Union",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": 1,
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   },
   "Winterfell": {
     "X": -236,
@@ -1279,13 +1279,13 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Kingdom of Vailan",
-    "Description": "",
-    "Image URL": "images/winterfell.png",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": "images/winterfell.png"
   },
   "Wohlstand": {
     "X": -97,
@@ -1293,12 +1293,26 @@
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "",
-    "Description": "",
-    "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": ""
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
+  },
+  "Sylvian Pillager Outpost": {
+    "X": "",
+    "Z": "",
+    "X Connector": "",
+    "Z Connector": "",
+    "Political Entity": "",
+    "National": "",
+    "IBWH": "",
+    "End": "",
+    "Hide": "",
+    "Warning": "",
+    "Description": "",
+    "Image URL": ""
   }
 }
