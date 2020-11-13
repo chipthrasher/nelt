@@ -10,8 +10,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Archives of Montrose": {
     "X": -76,
@@ -24,8 +24,8 @@
     "National": "",
     "IBWH": 1,
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Atlantis": {
     "X": -187,
@@ -38,8 +38,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Azrainir": {
     "X": 360,
@@ -48,26 +48,26 @@
     "Z Connector": "",
     "Political Entity": "Azrainir",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/azrainir.png",
     "National": 1,
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Baguette": {
     "X": 164,
     "Z": 245,
-    "X Connector": "",
-    "Z Connector": 200,
+    "X Connector": 164,
+    "Z Connector": "",
     "Political Entity": "Baguette & Inquisition",
     "Description": "",
     "Image URL": "",
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Banapo": {
     "X": -35,
@@ -80,8 +80,8 @@
     "National": 1,
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": 1
+    "Hide": 1,
+    "Warning": ""
   },
   "Bialya": {
     "X": 248,
@@ -94,8 +94,8 @@
     "National": 1,
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": 1
+    "Hide": 1,
+    "Warning": ""
   },
   "Black Dot Empire": {
     "X": -47,
@@ -108,8 +108,8 @@
     "National": 1,
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Botania": {
     "X": -190,
@@ -122,8 +122,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": 1
+    "Hide": 1,
+    "Warning": ""
   },
   "Bowilla's Basedments": {
     "X": 57,
@@ -136,8 +136,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Cascadia": {
     "X": -357,
@@ -146,12 +146,12 @@
     "Z Connector": "",
     "Political Entity": "Jugoslavija",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/cascadia.png",
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": 1,
-    "Hide": ""
+    "Hide": "",
+    "Warning": "Jugoslavija has closed borders. Do not enter without formal permission."
   },
   "Castle Montrose": {
     "X": -63,
@@ -160,12 +160,12 @@
     "Z Connector": "",
     "Political Entity": "Sylvian Union",
     "Description": "",
-    "Image URL": "https://vignette.wikia.nocookie.net/lgsmc/images/5/5f/Castle_montrose.JPG/revision/latest?cb=20190518163527",
+    "Image URL": "",
     "National": 1,
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Cattlehead": {
     "X": 44,
@@ -178,8 +178,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Champignon": {
     "X": 85,
@@ -192,8 +192,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Championis": {
     "X": 178,
@@ -206,8 +206,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Comus": {
     "X": 342,
@@ -220,8 +220,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": 1,
-    "Hide": ""
+    "Hide": "",
+    "Warning": "Jugoslavija has closed borders. Do not enter without formal permission."
   },
   "Cratertown": {
     "X": 64,
@@ -234,8 +234,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "East Goomtown": {
     "X": 71,
@@ -248,8 +248,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "East Taiga": {
     "X": 193,
@@ -262,8 +262,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Emerald Enclave": {
     "X": -357,
@@ -276,8 +276,8 @@
     "National": 1,
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Falcon's Nest": {
     "X": 56,
@@ -290,8 +290,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Fianna": {
     "X": 3,
@@ -300,12 +300,12 @@
     "Z Connector": "",
     "Political Entity": "Kingdom of Fianna",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/fianna.png",
     "National": 1,
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Fort Graham Area": {
     "X": -82,
@@ -318,8 +318,8 @@
     "National": "",
     "IBWH": 1,
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Fort Skardaz": {
     "X": -217,
@@ -332,8 +332,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Gabeford": {
     "X": -109,
@@ -346,8 +346,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Gateway City": {
     "X": 96,
@@ -360,8 +360,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": 1
+    "Hide": 1,
+    "Warning": ""
   },
   "Glavnaya": {
     "X": -240,
@@ -374,8 +374,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Global Crossroad, Yanshu Dynasty": {
     "X": 240,
@@ -388,8 +388,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": 1
+    "Hide": 1,
+    "Warning": ""
   },
   "GoatWear Island": {
     "X": -214,
@@ -402,8 +402,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Goomlandian End Portal": {
     "X": 241,
@@ -416,8 +416,8 @@
     "National": "",
     "IBWH": "",
     "End": 1,
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Goomtown": {
     "X": 44,
@@ -430,8 +430,8 @@
     "National": 1,
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Groogelandia": {
     "X": 290,
@@ -444,8 +444,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "HomeofBrave": {
     "X": 21,
@@ -458,8 +458,8 @@
     "National": 1,
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Hunger Games Island": {
     "X": -58,
@@ -472,8 +472,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": 1
+    "Hide": 1,
+    "Warning": ""
   },
   "Hybrasil": {
     "X": -231,
@@ -486,8 +486,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": 1,
-    "Hide": ""
+    "Hide": "",
+    "Warning": "Jugoslavija has closed borders. Do not enter without formal permission."
   },
   "Icedale Tavern": {
     "X": -96,
@@ -500,8 +500,8 @@
     "National": "",
     "IBWH": 1,
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Ilyrdom": {
     "X": 6,
@@ -514,13 +514,13 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": 1
+    "Hide": 1,
+    "Warning": ""
   },
   "Inquisition": {
     "X": 149,
     "Z": 283,
-    "X Connector": 165,
+    "X Connector": 164,
     "Z Connector": "",
     "Political Entity": "Baguette & Inquisition",
     "Description": "",
@@ -528,8 +528,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Iris": {
     "X": -96,
@@ -542,8 +542,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Isle of Gold": {
     "X": 150,
@@ -556,8 +556,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": 1
+    "Hide": 1,
+    "Warning": ""
   },
   "Kaab": {
     "X": -346,
@@ -566,12 +566,12 @@
     "Z Connector": "",
     "Political Entity": "Kaab",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/kaab.png",
     "National": 1,
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Krabbatoah": {
     "X": 309,
@@ -584,8 +584,8 @@
     "National": 1,
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": 1
+    "Hide": 1,
+    "Warning": ""
   },
   "Lazarica": {
     "X": 156,
@@ -598,8 +598,8 @@
     "National": 1,
     "IBWH": "",
     "End": "",
-    "Unsafe": 1,
-    "Hide": ""
+    "Hide": "",
+    "Warning": "Jugoslavija has closed borders. Do not enter without formal permission."
   },
   "MBL & MVPC": {
     "X": -89,
@@ -612,8 +612,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "MID": {
     "X": -82,
@@ -626,8 +626,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Montrose Ice Farm": {
     "X": -129,
@@ -640,8 +640,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Montrosian Government Offices": {
     "X": -66,
@@ -654,8 +654,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Montrosian Prismarine Farm": {
     "X": -96,
@@ -668,8 +668,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Montrosian Production Emporium": {
     "X": -51,
@@ -682,8 +682,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "New Toeland": {
     "X": 102,
@@ -696,8 +696,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": 1
+    "Hide": 1,
+    "Warning": ""
   },
   "North UAC": {
     "X": 224,
@@ -710,8 +710,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Northbay": {
     "X": -60,
@@ -724,8 +724,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": 1
+    "Hide": 1,
+    "Warning": ""
   },
   "Novosibirsk": {
     "X": -149,
@@ -738,8 +738,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": 1
+    "Hide": 1,
+    "Warning": ""
   },
   "Old Cascadia": {
     "X": -215,
@@ -752,22 +752,22 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
-  "Ozai": {
+  "Caracalistan": {
     "X": -366,
     "Z": 228,
     "X Connector": "",
     "Z Connector": "",
-    "Political Entity": "Ozai",
+    "Political Entity": "Caracalistan",
     "Description": "",
     "Image URL": "",
     "National": 1,
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": 1
+    "Hide": 1,
+    "Warning": ""
   },
   "Properopolis": {
     "X": -36,
@@ -780,8 +780,8 @@
     "National": 1,
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Prosperity League HQ": {
     "X": -64,
@@ -794,8 +794,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Rapture": {
     "X": -132,
@@ -808,8 +808,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Rhett Island": {
     "X": -37,
@@ -822,8 +822,8 @@
     "National": 1,
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Rhett Tropical": {
     "X": -123,
@@ -836,8 +836,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Richard": {
     "X": 105,
@@ -850,8 +850,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": 1
+    "Hide": 1,
+    "Warning": ""
   },
   "Sable-Rouge": {
     "X": 100,
@@ -864,8 +864,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": 1
+    "Hide": 1,
+    "Warning": ""
   },
   "Schenektengrad": {
     "X": 56,
@@ -878,8 +878,8 @@
     "National": 1,
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Shawtyville": {
     "X": 37,
@@ -892,8 +892,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Shipyard": {
     "X": -75,
@@ -906,8 +906,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": 1
+    "Hide": 1,
+    "Warning": ""
   },
   "Soleil Islands": {
     "X": 143,
@@ -920,8 +920,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": 1
+    "Hide": 1,
+    "Warning": ""
   },
   "South East Taiga": {
     "X": 212,
@@ -934,8 +934,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": 1
+    "Hide": 1,
+    "Warning": ""
   },
   "South Farnough": {
     "X": 317,
@@ -945,11 +945,11 @@
     "Political Entity": "Beachdom of Farnough",
     "Description": "",
     "Image URL": "",
-    "National": "?",
+    "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "South Polgolas": {
     "X": 54,
@@ -962,8 +962,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "South UAC": {
     "X": 218,
@@ -976,8 +976,8 @@
     "National": 1,
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Spawn": {
     "X": -30,
@@ -990,8 +990,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Spruceville": {
     "X": -112,
@@ -1004,22 +1004,22 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Squarenough": {
     "X": 135,
     "Z": -349,
     "X Connector": "",
-    "Z Connector": -351,
+    "Z Connector": "",
     "Political Entity": "Beachdom of Farnough",
     "Description": "",
     "Image URL": "",
-    "National": "?",
+    "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "SquishMellow": {
     "X": 342,
@@ -1032,8 +1032,8 @@
     "National": 1,
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Stemtown": {
     "X": 83,
@@ -1046,8 +1046,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": 1
+    "Hide": 1,
+    "Warning": ""
   },
   "Stradova": {
     "X": 96,
@@ -1060,8 +1060,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Sunflame's House": {
     "X": -130,
@@ -1074,8 +1074,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Sylvian Union Federal Province": {
     "X": -104,
@@ -1088,8 +1088,8 @@
     "National": 1,
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Tautona": {
     "X": 222,
@@ -1102,8 +1102,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": 1
+    "Hide": 1,
+    "Warning": ""
   },
   "the grey sanctum": {
     "X": 44,
@@ -1116,8 +1116,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "toeGANG": {
     "X": 4,
@@ -1130,8 +1130,8 @@
     "National": 1,
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Tsarevets": {
     "X": 97,
@@ -1144,8 +1144,8 @@
     "National": "",
     "IBWH": 1,
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Twiceland": {
     "X": -286,
@@ -1158,8 +1158,8 @@
     "National": 1,
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Vailan": {
     "X": -120,
@@ -1168,12 +1168,12 @@
     "Z Connector": "",
     "Political Entity": "Kingdom of Vailan",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/vailan.png",
     "National": 1,
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Vietsnom": {
     "X": -329,
@@ -1186,8 +1186,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": 1
+    "Hide": 1,
+    "Warning": ""
   },
   "Vietsnom Ice Sea Outpost": {
     "X": 256,
@@ -1200,8 +1200,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": 1
+    "Hide": 1,
+    "Warning": ""
   },
   "Vigi": {
     "X": 227,
@@ -1214,8 +1214,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": 1
+    "Hide": 1,
+    "Warning": ""
   },
   "Vilnius": {
     "X": 313,
@@ -1228,8 +1228,8 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Vladivostok": {
     "X": 142,
@@ -1238,12 +1238,12 @@
     "Z Connector": "",
     "Political Entity": "Vostok",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/vostok.png",
     "National": 1,
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Voidmouth": {
     "X": 52,
@@ -1256,8 +1256,8 @@
     "National": 1,
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Western End Portal": {
     "X": -100,
@@ -1270,8 +1270,8 @@
     "National": "",
     "IBWH": "",
     "End": 1,
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Winterfell": {
     "X": -236,
@@ -1280,12 +1280,12 @@
     "Z Connector": "",
     "Political Entity": "Kingdom of Vailan",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/winterfell.png",
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   },
   "Wohlstand": {
     "X": -97,
@@ -1298,7 +1298,7 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Unsafe": "",
-    "Hide": ""
+    "Hide": "",
+    "Warning": ""
   }
 }

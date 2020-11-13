@@ -28,7 +28,7 @@
         <i class="ibwh fas fa-globe" title="This exit is designated as an official IBWH site."></i>
         <i class="nation fas fa-flag" title="This is the official exit for its nation or political entity."></i>
         <i class="end fas fa-atom" title="This exit leads to a public-access End Portal."></i>
-        <i class="unsafe fas fa-exclamation-triangle" title="This exit is marked as unsafe. Proceed with caution."></i>
+        <i class="warning fas fa-exclamation-triangle" title="Not changed"></i>
       </div>
       <!-- <div class="controls">
         <input type="checkbox" checked id="stops" name="stops"/><label for="stops">Stops</label><br>
@@ -50,6 +50,7 @@
         var exits = {}, content = "";
 
         $('.footer i').tooltip();
+        $('.footer i').hide(0);
 
         $.getJSON("data.json", function(data) {
 
@@ -82,7 +83,7 @@
 
             } else {
 
-              function findClosest(num) {
+              function findClosestX(num) {
                 let lines = [-200,-100,0,100,200];
                 let closestLine = lines[0];
                 for(let item of lines) {
@@ -91,10 +92,19 @@
                 return closestLine;
               }
 
-              if(Math.abs(x - findClosest(x)) < Math.abs(z - findClosest(z))) {
-                content +=`<line class="line" x1="${375 + x}" y1="${375 + z}" x2="${375 + findClosest(x)}" y2="${375 + z}"/>`;
+              function findClosestZ(num) {
+                let lines = [-200,-100,0,100,200,300];
+                let closestLine = lines[0];
+                for(let item of lines) {
+                  if(Math.abs(item - num) < Math.abs(closestLine - num)) closestLine = item;
+                }
+                return closestLine;
+              }
+
+              if(Math.abs(x - findClosestX(x)) < Math.abs(z - findClosestZ(z))) {
+                content +=`<line class="line" x1="${375 + x}" y1="${375 + z}" x2="${375 + findClosestX(x)}" y2="${375 + z}"/>`;
               } else {
-                content +=`<line class="line" x1="${375 + x}" y1="${375 + z}" x2="${375 + x}" y2="${375 + findClosest(z)}"/>`;
+                content +=`<line class="line" x1="${375 + x}" y1="${375 + z}" x2="${375 + x}" y2="${375 + findClosestZ(z)}"/>`;
               }
             }
           });
@@ -151,7 +161,7 @@
                 national = info['National'],
                 ibwh = info['IBWH'],
                 end = info['End'],
-                unsafe = info['Unsafe'];
+                warning = info['Warning'];
 
             $('.content .name').html(name);
             $('.content .coords').html(`${x}, ${z}`);
@@ -187,9 +197,9 @@
               $('.end').show(0);
             } else $('.end').hide(0);
 
-            if(unsafe == 1) {
-              $('.unsafe').show(0);
-            } else $('.unsafe').hide(0);
+            if(warning != '') {
+              $('.warning').attr('title', warning).show();
+            } else $('.warning').hide(0);
           });
         });
       });

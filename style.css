@@ -83,11 +83,11 @@
     display: inline;
     margin-right: 10px;
   }
-  /* .ibwh, .nation, .end, .unsafe { display: none; } */
+  .ibwh, .nation, .end, .warning { display: none; }
   .ibwh:hover { color: #68b3e8; }
   .nation:hover { color: #66bb6b; }
   .end:hover { color: #a066bb; }
-  .unsafe:hover { color: #e65c46; }
+  .warning:hover { color: #e65c46; }
 
   /* Sizing & layering */
 
