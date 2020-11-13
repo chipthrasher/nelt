@@ -23,6 +23,7 @@
         <div class="entity">Select an exit for more information.</div>
         <div class="coords"></div>
         <div class="description"></div>
+        <a class="wiki" href="">Read more on the LGSMC Wiki</a>
       </div>
       <div class="footer">
         <i class="ibwh fas fa-globe" title="This exit is designated as an official IBWH site."></i>
@@ -50,7 +51,7 @@
         var exits = {}, content = "";
 
         $('.footer i').tooltip();
-        $('.footer i').hide(0);
+        $('.footer i, .wiki').hide(0);
 
         $.getJSON("data.json", function(data) {
 
@@ -158,6 +159,7 @@
                 entity = info['Political Entity'],
                 description = info['Description'],
                 image = info['Image URL'],
+                wiki = info['Wiki URL'],
                 national = info['National'],
                 ibwh = info['IBWH'],
                 end = info['End'],
@@ -198,8 +200,12 @@
             } else $('.end').hide(0);
 
             if(warning != '') {
-              $('.warning').attr('title', warning).show();
+              $('.warning').attr('title', warning).show(0);
             } else $('.warning').hide(0);
+
+            if(wiki != '') {
+              $('.wiki').attr('href', wiki).show(0);
+            } else $('.wiki').hide(0);
           });
         });
       });
