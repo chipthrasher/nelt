@@ -8,7 +8,7 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Hide": "",
+    "Hide": 1,
     "Warning": "",
     "Description": "",
     "Image URL": "",
@@ -134,7 +134,7 @@
     "Image URL": "",
     "Wiki URL": ""
   },
-  "Bowilla's Basedments": {
+  "Bowilla's House": {
     "X": 57,
     "Z": -44,
     "X Connector": "",
@@ -149,6 +149,21 @@
     "Image URL": "",
     "Wiki URL": ""
   },
+  "Caracalistan": {
+    "X": -366,
+    "Z": 228,
+    "X Connector": "",
+    "Z Connector": "",
+    "Political Entity": "Caracalistan",
+    "National": 1,
+    "IBWH": "",
+    "End": "",
+    "Hide": 1,
+    "Warning": "This portal leads to an active warzone.",
+    "Description": "",
+    "Image URL": "",
+    "Wiki URL": "https://lgsmc.fandom.com/wiki/Ozai"
+  },
   "Cascadia": {
     "X": -357,
     "Z": -88,
@@ -159,7 +174,7 @@
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": "Jugoslavija has closed borders. Do not enter without formal permission.",
+    "Warning": "This portal leads to an active warzone.",
     "Description": "Cascadia (formally known as Republika Kaskadija) is a small Jugoslavijan state in the birch forests of the West. Originally founded as a nation by Chipt, it adopted an internationally focused mindset, aiming to leave a positive mark on the world through international polls and restoration projects. It is home to a variety of architecture inspired by cultures across the world, such as the Yanshu Monument, as well as the world’s only ink farm.",
     "Image URL": "images/cascadia.png",
     "Wiki URL": "https://lgsmc.fandom.com/wiki/Cascadia"
@@ -234,7 +249,7 @@
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": "Jugoslavija has closed borders. Do not enter without formal permission.",
+    "Warning": "This portal leads to an active warzone.",
     "Description": "",
     "Image URL": "",
     "Wiki URL": ""
@@ -328,6 +343,21 @@
     "Description": "",
     "Image URL": "images/fianna.png",
     "Wiki URL": "https://lgsmc.fandom.com/wiki/Fianna"
+  },
+  "Fjall": {
+    "X": -120,
+    "Z": -169,
+    "X Connector": "",
+    "Z Connector": "",
+    "Political Entity": "Kingdom of Vailan",
+    "National": 1,
+    "IBWH": "",
+    "End": "",
+    "Hide": "",
+    "Warning": "",
+    "Description": "",
+    "Image URL": "images/vailan.png",
+    "Wiki URL": "https://lgsmc.fandom.com/wiki/Kingdom_of_Vailan"
   },
   "Fort Graham Area": {
     "X": -82,
@@ -519,7 +549,7 @@
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": "Jugoslavija has closed borders. Do not enter without formal permission.",
+    "Warning": "This portal leads to an active warzone.",
     "Description": "",
     "Image URL": "",
     "Wiki URL": ""
@@ -639,7 +669,7 @@
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": "Jugoslavija has closed borders. Do not enter without formal permission.",
+    "Warning": "This portal leads to an active warzone.",
     "Description": "",
     "Image URL": "",
     "Wiki URL": ""
@@ -808,21 +838,6 @@
     "Description": "",
     "Image URL": "",
     "Wiki URL": ""
-  },
-  "Caracalistan": {
-    "X": -366,
-    "Z": 228,
-    "X Connector": "",
-    "Z Connector": "",
-    "Political Entity": "Caracalistan",
-    "National": 1,
-    "IBWH": "",
-    "End": "",
-    "Hide": 1,
-    "Warning": "",
-    "Description": "",
-    "Image URL": "",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Ozai"
   },
   "Properopolis": {
     "X": -36,
@@ -1154,6 +1169,21 @@
     "Image URL": "",
     "Wiki URL": ""
   },
+  "Sylvian Pillager Outpost": {
+    "X": "",
+    "Z": "",
+    "X Connector": "",
+    "Z Connector": "",
+    "Political Entity": "",
+    "National": "",
+    "IBWH": "",
+    "End": "",
+    "Hide": 1,
+    "Warning": "",
+    "Description": "",
+    "Image URL": "",
+    "Wiki URL": ""
+  },
   "Sylvian Union Federal Province": {
     "X": -104,
     "Z": 5,
@@ -1244,20 +1274,20 @@
     "Image URL": "",
     "Wiki URL": ""
   },
-  "Fjall": {
-    "X": -120,
-    "Z": -169,
+  "Vastilis": {
+    "X": -307,
+    "Z": 96,
     "X Connector": "",
     "Z Connector": "",
-    "Political Entity": "Kingdom of Vailan",
+    "Political Entity": "Vastilis",
     "National": 1,
     "IBWH": "",
     "End": "",
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "images/vailan.png",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Kingdom_of_Vailan"
+    "Image URL": "",
+    "Wiki URL": ""
   },
   "Vietsnom": {
     "X": -329,
@@ -1393,20 +1423,5 @@
     "Description": "",
     "Image URL": "",
     "Wiki URL": "https://lgsmc.fandom.com/wiki/Wohlstand"
-  },
-  "Sylvian Pillager Outpost": {
-    "X": "",
-    "Z": "",
-    "X Connector": "",
-    "Z Connector": "",
-    "Political Entity": "",
-    "National": "",
-    "IBWH": "",
-    "End": "",
-    "Hide": "1",
-    "Warning": "",
-    "Description": "",
-    "Image URL": "",
-    "Wiki URL": ""
   }
 }
