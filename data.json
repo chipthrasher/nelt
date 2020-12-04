@@ -602,7 +602,7 @@
   "Iris": {
     "X": -96,
     "Z": -53,
-    "X Connector": "",
+    "X Connector": -96,
     "Z Connector": "",
     "Political Entity": "Sylvian Union",
     "National": "",
@@ -839,10 +839,10 @@
     "Image URL": "",
     "Wiki URL": ""
   },
-  "Properopolis": {
+  "HUM": {
     "X": -36,
     "Z": -36,
-    "X Connector": "",
+    "X Connector": -36,
     "Z Connector": "",
     "Political Entity": "Sylvian Union",
     "National": 1,
