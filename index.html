@@ -138,6 +138,15 @@
 
           map.panTo([0, 0]);
 
+          var c = new L.Control.Coordinates({
+            position: 'topleft'
+          });
+          c.addTo(map);
+
+          map.on('mousemove', function(e) {
+          	c.setCoordinates(e);
+          });
+
           /* Create hover tooltips */
 
           $(".circle").tooltip({
