@@ -16,9 +16,9 @@
   },
   "Archives of Montrose": {
     "X": -76,
-    "Z": -78,
+    "Z": -83,
     "X Connector": "",
-    "Z Connector": "",
+    "Z Connector": -74,
     "Political Entity": "Sylvian Union",
     "National": "",
     "IBWH": 1,
@@ -175,14 +175,14 @@
     "End": "",
     "Hide": "",
     "Warning": "This portal leads to an active warzone.",
-    "Description": "Cascadia (formally known as Republika Kaskadija) is a small Jugoslavijan state in the birch forests of the West. Originally founded as a nation by Chipt, it adopted an internationally focused mindset, aiming to leave a positive mark on the world through international polls and restoration projects. It is home to a variety of architecture inspired by cultures across the world, such as the Yanshu Monument, as well as the world’s only ink farm.",
+    "Description": "Cascadia (formally known as Republika Kaskadija) is a small Jugoslavijan state in the birch forests of the West. Originally founded as a nation by Chipt, it adopted an internationally focused mindset, aiming to leave a positive mahttps://csvjson.com/csv2jsonrk on the world through international polls and restoration projects. It is home to a variety of architecture inspired by cultures across the world, such as the Yanshu Monument, as well as the world’s only ink farm.",
     "Image URL": "images/cascadia.png",
     "Wiki URL": "https://lgsmc.fandom.com/wiki/Cascadia"
   },
   "Castle Montrose": {
     "X": -63,
     "Z": -74,
-    "X Connector": -100,
+    "X Connector": -66,
     "Z Connector": "",
     "Political Entity": "Sylvian Union",
     "National": 1,
@@ -229,7 +229,7 @@
     "Z": -74,
     "X Connector": "",
     "Z Connector": "",
-    "Political Entity": "",
+    "Political Entity": "Championis",
     "National": "",
     "IBWH": "",
     "End": "",
@@ -360,10 +360,10 @@
     "Wiki URL": "https://lgsmc.fandom.com/wiki/Kingdom_of_Vailan"
   },
   "Fort Graham Area": {
-    "X": -82,
+    "X": -78,
     "Z": -91,
-    "X Connector": "",
-    "Z Connector": -74,
+    "X Connector": -82,
+    "Z Connector": "",
     "Political Entity": "Sylvian Union",
     "National": "",
     "IBWH": 1,
@@ -602,7 +602,7 @@
   "Iris": {
     "X": -96,
     "Z": -53,
-    "X Connector": -96,
+    "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Sylvian Union",
     "National": "",
@@ -720,10 +720,10 @@
     "Wiki URL": ""
   },
   "Montrosian Government Offices": {
-    "X": -66,
+    "X": -69,
     "Z": -53,
-    "X Connector": "",
-    "Z Connector": -74,
+    "X Connector": -66,
+    "Z Connector": "",
     "Political Entity": "Sylvian Union",
     "National": "",
     "IBWH": "",
@@ -779,12 +779,12 @@
     "Image URL": "",
     "Wiki URL": ""
   },
-  "North UAC": {
+  "Black Hand Museum": {
     "X": 224,
     "Z": -356,
     "X Connector": "",
     "Z Connector": "",
-    "Political Entity": "Union of Allied Countries",
+    "Political Entity": "Jugoslavija",
     "National": "",
     "IBWH": "",
     "End": "",
@@ -842,7 +842,7 @@
   "HUM": {
     "X": -36,
     "Z": -36,
-    "X Connector": -36,
+    "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Sylvian Union",
     "National": 1,
@@ -855,9 +855,9 @@
     "Wiki URL": "https://lgsmc.fandom.com/wiki/HUM"
   },
   "Prosperity League HQ": {
-    "X": -64,
+    "X": -63,
     "Z": -25,
-    "X Connector": "",
+    "X Connector": -66,
     "Z Connector": "",
     "Political Entity": "Sylvian Union",
     "National": "",
@@ -1049,7 +1049,7 @@
     "Image URL": "",
     "Wiki URL": "https://lgsmc.fandom.com/wiki/Schevakia"
   },
-  "South UAC": {
+  "UAC": {
     "X": 218,
     "Z": -253,
     "X Connector": "",
@@ -1423,5 +1423,20 @@
     "Description": "",
     "Image URL": "",
     "Wiki URL": "https://lgsmc.fandom.com/wiki/Wohlstand"
+  },
+  "Montrose Horse Breeding Stables": {
+    "X": -77,
+    "Z": -46,
+    "X Connector": "",
+    "Z Connector": -43,
+    "Political Entity": "Sylvian Union",
+    "National": "",
+    "IBWH": "",
+    "End": "",
+    "Hide": "",
+    "Warning": "",
+    "Description": "",
+    "Image URL": "",
+    "Wiki URL": ""
   }
 }
