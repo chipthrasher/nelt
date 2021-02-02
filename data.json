@@ -87,7 +87,7 @@
     "Warning": "",
     "Description": "",
     "Image URL": "",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Banapo"
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Banapo"
   },
   "Bialya": {
     "X": 248,
@@ -132,7 +132,7 @@
     "Warning": "",
     "Description": "",
     "Image URL": "",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Balkan_Troubles#Black_Hand_Museum"
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Balkan_Troubles#Black_Hand_Museum"
   },
   "Botania": {
     "X": -190,
@@ -177,7 +177,7 @@
     "Warning": "",
     "Description": "Cascadia (formally known as Republika Kaskadija) is a small Jugoslavijan state in the birch forests of the West. Originally founded as a nation by Chipt, it adopted an internationally focused mindset, aiming to leave a positive mark on the world through international polls and restoration projects. It is home to a variety of architecture inspired by cultures across the world, such as the Yanshu Monument, as well as the world’s only ink farm.",
     "Image URL": "images/cascadia.png",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Cascadia"
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Cascadia"
   },
   "Castle Montrose": {
     "X": -63,
@@ -192,7 +192,7 @@
     "Warning": "",
     "Description": "Castle Montrose was the first building constructed in the Commonwealth of Montrose. It stands today as a historical landmark, providing Montrosian citizens with public facilities and storage for community resources.",
     "Image URL": "images/castlemontrose.png",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Montrose"
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Montrose"
   },
   "Cattlehead": {
     "X": 44,
@@ -207,7 +207,7 @@
     "Warning": "",
     "Description": "",
     "Image URL": "",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Cattlehead"
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Cattlehead"
   },
   "Champignon": {
     "X": 85,
@@ -222,7 +222,7 @@
     "Warning": "",
     "Description": "",
     "Image URL": "",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Champignon"
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Champignon"
   },
   "Championis": {
     "X": 178,
@@ -269,20 +269,20 @@
     "Image URL": "",
     "Wiki URL": ""
   },
-  "Democratic Republic of Roguiguez": {
-    "X": 347,
-    "Z": -115,
+  "Dwarf Island": {
+    "X": 3,
+    "Z": 36,
     "X Connector": "",
     "Z Connector": "",
-    "Political Entity": "Defunct",
-    "National": "",
+    "Political Entity": "Kingdom of Fianna",
+    "National": 1,
     "IBWH": "",
     "End": "",
     "Hide": "",
     "Warning": "",
-    "Description": "",
-    "Image URL": "",
-    "Wiki URL": ""
+    "Description": "The Kingdom of Fianna is the world's only fraternal monarchy, where all citizens are kings. It is known for its military prowess, lavish architecture, and central location on Dwarf Island.",
+    "Image URL": "images/fianna.png",
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Fianna"
   },
   "East Goomtown": {
     "X": 71,
@@ -297,7 +297,7 @@
     "Warning": "",
     "Description": "",
     "Image URL": "",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Goomtown"
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Goomtown"
   },
   "East Taiga": {
     "X": 193,
@@ -312,7 +312,7 @@
     "Warning": "",
     "Description": "",
     "Image URL": "",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Tautona"
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Tautona"
   },
   "Emerald Enclave": {
     "X": -357,
@@ -342,7 +342,7 @@
     "Warning": "",
     "Description": "",
     "Image URL": "",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Sylvian_Union"
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Sylvian_Union"
   },
   "Falcon's Nest": {
     "X": 56,
@@ -359,21 +359,6 @@
     "Image URL": "",
     "Wiki URL": ""
   },
-  "Fianna": {
-    "X": 3,
-    "Z": 36,
-    "X Connector": "",
-    "Z Connector": "",
-    "Political Entity": "Kingdom of Fianna",
-    "National": 1,
-    "IBWH": "",
-    "End": "",
-    "Hide": "",
-    "Warning": "",
-    "Description": "The Kingdom of Fianna is the world's only fraternal monarchy, where all citizens are kings. It is known for its military prowess, lavish architecture, and central location on Dwarf Island.",
-    "Image URL": "images/fianna.png",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Fianna"
-  },
   "Fjall": {
     "X": -120,
     "Z": -169,
@@ -387,7 +372,7 @@
     "Warning": "",
     "Description": "",
     "Image URL": "images/vailan.png",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Kingdom_of_Vailan"
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Kingdom_of_Vailan"
   },
   "Former Caracalistan": {
     "X": -366,
@@ -402,7 +387,7 @@
     "Warning": "",
     "Description": "The wasteland remains of the once religiously prominent nation of Caracalistan are war-torn and lifeless.",
     "Image URL": "",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Ozai"
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Ozai"
   },
   "Fort Graham Area": {
     "X": -78,
@@ -417,7 +402,7 @@
     "Warning": "",
     "Description": "",
     "Image URL": "images/fortgraham.png",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Fort_Graham"
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Fort_Graham"
   },
   "Fort Skardaz / Southern Isles": {
     "X": -217,
@@ -462,7 +447,7 @@
     "Warning": "",
     "Description": "",
     "Image URL": "",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Nyania"
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Nyania"
   },
   "Glavnaya": {
     "X": -240,
@@ -477,7 +462,7 @@
     "Warning": "",
     "Description": "",
     "Image URL": "",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Vanskovich"
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Vanskovich"
   },
   "Global Crossroad, Yanshu Dynasty": {
     "X": 240,
@@ -492,7 +477,7 @@
     "Warning": "",
     "Description": "",
     "Image URL": "",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Yanshu_Dynasty"
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Yanshu_Dynasty"
   },
   "GoatWear Island": {
     "X": -214,
@@ -507,7 +492,7 @@
     "Warning": "",
     "Description": "",
     "Image URL": "",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/HUM#Territories"
+    "Wiki URL": "https://wiki.elgeis.com/wiki/HUM#Territories"
   },
   "Goomlandian End Portal": {
     "X": 241,
@@ -537,7 +522,7 @@
     "Warning": "",
     "Description": "Goomtown is the capital city of Goomlandia, as well as the largest and most populated city in the world. It is a thriving cultural center, featuring the Goomlandian Capitol building (with its signature diamond dome) and the public Goomtown Library.",
     "Image URL": "images/goomtown.png",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Goomtown"
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Goomtown"
   },
   "Groogelandia": {
     "X": 290,
@@ -563,7 +548,7 @@
     "National": 1,
     "IBWH": "",
     "End": "",
-    "Hide": "",
+    "Hide": 1,
     "Warning": "",
     "Description": "",
     "Image URL": "",
@@ -582,7 +567,7 @@
     "Warning": "",
     "Description": "",
     "Image URL": "",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/HUM"
+    "Wiki URL": "https://wiki.elgeis.com/wiki/HUM"
   },
   "Hunger Games Island": {
     "X": -58,
@@ -593,7 +578,7 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Hide": 1,
+    "Hide": "",
     "Warning": "",
     "Description": "",
     "Image URL": "",
@@ -627,7 +612,7 @@
     "Warning": "",
     "Description": "",
     "Image URL": "",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Icedale_Guild"
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Icedale_Guild"
   },
   "Ilyrdom": {
     "X": 6,
@@ -672,7 +657,7 @@
     "Warning": "",
     "Description": "",
     "Image URL": "",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Iris"
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Iris"
   },
   "Iskallia": {
     "X": 123,
@@ -699,6 +684,21 @@
     "IBWH": "",
     "End": "",
     "Hide": 1,
+    "Warning": "",
+    "Description": "",
+    "Image URL": "",
+    "Wiki URL": ""
+  },
+  "Joe LaPorte City": {
+    "X": 35,
+    "Z": 73,
+    "X Connector": "",
+    "Z Connector": "",
+    "Political Entity": "Kingdom of Fianna",
+    "National": "",
+    "IBWH": "",
+    "End": "",
+    "Hide": "",
     "Warning": "",
     "Description": "",
     "Image URL": "",
@@ -732,7 +732,22 @@
     "Warning": "",
     "Description": "",
     "Image URL": "",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Krabbatoah"
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Krabbatoah"
+  },
+  "Krosnox": {
+    "X": 313,
+    "Z": 30,
+    "X Connector": "",
+    "Z Connector": "",
+    "Political Entity": "Goomlandia",
+    "National": "",
+    "IBWH": "",
+    "End": "",
+    "Hide": "",
+    "Warning": "",
+    "Description": "",
+    "Image URL": "",
+    "Wiki URL": ""
   },
   "Lazarica": {
     "X": 156,
@@ -741,6 +756,21 @@
     "Z Connector": "",
     "Political Entity": "Jugoslavija",
     "National": 1,
+    "IBWH": "",
+    "End": "",
+    "Hide": "",
+    "Warning": "",
+    "Description": "",
+    "Image URL": "",
+    "Wiki URL": ""
+  },
+  "LoFren": {
+    "X": 347,
+    "Z": -115,
+    "X Connector": "",
+    "Z Connector": "",
+    "Political Entity": "LoFren",
+    "National": "",
     "IBWH": "",
     "End": "",
     "Hide": "",
@@ -852,7 +882,7 @@
     "Warning": "",
     "Description": "",
     "Image URL": "images/mpe.png",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Montrosian_Production_Emporium"
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Montrosian_Production_Emporium"
   },
   "New Toeland": {
     "X": 102,
@@ -882,7 +912,7 @@
     "Warning": "",
     "Description": "",
     "Image URL": "",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Northbay"
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Northbay"
   },
   "Novosibirsk": {
     "X": -149,
@@ -927,7 +957,7 @@
     "Warning": "",
     "Description": "",
     "Image URL": "",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Prosperity_League"
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Prosperity_League"
   },
   "Rapture": {
     "X": -132,
@@ -942,7 +972,7 @@
     "Warning": "",
     "Description": "",
     "Image URL": "",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Rapture"
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Rapture"
   },
   "Rhett Island": {
     "X": -37,
@@ -957,7 +987,7 @@
     "Warning": "",
     "Description": "",
     "Image URL": "",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Rhett"
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Rhett"
   },
   "Rhett Tropical": {
     "X": -123,
@@ -972,7 +1002,7 @@
     "Warning": "",
     "Description": "",
     "Image URL": "",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Rhett"
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Rhett"
   },
   "Richard": {
     "X": 105,
@@ -987,7 +1017,7 @@
     "Warning": "",
     "Description": "",
     "Image URL": "",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Richard"
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Richard"
   },
   "Sable-Rouge": {
     "X": 100,
@@ -1002,7 +1032,7 @@
     "Warning": "",
     "Description": "",
     "Image URL": "",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Sable-Rouge"
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Sable-Rouge"
   },
   "Schenektengrad": {
     "X": 56,
@@ -1017,7 +1047,7 @@
     "Warning": "",
     "Description": "Schevakia is a southern empire, risen from the ashes of the former country's civil war and splinter state era. It is led by its glorious emperor, Mr_Waffles17, on his throne in the shining capital city of Schenektengrad. Located on Tierra Del Fuego, the empire is governed by four lords, including Emperor and Lord Mr_Waffles17, catcherzw, The_Brunt, and thepolg; the four governing these subsequent states: Melaconia, Jacksonia, Ambrosia, and Polgolas.",
     "Image URL": "",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Schevakia"
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Schevakia"
   },
   "Shawtyville": {
     "X": 37,
@@ -1032,7 +1062,7 @@
     "Warning": "",
     "Description": "",
     "Image URL": "",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Voidnest#Landmarks"
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Voidnest#Landmarks"
   },
   "Shipyard": {
     "X": -75,
@@ -1051,14 +1081,14 @@
   },
   "Soleil Islands": {
     "X": 143,
-    "Z": 57,
+    "Z": 56,
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Goomlandia",
     "National": "",
     "IBWH": "",
     "End": "",
-    "Hide": 1,
+    "Hide": "",
     "Warning": "",
     "Description": "",
     "Image URL": "",
@@ -1077,7 +1107,7 @@
     "Warning": "",
     "Description": "",
     "Image URL": "",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Tautona"
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Tautona"
   },
   "South Farnough": {
     "X": 317,
@@ -1107,7 +1137,7 @@
     "Warning": "",
     "Description": "",
     "Image URL": "",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Schevakia"
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Schevakia"
   },
   "Spawn": {
     "X": -30,
@@ -1122,7 +1152,7 @@
     "Warning": "",
     "Description": "",
     "Image URL": "",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Overworld"
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Overworld"
   },
   "Spruceville": {
     "X": -112,
@@ -1137,7 +1167,7 @@
     "Warning": "",
     "Description": "",
     "Image URL": "images/spruceville.png",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Montrose#Notable_Locations"
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Montrose#Notable_Locations"
   },
   "Squarenough": {
     "X": 135,
@@ -1182,7 +1212,7 @@
     "Warning": "",
     "Description": "",
     "Image URL": "",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Stemtown"
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Stemtown"
   },
   "Stradova": {
     "X": 94,
@@ -1206,6 +1236,21 @@
     "Z Connector": "",
     "Political Entity": "Commonwealth of Montrose",
     "National": "",
+    "IBWH": "",
+    "End": "",
+    "Hide": "",
+    "Warning": "",
+    "Description": "",
+    "Image URL": "",
+    "Wiki URL": ""
+  },
+  "Sylthiem": {
+    "X": -364,
+    "Z": -141,
+    "X Connector": "",
+    "Z Connector": "",
+    "Political Entity": "Sylthiem",
+    "National": 1,
     "IBWH": "",
     "End": "",
     "Hide": "",
@@ -1242,7 +1287,7 @@
     "Warning": "",
     "Description": "",
     "Image URL": "",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Tautona"
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Tautona"
   },
   "the grey sanctum": {
     "X": 44,
@@ -1257,7 +1302,7 @@
     "Warning": "",
     "Description": "",
     "Image URL": "",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Voidnest#Landmarks"
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Voidnest#Landmarks"
   },
   "toeGANG": {
     "X": 25,
@@ -1272,7 +1317,7 @@
     "Warning": "",
     "Description": "",
     "Image URL": "",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/ToeGANG"
+    "Wiki URL": "https://wiki.elgeis.com/wiki/ToeGANG"
   },
   "Tower of Babel": {
     "X": 96,
@@ -1287,7 +1332,7 @@
     "Warning": "",
     "Description": "",
     "Image URL": "",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Kingdom_of_Vailan#Further_expansion.2C_Alliances._.286.2F26.2F2019-7.2F11.2F2019.29"
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Kingdom_of_Vailan#Further_expansion.2C_Alliances._.286.2F26.2F2019-7.2F11.2F2019.29"
   },
   "Tsarevets": {
     "X": 97,
@@ -1302,7 +1347,7 @@
     "Warning": "",
     "Description": "",
     "Image URL": "",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Compendium_of_Server_History_(Text)#Tsarevets"
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Compendium_of_Server_History_(Text)#Tsarevets"
   },
   "Twiceland": {
     "X": -286,
@@ -1332,7 +1377,7 @@
     "Warning": "",
     "Description": "",
     "Image URL": "",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Union_of_Allied_Countries_(UAC)"
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Union_of_Allied_Countries_(UAC)"
   },
   "Vastilis": {
     "X": -307,
@@ -1392,22 +1437,7 @@
     "Warning": "",
     "Description": "",
     "Image URL": "",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Wohlstand#.22Sj.C3.B3_av_Wohlstand.22"
-  },
-  "Vilnius": {
-    "X": 313,
-    "Z": 30,
-    "X Connector": "",
-    "Z Connector": "",
-    "Political Entity": "Goomlandia",
-    "National": "",
-    "IBWH": "",
-    "End": "",
-    "Hide": "",
-    "Warning": "",
-    "Description": "",
-    "Image URL": "",
-    "Wiki URL": ""
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Wohlstand#.22Sj.C3.B3_av_Wohlstand.22"
   },
   "Vladivostok": {
     "X": 142,
@@ -1422,7 +1452,7 @@
     "Warning": "",
     "Description": "",
     "Image URL": "images/vostok.png",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Vostok"
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Vostok"
   },
   "Voidmouth": {
     "X": 52,
@@ -1437,7 +1467,7 @@
     "Warning": "",
     "Description": "",
     "Image URL": "",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Voidnest#Landmarks"
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Voidnest#Landmarks"
   },
   "Western End Portal": {
     "X": -111,
@@ -1463,11 +1493,11 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Hide": "",
+    "Hide": 1,
     "Warning": "",
     "Description": "",
     "Image URL": "images/winterfell.png",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Winterfell"
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Winterfell"
   },
   "Wohlstand": {
     "X": -97,
@@ -1482,21 +1512,6 @@
     "Warning": "",
     "Description": "",
     "Image URL": "",
-    "Wiki URL": "https://lgsmc.fandom.com/wiki/Wohlstand"
-  },
-  "Joe LaPorte City": {
-    "X": 35,
-    "Z": 73,
-    "X Connector": "",
-    "Z Connector": "",
-    "Political Entity": "Kingdom of Fianna",
-    "National": "",
-    "IBWH": "",
-    "End": "",
-    "Hide": "",
-    "Warning": "",
-    "Description": "",
-    "Image URL": "",
-    "Wiki URL": ""
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Wohlstand"
   }
 }
