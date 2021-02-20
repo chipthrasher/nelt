@@ -58,6 +58,8 @@ L.Control.Coordinates = L.Control.extend({
 	{
 		this._lng = L.DomUtil.create('span', 'leaflet-control-coordinates-lng' , container),
     this._lat = L.DomUtil.create('span', 'leaflet-control-coordinates-lat' , container);
+    this._nethlng = L.DomUtil.create('span', 'leaflet-control-coordinates-nethlng' , container),
+    this._nethlat = L.DomUtil.create('span', 'leaflet-control-coordinates-nethlat' , container);
 
 		return container;
 	},
@@ -73,11 +75,11 @@ L.Control.Coordinates = L.Control.extend({
 		}
 
 		if (obj.latlng) {
-      L.DomUtil.get(this._lng).innerHTML = '<strong>Overworld: </strong><br>' + (obj.latlng.lng.toFixed(this.options.precision) * 1).toString();
-      L.DomUtil.get(this._lat).innerHTML = ', ' + (obj.latlng.lat.toFixed(this.options.precision) * -1).toString();
+      L.DomUtil.get(this._lng).innerHTML = '<strong>Overworld: </strong><br>' + (obj.latlng.lng * 1).toFixed(0).toString();
+      L.DomUtil.get(this._lat).innerHTML = ', ' + (obj.latlng.lat * -1).toFixed(0).toString();
 
-      // L.DomUtil.get(this._nethlat).innerHTML = '<br><strong>' + this.options.longitudeText + ':</strong> ' + (obj.latlng.lat.toFixed(this.options.precision)/8).toString();
-      // L.DomUtil.get(this._nethlng).innerHTML = '<br><strong>' + this.options.latitudeText + ':</strong> ' + (obj.latlng.lng.toFixed(this.options.precision)/-8).toString();
+      L.DomUtil.get(this._nethlng).innerHTML = '<br><strong>Nether: </strong><br>' + (obj.latlng.lng / 8).toFixed(0).toString();
+      L.DomUtil.get(this._nethlat).innerHTML = ', ' + (obj.latlng.lat / -8).toFixed(0).toString();
 		}
 	}
 });
