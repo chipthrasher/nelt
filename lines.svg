@@ -1,5 +1,6 @@
 <svg width="750" height="750" viewBox="0 0 750 750" fill="none" xmlns="http://www.w3.org/2000/svg">
 <line x1="174.5" y1="750" x2="174.5" stroke="black"/>
+<path d="M74.5 375L74.5 275" stroke="black"/>
 <line y1="-0.5" x2="750" y2="-0.5" transform="matrix(0 -1 1 -4.57954e-06 275 750)" stroke="black"/>
 <line y1="-0.5" x2="750" y2="-0.5" transform="matrix(0 -1 1 -4.57954e-06 375 750)" stroke="black"/>
 <line y1="-0.5" x2="750" y2="-0.5" transform="matrix(0 -1 1 -4.57954e-06 475 750)" stroke="black"/>
@@ -35,8 +36,8 @@
 <line x1="475" y1="340.5" x2="375" y2="340.5" stroke="black"/>
 <line x1="309.5" y1="300.997" x2="309.5" y2="375.003" stroke="black"/>
 <line x1="293" y1="301" x2="293" y2="274" stroke="black"/>
-<line x1="274.998" y1="301" x2="310.002" y2="301" stroke="black"/>
-<line x1="274" y1="331.5" x2="309" y2="331.5" stroke="black"/>
+<line x1="227.999" y1="300.5" x2="310.003" y2="300.5" stroke="black"/>
+<line x1="274" y1="332" x2="309" y2="332" stroke="black"/>
 <line x1="420.5" y1="374" x2="420.5" y2="274" stroke="black"/>
 <line x1="538.5" y1="675" x2="538.5" y2="575" stroke="black"/>
 </svg>
