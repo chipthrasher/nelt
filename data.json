@@ -26,7 +26,7 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/archivesofmontrose.png",
     "Wiki URL": ""
   },
   "Atlantis": {
@@ -41,7 +41,7 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/atlantis.png",
     "Wiki URL": ""
   },
   "Azrainir": {
@@ -71,7 +71,7 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/baguette.png",
     "Wiki URL": ""
   },
   "Banapo": {
@@ -86,7 +86,7 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/banapo.png",
     "Wiki URL": "https://wiki.elgeis.com/wiki/Banapo"
   },
   "Bialya": {
@@ -116,7 +116,7 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/blackhandmuseum.png",
     "Wiki URL": "https://wiki.elgeis.com/wiki/Balkan_Troubles#Black_Hand_Museum"
   },
   "Botania": {
@@ -149,6 +149,21 @@
     "Image URL": "images/bowillashouse.png",
     "Wiki URL": ""
   },
+  "Brave Island": {
+    "X": -58,
+    "Z": 182,
+    "X Connector": "",
+    "Z Connector": "",
+    "Political Entity": "Schevakian Empire",
+    "National": "",
+    "IBWH": "",
+    "End": "",
+    "Hide": "",
+    "Warning": "",
+    "Description": "",
+    "Image URL": "images/braveisland.png",
+    "Wiki URL": ""
+  },
   "Burger": {
     "X": -144,
     "Z": -61,
@@ -161,7 +176,7 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/burger.png",
     "Wiki URL": ""
   },
   "Cascadia": {
@@ -206,7 +221,7 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/cattlehead.png",
     "Wiki URL": "https://wiki.elgeis.com/wiki/Cattlehead"
   },
   "Champignon": {
@@ -278,7 +293,7 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Hide": "",
+    "Hide": 1,
     "Warning": "",
     "Description": "",
     "Image URL": "",
@@ -296,7 +311,7 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/creamyhoneynutsestate.png",
     "Wiki URL": ""
   },
   "Dwarf Island": {
@@ -356,7 +371,7 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/easttaiga.png",
     "Wiki URL": "https://wiki.elgeis.com/wiki/Tautona"
   },
   "Emerald Enclave": {
@@ -371,7 +386,7 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/emeraldenclave.png",
     "Wiki URL": ""
   },
   "Etel Metsia": {
@@ -386,7 +401,7 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/etelmetsia.png",
     "Wiki URL": "https://wiki.elgeis.com/wiki/Sylvian_Union"
   },
   "Falcon's Nest": {
@@ -398,7 +413,7 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Hide": "",
+    "Hide": 1,
     "Warning": "",
     "Description": "The inaugural location for the ArenaFest games, the Falcon's Nest Arena is grand and powerful, featuring a luxurious courtyard and ample seating.",
     "Image URL": "",
@@ -416,7 +431,7 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/fiannamobgrinder.png",
     "Wiki URL": ""
   },
   "Fjall": {
@@ -491,7 +506,7 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/fortskardaz.png",
     "Wiki URL": ""
   },
   "Gabeford": {
@@ -536,7 +551,7 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/glavnaya.png",
     "Wiki URL": "https://wiki.elgeis.com/wiki/Vanskovich"
   },
   "Global Crossroad, Yanshu Dynasty": {
@@ -566,7 +581,7 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/goatwear.png",
     "Wiki URL": "https://wiki.elgeis.com/wiki/HUM#Territories"
   },
   "Goomlandian End Portal": {
@@ -581,7 +596,7 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/goomlandianendportal.png",
     "Wiki URL": ""
   },
   "Goomtown": {
@@ -611,7 +626,7 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/groogelandia.png",
     "Wiki URL": ""
   },
   "HomeofBrave": {
@@ -641,7 +656,7 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/hum.png",
     "Wiki URL": "https://wiki.elgeis.com/wiki/HUM"
   },
   "HUM Pillager Farm": {
@@ -659,21 +674,6 @@
     "Image URL": "",
     "Wiki URL": ""
   },
-  "Hunger Games Island": {
-    "X": -58,
-    "Z": 182,
-    "X Connector": "",
-    "Z Connector": "",
-    "Political Entity": "Schevakian Empire",
-    "National": "",
-    "IBWH": "",
-    "End": "",
-    "Hide": "",
-    "Warning": "",
-    "Description": "",
-    "Image URL": "",
-    "Wiki URL": ""
-  },
   "Hybrasil": {
     "X": -231,
     "Z": 348,
@@ -686,7 +686,7 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/hybrasil.png",
     "Wiki URL": ""
   },
   "Icedale Tavern": {
@@ -701,7 +701,7 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/icedaletavern.png",
     "Wiki URL": "https://wiki.elgeis.com/wiki/Icedale_Guild"
   },
   "Ilyrdom": {
@@ -731,7 +731,7 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/inquisition.png",
     "Wiki URL": ""
   },
   "Iris": {
@@ -746,7 +746,7 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/iris.png",
     "Wiki URL": "https://wiki.elgeis.com/wiki/Iris"
   },
   "Iskallia": {
@@ -778,6 +778,21 @@
     "Description": "",
     "Image URL": "",
     "Wiki URL": ""
+  },
+  "Jarn Saari": {
+    "X": -75,
+    "Z": 280,
+    "X Connector": "",
+    "Z Connector": "",
+    "Political Entity": "Commonwealth of Montrose",
+    "National": "",
+    "IBWH": "",
+    "End": "",
+    "Hide": "",
+    "Warning": "",
+    "Description": "",
+    "Image URL": "images/jarnsaari.png",
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Wohlstand"
   },
   "Joe LaPorte City": {
     "X": 35,
@@ -836,7 +851,7 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/krosnox.png",
     "Wiki URL": ""
   },
   "Lazarica": {
@@ -866,7 +881,7 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/lofren.png",
     "Wiki URL": ""
   },
   "MBL & MVPC": {
@@ -911,7 +926,7 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/mbs.png",
     "Wiki URL": ""
   },
   "Montrose Ice Farm": {
@@ -926,7 +941,7 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/mif.png",
     "Wiki URL": ""
   },
   "Montrosian Government Offices": {
@@ -941,7 +956,7 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/mgo.png",
     "Wiki URL": ""
   },
   "Montrosian Prismarine Farm": {
@@ -956,7 +971,7 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/mpf.png",
     "Wiki URL": ""
   },
   "Montrosian Production Emporium": {
@@ -986,7 +1001,7 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/newicedale.png",
     "Wiki URL": ""
   },
   "New Toeland": {
@@ -1046,23 +1061,8 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/oldcascadia.png",
     "Wiki URL": ""
-  },
-  "Old Wohlstand": {
-    "X": -97,
-    "Z": 290,
-    "X Connector": "",
-    "Z Connector": "",
-    "Political Entity": "Commonwealth of Montrose",
-    "National": "",
-    "IBWH": "",
-    "End": "",
-    "Hide": "",
-    "Warning": "",
-    "Description": "",
-    "Image URL": "",
-    "Wiki URL": "https://wiki.elgeis.com/wiki/Wohlstand"
   },
   "Old Wohlstand Shipyard": {
     "X": -75,
@@ -1079,7 +1079,7 @@
     "Image URL": "",
     "Wiki URL": ""
   },
-  "Prosperity League HQ": {
+  "PLHQ Hotel": {
     "X": -63,
     "Z": -25,
     "X Connector": -66,
@@ -1091,7 +1091,7 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/plhq.png",
     "Wiki URL": "https://wiki.elgeis.com/wiki/Prosperity_League"
   },
   "Rapture": {
@@ -1106,7 +1106,7 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/rapture.png",
     "Wiki URL": "https://wiki.elgeis.com/wiki/Rapture"
   },
   "Rapture Prismarine Farm": {
@@ -1121,7 +1121,7 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/raptureprismarine.png",
     "Wiki URL": ""
   },
   "Rhett Island": {
@@ -1136,7 +1136,7 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/rhett.png",
     "Wiki URL": "https://wiki.elgeis.com/wiki/Rhett"
   },
   "Rhett Tropical": {
@@ -1148,7 +1148,7 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Hide": "",
+    "Hide": 1,
     "Warning": "",
     "Description": "",
     "Image URL": "",
@@ -1211,7 +1211,7 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/shawtyville.png",
     "Wiki URL": "https://wiki.elgeis.com/wiki/Voidnest#Landmarks"
   },
   "Soleii Islands": {
@@ -1256,7 +1256,7 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/farnough.png",
     "Wiki URL": ""
   },
   "South Polgolas": {
@@ -1271,7 +1271,7 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/southpolgolas.png",
     "Wiki URL": "https://wiki.elgeis.com/wiki/Schevakia"
   },
   "Spawn": {
@@ -1286,7 +1286,7 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/spawn.png",
     "Wiki URL": "https://wiki.elgeis.com/wiki/Overworld"
   },
   "Spruceville": {
@@ -1331,7 +1331,7 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/squishmellow.png",
     "Wiki URL": ""
   },
   "Stemtown": {
@@ -1376,7 +1376,7 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/sunflamesestate.png",
     "Wiki URL": ""
   },
   "Syltheim": {
@@ -1391,7 +1391,7 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/syltheim.png",
     "Wiki URL": ""
   },
   "Tautona": {
@@ -1421,7 +1421,7 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/thegreysanctum.png",
     "Wiki URL": "https://wiki.elgeis.com/wiki/Voidnest#Landmarks"
   },
   "Toe Gang": {
@@ -1451,7 +1451,7 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/towerofbabel.png",
     "Wiki URL": "https://wiki.elgeis.com/wiki/Kingdom_of_Vailan#Further_expansion.2C_Alliances._.286.2F26.2F2019-7.2F11.2F2019.29"
   },
   "Tsarevets": {
@@ -1481,7 +1481,7 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/twiceland.png",
     "Wiki URL": ""
   },
   "UAC": {
@@ -1586,7 +1586,7 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/voidmouth.png",
     "Wiki URL": "https://wiki.elgeis.com/wiki/Voidnest#Landmarks"
   },
   "Western End Portal": {
@@ -1601,7 +1601,7 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/westendportal.png",
     "Wiki URL": ""
   },
   "Winterfell": {
@@ -1631,7 +1631,7 @@
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
+    "Image URL": "images/wooklandia.png",
     "Wiki URL": ""
   }
 }
