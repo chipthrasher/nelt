@@ -40,7 +40,7 @@
     "End": "",
     "Hide": "",
     "Warning": "",
-    "Description": "",
+    "Description": "Atlantis is the unfinished underwater city created by the Vailic MiksaSerbia.",
     "Image URL": "images/atlantis.png",
     "Wiki URL": ""
   },
@@ -115,7 +115,7 @@
     "End": "",
     "Hide": "",
     "Warning": "",
-    "Description": "",
+    "Description": "An unfinished project of Kaleidoeyes127, the Black Hand Museum will be in the reclaimed bunker of former Krvija that once housed the infamous terrorist organization.",
     "Image URL": "images/blackhandmuseum.png",
     "Wiki URL": "https://wiki.elgeis.com/wiki/Balkan_Troubles#Black_Hand_Museum"
   },
@@ -160,7 +160,7 @@
     "End": "",
     "Hide": "",
     "Warning": "",
-    "Description": "",
+    "Description": "Formerly known as \"Hunger Games Island\", this island housed an international PVP project featuring various architecture styles which ultimately never came to fruition.",
     "Image URL": "images/braveisland.png",
     "Wiki URL": ""
   },
@@ -175,7 +175,7 @@
     "End": "",
     "Hide": "",
     "Warning": "",
-    "Description": "",
+    "Description": "Originally built by olimcpants, Burger is a historically iconic Montrosian build, and is currently inhabited by Montrosian citizen Endossi.",
     "Image URL": "images/burger.png",
     "Wiki URL": ""
   },
@@ -355,7 +355,7 @@
     "End": "",
     "Hide": "",
     "Warning": "",
-    "Description": "",
+    "Description": "East Syltheim is home to the famous Tea Garden, as well as many residences, government buildings, and mountainous forests.",
     "Image URL": "images/eastsyltheim.png",
     "Wiki URL": ""
   },
@@ -694,7 +694,7 @@
     "Z": 117,
     "X Connector": "",
     "Z Connector": "",
-    "Political Entity": "HUM Federated Merchant Republic",
+    "Political Entity": "Rhett",
     "National": "",
     "IBWH": 1,
     "End": "",
@@ -1390,7 +1390,7 @@
     "End": "",
     "Hide": "",
     "Warning": "",
-    "Description": "",
+    "Description": "Syltheim (meaning \"Silt Home\" in Old Norse) is a Northwestern nation located between Twiceland and Kaab. It is a democracy with monthly elections to determine a Chief Diplomat (head of state), meaning that any citizen of Syltheim can potentially lead the country (provided they are convincing enough). Syltheim has values of duty, honour, camaraderie, hospitality, and strength (not to mention being able to party like there is no tomorrow).",
     "Image URL": "images/syltheim.png",
     "Wiki URL": ""
   },
@@ -1499,7 +1499,7 @@
     "Image URL": "images/uac.png",
     "Wiki URL": "https://wiki.elgeis.com/wiki/Union_of_Allied_Countries_(UAC)"
   },
-  "Vastilis": {
+  "Vastilis Agricultural Area": {
     "X": -307,
     "Z": 96,
     "X Connector": "",
@@ -1632,6 +1632,21 @@
     "Warning": "",
     "Description": "",
     "Image URL": "images/wooklandia.png",
+    "Wiki URL": ""
+  },
+  "Vastilis Capital": {
+    "X": -357,
+    "Z": 136,
+    "X Connector": "",
+    "Z Connector": "",
+    "Political Entity": "Vastilis",
+    "National": "",
+    "IBWH": "",
+    "End": "",
+    "Hide": "",
+    "Warning": "",
+    "Description": "",
+    "Image URL": "",
     "Wiki URL": ""
   }
 }
