@@ -39,5 +39,6 @@
 <line x1="227.999" y1="300.5" x2="310.003" y2="300.5" stroke="black"/>
 <line x1="274" y1="332" x2="309" y2="332" stroke="black"/>
 <line x1="420.5" y1="374" x2="420.5" y2="274" stroke="black"/>
+<line x1="440.5" y1="375" x2="440.5" y2="341" stroke="black"/>
 <line x1="538.5" y1="675" x2="538.5" y2="575" stroke="black"/>
 </svg>

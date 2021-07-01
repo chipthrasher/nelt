@@ -1635,15 +1635,15 @@
     "Wiki URL": ""
   },
   "Vigi": {
-    "X": 227,
+    "X": 226,
     "Z": 372,
     "X Connector": "",
     "Z Connector": "",
-    "Political Entity": "Defunct",
+    "Political Entity": "Wohlstand",
     "National": "",
     "IBWH": "",
     "End": "",
-    "Hide": 1,
+    "Hide": "",
     "Warning": "",
     "Description": "",
     "Image URL": "",
@@ -1757,7 +1757,7 @@
   "Jaune": {
     "X": 66,
     "Z": 0,
-    "X Connector": "",
+    "X Connector": 66,
     "Z Connector": "",
     "Political Entity": "Goomlandia",
     "National": "",
