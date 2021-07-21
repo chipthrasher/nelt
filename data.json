@@ -1037,7 +1037,7 @@
   "Montrosian Government Offices": {
     "X": -69,
     "Z": -53,
-    "X Connector": -66,
+    "X Connector": -82,
     "Z Connector": "",
     "Political Entity": "Commonwealth of Montrose",
     "National": "",
@@ -1187,7 +1187,7 @@
   "PLHQ Inn": {
     "X": -63,
     "Z": -25,
-    "X Connector": -66,
+    "X Connector": -82,
     "Z Connector": "",
     "Political Entity": "Commonwealth of Montrose",
     "National": "",

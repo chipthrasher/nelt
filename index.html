@@ -143,6 +143,17 @@
           });
           c.addTo(map);
 
+          $('.leaflet-control-attribution').html('<a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSwok3n0HC0TmlJt4gG-C6JXFEInJfcm4zDb4YKtwsLW78TZu5BA3r9FM_EbarcO0q5V2QDAv2QdTGQ/pubhtml">Nelt Map Data</a>');
+
+          // // Attribution options
+          // var attrOptions = {
+          //   prefix: 'attribution sample'
+          // };
+          //
+          // // Creating an attribution
+          // var attr = L.control.attribution(attrOptions);
+          // attr.addTo(map);  // Adding attribution to the map
+
           map.on('mousemove', function(e) {
           	c.setCoordinates(e);
           });
