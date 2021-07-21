@@ -30,8 +30,8 @@
     "Wiki URL": ""
   },
   "Askar": {
-    "X": -292,
-    "Z": -273,
+    "X": -291,
+    "Z": -271,
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Askar",
@@ -134,6 +134,21 @@
     "Image URL": "",
     "Wiki URL": ""
   },
+  "Black Dot Empire": {
+    "X": -48,
+    "Z": -355,
+    "X Connector": "",
+    "Z Connector": "",
+    "Political Entity": "Wohlstand",
+    "National": "",
+    "IBWH": "",
+    "End": "",
+    "Hide": "",
+    "Warning": "",
+    "Description": "",
+    "Image URL": "",
+    "Wiki URL": ""
+  },
   "Black Hand Museum": {
     "X": 224,
     "Z": -356,
@@ -223,6 +238,21 @@
     "Description": "Cascadia is the southern territory of Syltheim. Originally founded as a nation by Chipt, and later incorporated as a state of Jugoslavija, it adopted an internationally focused mindset, aiming to leave a positive mark on the world through international polls and restoration projects. It is home to a variety of architecture inspired by cultures across the world, such as the Yanshu-inspired pagoda, as well as the world’s only ink farm. It was sold to Sylthiem on January 16th, 2020.",
     "Image URL": "images/cascadia.png",
     "Wiki URL": "https://wiki.elgeis.com/wiki/Cascadia"
+  },
+  "Cascadia Colisseum": {
+    "X": -190,
+    "Z": -51,
+    "X Connector": "",
+    "Z Connector": "",
+    "Political Entity": "Commonwealth of Montrose",
+    "National": "",
+    "IBWH": "",
+    "End": "",
+    "Hide": "",
+    "Warning": "",
+    "Description": "",
+    "Image URL": "",
+    "Wiki URL": ""
   },
   "Castle Montrose": {
     "X": -63,
@@ -854,6 +884,21 @@
     "Image URL": "images/jarnsaari.png",
     "Wiki URL": "https://wiki.elgeis.com/wiki/Wohlstand"
   },
+  "Jaune": {
+    "X": 66,
+    "Z": -3,
+    "X Connector": 66,
+    "Z Connector": "",
+    "Political Entity": "Goomlandia",
+    "National": "",
+    "IBWH": "",
+    "End": "",
+    "Hide": "",
+    "Warning": "",
+    "Description": "",
+    "Image URL": "",
+    "Wiki URL": ""
+  },
   "Joe LaPorte City": {
     "X": 35,
     "Z": 73,
@@ -974,21 +1019,6 @@
     "Image URL": "images/mid.png",
     "Wiki URL": ""
   },
-  "Montrose Horse Breeding Stables": {
-    "X": -77,
-    "Z": -46,
-    "X Connector": "",
-    "Z Connector": -43,
-    "Political Entity": "Commonwealth of Montrose",
-    "National": "",
-    "IBWH": "",
-    "End": "",
-    "Hide": "",
-    "Warning": "",
-    "Description": "",
-    "Image URL": "images/mbs.png",
-    "Wiki URL": ""
-  },
   "Montrose Ice Farm": {
     "X": -129,
     "Z": -133,
@@ -1048,6 +1078,21 @@
     "Description": "",
     "Image URL": "images/mpe.png",
     "Wiki URL": "https://wiki.elgeis.com/wiki/Montrosian_Production_Emporium"
+  },
+  "Montrosian Tree Farm & Horse Breeding Stables": {
+    "X": -79,
+    "Z": -45,
+    "X Connector": "",
+    "Z Connector": -43,
+    "Political Entity": "Commonwealth of Montrose",
+    "National": "",
+    "IBWH": "",
+    "End": "",
+    "Hide": "",
+    "Warning": "",
+    "Description": "",
+    "Image URL": "images/mbs.png",
+    "Wiki URL": ""
   },
   "New Icedale": {
     "X": -342,
@@ -1139,7 +1184,7 @@
     "Image URL": "",
     "Wiki URL": ""
   },
-  "PLHQ Hotel": {
+  "PLHQ Inn": {
     "X": -63,
     "Z": -25,
     "X Connector": -66,
@@ -1549,7 +1594,7 @@
     "Z": -204,
     "X Connector": "",
     "Z Connector": "",
-    "Political Entity": "Twiceland",
+    "Political Entity": "Syltheim",
     "National": 1,
     "IBWH": "",
     "End": "",
@@ -1695,34 +1740,19 @@
     "Wiki URL": ""
   },
   "Winterfell": {
-    "X": -236,
-    "Z": -8,
+    "X": -231,
+    "Z": -12,
     "X Connector": "",
     "Z Connector": "",
     "Political Entity": "Kingdom of Vailan",
     "National": "",
     "IBWH": "",
     "End": "",
-    "Hide": 1,
+    "Hide": "",
     "Warning": "",
     "Description": "",
     "Image URL": "images/winterfell.png",
     "Wiki URL": "https://wiki.elgeis.com/wiki/Winterfell"
-  },
-  "Wooklandia": {
-    "X": -352,
-    "Z": 7,
-    "X Connector": "",
-    "Z Connector": "",
-    "Political Entity": "Commonwealth of Montrose",
-    "National": 1,
-    "IBWH": "",
-    "End": "",
-    "Hide": "",
-    "Warning": "",
-    "Description": "",
-    "Image URL": "images/wooklandia.png",
-    "Wiki URL": ""
   },
   "Wohlstand": {
     "X": 11,
@@ -1739,34 +1769,19 @@
     "Image URL": "",
     "Wiki URL": ""
   },
-  "Black Dot Empire": {
-    "X": -48,
-    "Z": -355,
+  "Wooklandia": {
+    "X": -352,
+    "Z": 7,
     "X Connector": "",
     "Z Connector": "",
-    "Political Entity": "Wohlstand",
-    "National": "",
+    "Political Entity": "Commonwealth of Montrose",
+    "National": 1,
     "IBWH": "",
     "End": "",
     "Hide": "",
     "Warning": "",
     "Description": "",
-    "Image URL": "",
-    "Wiki URL": ""
-  },
-  "Jaune": {
-    "X": 66,
-    "Z": -3,
-    "X Connector": 66,
-    "Z Connector": "",
-    "Political Entity": "Goomlandia",
-    "National": "",
-    "IBWH": "",
-    "End": "",
-    "Hide": "",
-    "Warning": "",
-    "Description": "",
-    "Image URL": "",
+    "Image URL": "images/wooklandia.png",
     "Wiki URL": ""
   }
 }
