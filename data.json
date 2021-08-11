@@ -62,7 +62,7 @@
   "Azrainir": {
     "X": 360,
     "Z": 156,
-    "X Connector": "",
+    "X Connector": 360,
     "Z Connector": "",
     "Political Entity": "Azrainir",
     "National": 1,
@@ -1817,7 +1817,7 @@
   "Azrainir Industrial": {
     "X": 369,
     "Z": 133,
-    "X Connector": "",
+    "X Connector": 360,
     "Z Connector": "",
     "Political Entity": "Azrainir",
     "National": "",
