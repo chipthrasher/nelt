@@ -42,7 +42,7 @@
     "Warning": "",
     "Description": "",
     "Image URL": "",
-    "Wiki URL": ""
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Askar"
   },
   "Atlantis": {
     "X": -187,
@@ -57,7 +57,7 @@
     "Warning": "",
     "Description": "Atlantis is the unfinished underwater city created by the Vailic MiksaSerbia.",
     "Image URL": "images/atlantis.png",
-    "Wiki URL": ""
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Ilyria#Settlement_in_the_South"
   },
   "Azrainir": {
     "X": 360,
@@ -72,7 +72,7 @@
     "Warning": "",
     "Description": "",
     "Image URL": "images/azrainir.png",
-    "Wiki URL": ""
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Mania_man111#Post-Ban"
   },
   "Baguette": {
     "X": 164,
@@ -87,7 +87,7 @@
     "Warning": "",
     "Description": "",
     "Image URL": "images/baguette.png",
-    "Wiki URL": ""
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Baguette_%26_Inquisition"
   },
   "Banapo": {
     "X": -35,
@@ -114,10 +114,10 @@
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": "",
+    "Warning": "Bardum has closed borders.",
     "Description": "",
     "Image URL": "",
-    "Wiki URL": ""
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Bardum"
   },
   "Bialya": {
     "X": 248,
@@ -222,7 +222,7 @@
     "Warning": "",
     "Description": "Originally built by olimcpants, Burger is a historically iconic Montrosian build, and is currently inhabited by Montrosian citizen Endossi.",
     "Image URL": "images/burger.png",
-    "Wiki URL": ""
+    "Wiki URL": "https://wiki.elgeis.com/wiki/BurgerBomb%E2%84%A2%EF%B8%8F"
   },
   "Cascadia": {
     "X": -357,
@@ -312,7 +312,7 @@
     "Warning": "",
     "Description": "",
     "Image URL": "images/championis.png",
-    "Wiki URL": ""
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Championis"
   },
   "Cheeseton": {
     "X": 362,
@@ -359,7 +359,7 @@
     "Image URL": "",
     "Wiki URL": ""
   },
-  "CreamyHoneyNut's Estate": {
+  "MaLleuad's Gift": {
     "X": -142,
     "Z": 16,
     "X Connector": "",
@@ -384,10 +384,10 @@
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": "",
+    "Warning": "Drift has closed borders.",
     "Description": "",
     "Image URL": "",
-    "Wiki URL": ""
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Drift"
   },
   "Dwarf Island": {
     "X": 3,
@@ -432,7 +432,7 @@
     "Warning": "",
     "Description": "East Syltheim is home to the famous Tea Garden, as well as many residences, government buildings, and mountainous forests.",
     "Image URL": "images/eastsyltheim.png",
-    "Wiki URL": ""
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Syltheim"
   },
   "East Taiga": {
     "X": 193,
@@ -462,7 +462,7 @@
     "Warning": "",
     "Description": "",
     "Image URL": "images/emeraldenclave.png",
-    "Wiki URL": ""
+    "Wiki URL": "https://wiki.elgeis.com/wiki/Emerald_Enclave"
   },
   "Etel Metsia": {
     "X": -104,
@@ -504,7 +504,7 @@
     "IBWH": "",
     "End": "",
     "Hide": "",
-    "Warning": "",
+    "Warning": "Fauxford has closed borders.",
     "Description": "",
     "Image URL": "",
     "Wiki URL": ""
@@ -1043,7 +1043,7 @@
     "National": "",
     "IBWH": "",
     "End": "",
-    "Hide": "",
+    "Hide": 1,
     "Warning": "",
     "Description": "",
     "Image URL": "images/mgo.png",
@@ -1744,7 +1744,7 @@
     "Z": -12,
     "X Connector": "",
     "Z Connector": "",
-    "Political Entity": "Kingdom of Vailan",
+    "Political Entity": "Commonwealth of Montrose",
     "National": "",
     "IBWH": "",
     "End": "",
@@ -1782,6 +1782,51 @@
     "Warning": "",
     "Description": "",
     "Image URL": "images/wooklandia.png",
+    "Wiki URL": ""
+  },
+  "Bloxford": {
+    "X": -250,
+    "Z": -187,
+    "X Connector": "",
+    "Z Connector": "",
+    "Political Entity": "Syltheim",
+    "National": "",
+    "IBWH": "",
+    "End": "",
+    "Hide": "",
+    "Warning": "Bloxford is under construction.",
+    "Description": "",
+    "Image URL": "",
+    "Wiki URL": ""
+  },
+  "Jericho": {
+    "X": -151,
+    "Z": 219,
+    "X Connector": "",
+    "Z Connector": "",
+    "Political Entity": "Jericho",
+    "National": 1,
+    "IBWH": "",
+    "End": "",
+    "Hide": "",
+    "Warning": "",
+    "Description": "",
+    "Image URL": "",
+    "Wiki URL": ""
+  },
+  "Azrainir Industrial": {
+    "X": 369,
+    "Z": 133,
+    "X Connector": "",
+    "Z Connector": "",
+    "Political Entity": "Azrainir",
+    "National": "",
+    "IBWH": "",
+    "End": "",
+    "Hide": "",
+    "Warning": "",
+    "Description": "",
+    "Image URL": "",
     "Wiki URL": ""
   }
 }
