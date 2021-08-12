@@ -19,14 +19,15 @@
       <div id="layers" class="layers"></div>
     </div>
     <div class="right">
-      <div class="title">Nelt Map</div>
+      <div class="title"><a href="">Nelt Map</a></div>
+      <div class="searchbox"><input class="search" placeholder="Search for a stop"></div>
       <div class="image"><img src=""></div>
       <div class="content">
         <div class="name"></div>
-        <div class="entity">Thanks for visiting the interactive map of the Nelt, the public Nether Highway! Each line represents a Nelt line, and the dots represent the exits. Hover over any exit to see its name, and click on it to see more information. (Keep in mind that the left side of the map represents the West, up represents North, etc.)</div>
+        <div class="entity"></div>
         <div class="coords"></div>
         <div class="description"></div>
-        <a class="wiki" href="https://wiki.elgeis.com/wiki/The_Nelt">Read more on the LGSMC Wiki</a>
+        <a class="wiki" href="https://wiki.elgeis.com/wiki/The_Nelt">Read more on the Elgeis Wiki</a>
       </div>
       <div class="footer">
         <i class="ibwh fas fa-globe" title="This exit is designated as an official IBWH site."></i>
@@ -73,17 +74,17 @@
 
             /* Render SVG circles */
 
-            content += `<circle class="circle" r="4" cx="${375 + x}" cy="${375 + z}" data-name="${name}" title/>`;
+            content += `<circle class="circle" data-name="${name}" r="4" cx="${375 + x}" cy="${375 + z}" title/>`;
 
             /* Render lines */
 
             if(specialX != '') {
 
-              content +=`<line class="line" x1="${375 + x}" y1="${375 + z}" x2="${375 + specialX}" y2="${375 + z}"/>`;
+              content +=`<line class="line" data-name="${name}" x1="${375 + x}" y1="${375 + z}" x2="${375 + specialX}" y2="${375 + z}"/>`;
 
             } else if(specialZ != '') {
 
-              content +=`<line class="line" x1="${375 + x}" y1="${375 + z}" x2="${375 + x}" y2="${375 + specialZ}"/>`;
+              content +=`<line class="line" data-name="${name}" x1="${375 + x}" y1="${375 + z}" x2="${375 + x}" y2="${375 + specialZ}"/>`;
 
             } else {
 
@@ -106,9 +107,9 @@
               }
 
               if(Math.abs(x - findClosestX(x)) < Math.abs(z - findClosestZ(z))) {
-                content +=`<line class="line" x1="${375 + x}" y1="${375 + z}" x2="${375 + findClosestX(x)}" y2="${375 + z}"/>`;
+                content +=`<line class="line" data-name="${name}" x1="${375 + x}" y1="${375 + z}" x2="${375 + findClosestX(x)}" y2="${375 + z}"/>`;
               } else {
-                content +=`<line class="line" x1="${375 + x}" y1="${375 + z}" x2="${375 + x}" y2="${375 + findClosestZ(z)}"/>`;
+                content +=`<line class="line" data-name="${name}" x1="${375 + x}" y1="${375 + z}" x2="${375 + x}" y2="${375 + findClosestZ(z)}"/>`;
               }
             }
           });
@@ -173,6 +174,36 @@
           });
 
           /* Display info on sidebar */
+
+          $('.search').keyup(function() {
+            $('.circle').each(function() {
+              var searchString = $(this).data('name').toLowerCase();
+              var thisString = $('.search').val().toLowerCase();
+              var searchFlag = searchString.search(thisString);
+
+              if(searchFlag == -1) {
+                // console.log(`${thisString} NOT found in ${searchString}`);
+                $(this).fadeOut(0);
+              } else {
+                // console.log(`${thisString} found at position ${searchFlag} in ${searchString}`);
+                $(this).fadeIn(0);
+              }
+            });
+
+            $('.line').each(function() {
+              var searchString = $(this).data('name').toLowerCase();
+              var thisString = $('.search').val().toLowerCase();
+              var searchFlag = searchString.search(thisString);
+
+              if(searchFlag == -1) {
+                // console.log(`${thisString} NOT found in ${searchString}`);
+                $(this).fadeOut(0);
+              } else {
+                // console.log(`${thisString} found at position ${searchFlag} in ${searchString}`);
+                $(this).fadeIn(0);
+              }
+            });
+          });
 
           $('.circle').click(function() {
             var name = $(this).data('name'),

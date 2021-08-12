@@ -1,10 +1,11 @@
-# NELT map
+## Nelt map
 
-The [NELT map](https://chipthrasher.com/nelt) is a map of the Nether highway in the [Elgeis](https://elgeis.com) political Minecraft server. It is based on the Minecraft [Nether travel mechanic](https://minecraft.gamepedia.com/The_Nether#Traits), where each block in the Nether counts for 8 blocks in the overworld. The server has a limited map size (6000x6000 in the overworld, and 750x750 in the Nether). The map is based on a 5x5 line structure — although this structure will extend outward based on demand — lines each placed 100 blocks apart to efficiently cover each portal and allow for new ones to be added easily.
+The [Nelt map](https://chipthrasher.com/nelt) is a map of the Nether highway in the [Elgeis](https://elgeis.com) political Minecraft server. It is based on the Minecraft [Nether travel mechanic](https://minecraft.gamepedia.com/The_Nether#Traits), where each block in the Nether counts for 8 blocks in the overworld. The server has a limited map size: 6000 x 6000 blocks in the overworld, and 750 x 750 in the Nether. The Nelt is built on a 7 x 7 grid of lines, extending outward based on demand. Lines are placed 100 blocks apart to efficiently cover each portal and allow for easy addition of new portals.
 
-Until recently, the NELT map was manually drawn in a graphics program, but I've recently converted it to an automatic system that generates the NELT map from a JSON file that I export from a spreadsheet. This vastly simplifies the process, allowing me to make small changes without a lot of hassle.
+## How it Works
 
-## Generating the Map
+The Nelt map was originally drawn manually in a vector graphics program, but I eventually converted it to a web-based, automatic system that generates the Nelt map from a JSON file that I export from a spreadsheet. This vastly simplifies the process, allowing me to make small changes without a lot of hassle.
 
-The map is initiated using [Leaflet.js](https://leafletjs.com), and the background layers (nation borders, lines, and the server map render) are listed.
-On page load, each portal is generated into an SVG, and unless otherwise specified, it snaps to the nearest line, horizontal or vertical. To accomodate for portals that are placed in a nonstandard way, I have an exceptions list, notably including the portals on the Goomlandian Inner Line (which makes travel much more convenient inside the in-game nation Goomlandia). Using [Leaflet.js](https://leafletjs.com), the map zooms in and out, vectors scaling smoothly. I used jQuery UI's [tooltip functionality](https://api.jqueryui.com/tooltip) to show a snippet of data for each portal when it's hovered over, including coordinates, the portal's name, and a picture and description.
+On page load, a map is initiated using [Leaflet.js](https://leafletjs.com), beginning with the background layers: nation borders, lines, and the blank server map.
+
+Each portal is displayed as a dot, and unless otherwise specified, is connected to the nearest horizontal or vertical line. An exceptions list accomodates portals that are positioned in a nonstandard fashion, notably including "inner lines" which group together clusters of nearby portals that are highly trafficked. Using [Leaflet.js](https://leafletjs.com), the map zooms in and out, vectors scaling smoothly.
