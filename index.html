@@ -24,7 +24,7 @@
       <div class="image"><img src=""></div>
       <div class="content">
         <div class="name"></div>
-        <div class="entity"></div>
+        <div class="entity">Lost in the Nether? Type your destination in the search bar, or just hover your mouse over the stops!</div>
         <div class="coords"></div>
         <div class="description"></div>
         <a class="wiki" href="https://wiki.elgeis.com/wiki/The_Nelt">Read more on the Elgeis Wiki</a>
@@ -56,6 +56,7 @@
 
         $('.footer i').tooltip();
         $('.footer i').hide(0);
+        $('.wiki').hide(0);
 
         $.getJSON("data.json", function(data) {
 
