@@ -5,6 +5,7 @@
     <title>Interactive Nelt Map</title>
     <script src="leaflet/leaflet.js"></script>
     <script src="leaflet/coords.js"></script>
+    <script src="leaflet/opacity.js"></script>
     <script src="https://kit.fontawesome.com/64fcc6f5cf.js" crossorigin="anonymous"></script>
     <meta property="og:title" content="Interactive Nelt Map">
     <meta property="og:site_name" content="chipthrasher.com">
@@ -127,8 +128,9 @@
           var topleft = [-3000, -3000];
           var bottomright = [3000, 3000];
 
-          L.imageOverlay('dynmap.jpg', [topleft, bottomright], { className: 'dynmap', zIndex: 1 }).addTo(map);
-          L.imageOverlay('country.svg', [topleft, bottomright], { className: 'countries', zIndex: 2 }).addTo(map);
+          // L.imageOverlay('dynmap.jpg', [topleft, bottomright], { className: 'dynmap', zIndex: 1 }).addTo(map);
+          // L.imageOverlay('country.svg', [topleft, bottomright], { className: 'countries', zIndex: 2 }).addTo(map);
+          L.imageOverlay('political.jpg', [topleft, bottomright], { className: 'political', zIndex: 1 }).addTo(map);
           L.imageOverlay('lines.svg', [topleft, bottomright], { className: 'lines', zIndex: 3 }).addTo(map);
 
           var svgElement = document.createElementNS("http://www.w3.org/2000/svg", "svg");
@@ -140,12 +142,23 @@
 
           map.panTo([0, 0]);
 
+          // var f = new L.Control.Blank({
+          //   position: 'topleft'
+          // });
+          // f.addTo(map);
+
+          // ^ this is me trying to add an opacity slider control but it breaks everything
+
           var c = new L.Control.Coordinates({
             position: 'topleft'
           });
           c.addTo(map);
 
-          $('.leaflet-control-attribution').html('<a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSwok3n0HC0TmlJt4gG-C6JXFEInJfcm4zDb4YKtwsLW78TZu5BA3r9FM_EbarcO0q5V2QDAv2QdTGQ/pubhtml">Nelt Map Data</a>');
+          // $('.leaflet-control-attribution').html('<a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSwok3n0HC0TmlJt4gG-C6JXFEInJfcm4zDb4YKtwsLW78TZu5BA3r9FM_EbarcO0q5V2QDAv2QdTGQ/pubhtml">Nelt Map Data</a>');
+          $('.leaflet-control-attribution').html('<b>Map opacity:</b><br><input type="range" min="0" max="0.5" step="0.01" value="0.15">');
+          $('.leaflet-control-attribution input').mousemove(function() {
+            $('.political').css('opacity', this.value);
+          });
 
           // // Attribution options
           // var attrOptions = {

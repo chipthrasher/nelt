@@ -10,6 +10,7 @@
  *        promptText: text displayed when user clicks the control
  *        precision: number of decimals to be displayed
  */
+ 
 L.Control.Coordinates = L.Control.extend({
 	options: {
 		position: 'topleft',
