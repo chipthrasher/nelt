@@ -37,6 +37,13 @@ a {
   }
 }
 
+.mobileleft {
+  display: none;
+}
+.mobileright {
+  width: 100vw;
+  
+}
 .left {
 
 }
