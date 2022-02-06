@@ -5,7 +5,6 @@
     <title>Interactive Nelt Map</title>
     <script src="leaflet/leaflet.js"></script>
     <script src="leaflet/coords.js"></script>
-    <script src="leaflet/opacity.js"></script>
     <script src="https://kit.fontawesome.com/64fcc6f5cf.js" crossorigin="anonymous"></script>
     <meta property="og:title" content="Interactive Nelt Map">
     <meta property="og:site_name" content="chipthrasher.com">
@@ -20,45 +19,59 @@
       <div id="layers" class="layers"></div>
     </div>
     <div class="right">
-      <div class="title"><a href="">Nelt Map</a></div>
-      <div class="searchbox"><input class="search" placeholder="Search for a stop"></div>
-      <div class="image"><img src=""></div>
-      <div class="content">
-        <div class="name"></div>
-        <div class="entity">Lost in the Nether? Type your destination in the search bar, or just hover your mouse over the stops!</div>
-        <div class="coords"></div>
-        <div class="description">
-        </div>
-        <a class="wiki" href="https://wiki.elgeis.com/wiki/The_Nelt">Read more on the Elgeis Wiki</a>
+      <div class="top">
+        <div class="title"><a href="">Nelt Map</a></div>
+        <div class="searchbox"><input class="search" placeholder="Search for a stop"><span class="clear" title="Clear search"><i class="fas fa-times"></i></span></div>
+        <div class="subtitle">Tap on an exit to learn more.</div>
       </div>
-      <div class="footer">
-        <i class="ibwh fas fa-globe" title="This exit is designated as an official IBWH site."></i>
-        <i class="nation fas fa-flag" title="This is the official exit for its nation or political entity."></i>
-        <i class="end fas fa-atom" title="This exit leads to a public-access End Portal."></i>
-        <i class="warning fas fa-exclamation-triangle" title="Not changed"></i>
-      </div>
-      <!-- <div class="controls">
-        <input type="checkbox" checked id="stops" name="stops"/><label for="stops">Stops</label><br>
-        <input type="checkbox" checked id="lines" name="lines"/><label for="lines">Lines</label><br>
-        <div class="control">
-          Countries<br>
-          <input type="range" min="0" max="1" step="0.01" value="0.6" id="country" name="country"/><br>
-        </div>
-        <div class="control">
-          Dynmap<br>
-          <input type="range" min="0" max="0.9" step="0.01" value="0.1" id="dynmap" name="dynmap"/>
-        </div>
-      </div> -->
+      <div class="directory"></div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="leaflet/scroll.js"></script>
     <script>
       $(document).ready(function(e) {
-        var exits = {}, content = "";
+        var exits = {}, content = '', directory = '';
+        var colors = {
+          "Montrose": "f1c40f",
+          "Nótos": "086F85",
+          "Ozai": "7CDCE7",
+          "Wohlstand": "3498DB",
+          "Episkopija":"E9D4FF",
+          "Syltheim":"ED8D18",
+          "Goomlandia":"71368A",
+          "Championis":"FFA846",
+          "Fianna":"2C7D47",
+          "HUM":"40A3FC",
+          "Emerald Enclave":"50C878",
+          "Emeraldia":"00ff00",
+          "Fauxford":"030101",
+          "Vailan":"100966",
+          "Stradova":"4169e1",
+          "Jericho":"5E60E6",
+          "Kaab":"EBD785",
+          "Krosnox":"555C45",
+          "Vostok":"EB1C24",
+          "Oberos":"9B59B6",
+          "Obios":"B34343",
+          "IBWH":"FFFFFF",
+          "UAC":"A18B2B"
+        };
 
-        $('.footer i').tooltip();
-        $('.footer i').hide(0);
+        $('.itemcontent i').tooltip();
+        $('.itemcontent i').hide(0);
         $('.wiki').hide(0);
+
+        // Random color function
+        const randomColor = () => {
+           let color = '#';
+           for (let i = 0; i < 6; i++){
+              const random = Math.random();
+              const bit = (random * 16) | 0;
+              color += (bit).toString(16);
+           };
+           return color;
+        };
 
         $.getJSON("data.json", function(data) {
 
@@ -71,13 +84,34 @@
             var x = info['X'],
                 z = info['Z'],
                 specialX = info['X Connector'],
-                specialZ = info['Z Connector'];
+                specialZ = info['Z Connector'],
+                tempColor = '',
+                tempIcons = '',
+                tempWiki = '';
 
             exits[name] = info;
 
             /* Render SVG circles */
 
             content += `<circle class="circle" data-name="${name}" r="4" cx="${375 + x}" cy="${375 + z}" title/>`;
+
+            if(colors[info['Political Entity']]) { // Set up itemright square color
+              tempColor = '#' + colors[info['Political Entity']];
+            } else tempColor = '';
+
+            if(info['Wiki URL']) {
+              tempWiki = `<div><a class="wiki" href="${info['Wiki URL']}">Read more on the Wiki</a></div>`;
+            } else tempWiki = '';
+
+            if(info['National'] == 1) tempIcons += '<i class="nation fas fa-flag" title="This is the official exit for its nation or political entity."></i>';
+
+            if(info['End'] == 1) tempIcons += '<i class="end fas fa-atom" title="This exit leads to a public-access End Portal."></i>';
+
+            if(info['IBWH'] == 1) tempIcons += '<i class="ibwh fas fa-globe" title="This exit is designated as an official IBWH site."></i>';
+
+            if(info['Warning']) tempIcons += `<i class="warning fas fa-exclamation-triangle" title="${info['Warning']}"></i>`;
+
+            directory += `<div class="item" data-name="${name}"><div class="itemtop"><div class="itemleft">${name}</div><div class="itemright" style="background: ${tempColor}">&nbsp;</div></div><div class="itemcontent"><div class="coords">${x}, ${z}</div><div class="entity">${info['Political Entity']}</div><div class="description">${info['Description']}</div>${tempWiki}<div>${tempIcons}</div></div></div>`;
 
             /* Render lines */
 
@@ -141,34 +175,20 @@
             interactive: true, zIndex: 5
           }).addTo(map);
 
+          $('.directory').append(directory);
+          $('.itemcontent i').tooltip();
+
           map.panTo([0, 0]);
-
-          // var f = new L.Control.Blank({
-          //   position: 'topleft'
-          // });
-          // f.addTo(map);
-
-          // ^ this is me trying to add an opacity slider control but it breaks everything
 
           var c = new L.Control.Coordinates({
             position: 'topleft'
           });
           c.addTo(map);
 
-          // $('.leaflet-control-attribution').html('<a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSwok3n0HC0TmlJt4gG-C6JXFEInJfcm4zDb4YKtwsLW78TZu5BA3r9FM_EbarcO0q5V2QDAv2QdTGQ/pubhtml">Nelt Map Data</a>');
           $('.leaflet-control-attribution').html('<b>Map opacity:</b><br><input type="range" min="0" max="0.5" step="0.01" value="0.15">');
           $('.leaflet-control-attribution input').mousemove(function() {
             $('.political').css('opacity', this.value);
           });
-
-          // // Attribution options
-          // var attrOptions = {
-          //   prefix: 'attribution sample'
-          // };
-          //
-          // // Creating an attribution
-          // var attr = L.control.attribution(attrOptions);
-          // attr.addTo(map);  // Adding attribution to the map
 
           map.on('mousemove', function(e) {
           	c.setCoordinates(e);
@@ -191,8 +211,10 @@
           /* Display info on sidebar */
 
           $('.search').keyup(function() {
+            $('.itemcontent').slideUp(0); // HIDE ANY OPEN CONTENT THAT MIGHT BE OPEN
             $('.circle').each(function() {
-              var searchString = $(this).data('name').toLowerCase();
+              var name = $(this).data('name');
+              var searchString = `${name} ${exits[name]['X']} ${exits[name]['Z']} ${exits[name]['Political Entity']} ${exits[name]['Description']}`.toLowerCase();
               var thisString = $('.search').val().toLowerCase();
               var searchFlag = searchString.search(thisString);
 
@@ -206,7 +228,23 @@
             });
 
             $('.line').each(function() {
-              var searchString = $(this).data('name').toLowerCase();
+              var name = $(this).data('name');
+              var searchString = `${name} ${exits[name]['X']} ${exits[name]['Z']} ${exits[name]['Political Entity']} ${exits[name]['Description']}`.toLowerCase();
+              var thisString = $('.search').val().toLowerCase();
+              var searchFlag = searchString.search(thisString);
+
+              if(searchFlag == -1) {
+                // console.log(`${thisString} NOT found in ${searchString}`);
+                $(this).fadeOut(0);
+              } else {
+                // console.log(`${thisString} found at position ${searchFlag} in ${searchString}`);
+                $(this).fadeIn(0);
+              }
+            });
+
+            $('.item').each(function() {
+              var name = $(this).data('name');
+              var searchString = `${name} ${exits[name]['X']} ${exits[name]['Z']} ${exits[name]['Political Entity']} ${exits[name]['Description']}`.toLowerCase();
               var thisString = $('.search').val().toLowerCase();
               var searchFlag = searchString.search(thisString);
 
@@ -220,99 +258,38 @@
             });
           });
 
+          // UPDATE THE SIDEBAR WITH STOP INFO!!!
           $('.circle').click(function() {
-            var name = $(this).data('name'),
-                info = exits[name],
-                x = info['X'],
-                z = info['Z'],
-                entity = info['Political Entity'],
-                description = info['Description'],
-                image = info['Image URL'],
-                wiki = info['Wiki URL'],
-                national = info['National'],
-                ibwh = info['IBWH'],
-                end = info['End'],
-                warning = info['Warning'];
-
-            $('.content .name').html(name);
-            $('.content .coords').html(`${x}, ${z}`);
-
-            if(image != '') {
-              $('.image img').attr('src', image);
-              $('.image').show(0);
+            var name = $(this).data('name');
+            if($(`.item[data-name="${name}"]`).children('.itemcontent').css('display') != 'none') {
             } else {
-              $('.image').hide(0);
+              $('.search').val($(this).data('name'));
+              $('.search').trigger('keyup');
+              $(`.item[data-name="${name}"]`).children('.itemtop').trigger('click');
             }
+          });
 
-            if(entity != '') {
-              $('.content .entity').html(entity);
+          $('.itemtop').click(function() {
+            if($(this).siblings('.itemcontent').css('display') != 'none') {
+              // It's open, so close it
+              $(this).siblings('.itemcontent').slideUp(300);
             } else {
-              $('.content .entity').html('');
-            }
+              // It's closed, so close everything else and open it
+              $('.itemcontent').slideUp(300);
+              $(this).siblings('.itemcontent').slideDown(300);
+            };
+          });
 
-            if(description != '') {
-              $('.content .description').html(description);
-            } else {
-              $('.content .description').html('');
-            }
+          $('.entity').click(function() { // Show all portals of same country
+            $('.search').val(exits[$(this).parent().parent().data('name')]['Political Entity']);
+            $('.search').trigger('keyup');
+          });
 
-            if(national == 1) {
-              $('.nation').show(0);
-            } else $('.nation').hide(0);
-
-            if(ibwh == 1) {
-              $('.ibwh').show(0);
-            } else $('.ibwh').hide(0);
-
-            if(end == 1) {
-              $('.end').show(0);
-            } else $('.end').hide(0);
-
-            if(warning != '') {
-              $('.warning').attr('title', warning).show(0);
-            } else $('.warning').hide(0);
-
-            if(wiki != '') {
-              $('.wiki').attr('href', wiki).show(0);
-            } else $('.wiki').hide(0);
+          $('.clear').click(function() {
+            $('.search').val('').trigger('keyup').focus();
           });
         });
       });
-
-      // CONTROLS
-      //
-      // var duration = 0;
-      //
-      // $('#lines').click(function() { // Line button
-      //   if($('.lines').is(':visible')) { // Line image
-      //     $('.lines').fadeOut(duration); // Line image
-      //     $('.line').fadeOut(duration); // All lines have .line
-      //   } else {
-      //     $('.lines').fadeIn(duration);
-      //     if($('.circle').is(':visible')) $('.line').fadeIn(duration);
-      //   }
-      // });
-      //
-      // $('#stops').click(function() {
-      //   if($('.circle').is(':visible')) {
-      //     $('.circle').fadeOut(duration);
-      //     $('.line').fadeOut(duration);
-      //   } else {
-      //     $('.circle').fadeIn(duration);
-      //     if($('.lines').is(':visible')) { // Exit lines
-      //       $('.line').fadeIn(duration);
-      //     }
-      //   }
-      // });
-      //
-      // $('#dynmap').on('input', function() {
-      //   $('img.dynmap').css('opacity', this.value);
-      // });
-      //
-      // $('#country').on('input', function() {
-      //   $('img.countries').css('opacity', this.value);
-      // });
-
     </script>
   </body>
 </html>
