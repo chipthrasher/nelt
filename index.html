@@ -88,29 +88,35 @@
 
         var exits = {}, content = '', directory = '';
         var colors = {
-          "Montrose": "f1c40f",
-          "Nótos": "086F85",
-          "Ozai": "7CDCE7",
-          "Wohlstand": "3498DB",
-          "Episkopija":"E9D4FF",
-          "Syltheim":"ED8D18",
-          "Goomlandia":"71368A",
-          "Championis":"FFA846",
-          "Fianna":"2C7D47",
-          "HUM":"40A3FC",
-          "Emerald Enclave":"50C878",
-          "Emeraldia":"00ff00",
-          "Fauxford":"030101",
-          "Vailan":"100966",
-          "Stradova":"4169e1",
-          "Jericho":"5E60E6",
-          "Kaab":"EBD785",
-          "Krosnox":"555C45",
-          "Vostok":"EB1C24",
-          "Oberos":"9B59B6",
-          "Obios":"B34343",
-          "IBWH":"FFFFFF",
-          "UAC":"A18B2B"
+          "Askar": "#e6b8af",
+          "Solace": "#004d4d",
+          "Cactus Town": "#0a0",
+          "Grove Tribe": "#411010",
+          "Oberos": "#9b59b6",
+          "Championis": "#ffa846",
+          "Ozai": "#7cdce7",
+          "Kaab": "#ebd785",
+          "Wohlstand": "#3498db",
+          "Syltheim": "#ed8d18",
+          "Tree": "#989898",
+          "Obios": "#b34343",
+          "Stradova": "#4169e1",
+          "Montrose": "#f1c40f",
+          "Jericho": "#5e60e6",
+          "Shaxian Empire": "#8c00b7",
+          "Notos": "#086f85",
+          "Creenis": "#ff64ff",
+          "HUM": "#40a3fc",
+          "Blackreach": "#030303",
+          "Oostland": "#ff7100",
+          "Alliance City": "#a18b2b",
+          "Vostok": "#eb1c24",
+          "Emeraldia": "#0f0",
+          "Saru": "#0f0",
+          "Goomlandia": "#71368a",
+          "Redstone Valley": "#7f7f7f",
+          "Rakdos": "#dc143c",
+          "IBWH": "#fff"
         };
 
         $('.itemcontent i').tooltip();
@@ -174,7 +180,7 @@
             content += `<circle class="circle" data-name="${name}" r="4" cx="${375 + x}" cy="${375 + z}" title/>`;
 
             if(colors[info['Political Entity']]) { // Set up itemright square color
-              tempColor = '#' + colors[info['Political Entity']];
+              tempColor = colors[info['Political Entity']];
             } else tempColor = '';
 
             if(info['Wiki URL']) {
