@@ -209,7 +209,7 @@
 
             } else {
 
-              function findClosestX(num) { // Horizontal lines
+              function findClosestX(num) { // Vertical lines
                 let lines = [-300,-200,-100,0,100,200];
                 let closestLine = lines[0];
                 for(let item of lines) {
@@ -218,8 +218,8 @@
                 return closestLine;
               }
 
-              function findClosestZ(num) { // Vertical lines
-                let lines = [-200,-100,0,100,200,300];
+              function findClosestZ(num) { // Horizontal lines
+                let lines = [-300,-200,-100,0,100,200,300];
                 let closestLine = lines[0];
                 for(let item of lines) {
                   if(Math.abs(item - num) < Math.abs(closestLine - num)) closestLine = item;
