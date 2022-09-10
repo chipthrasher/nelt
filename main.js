@@ -219,7 +219,7 @@ $(document).ready(function() {
   
     // L.imageOverlay('dynmap.jpg', [topleft, bottomright], { className: 'dynmap', zIndex: 1 }).addTo(map);
     // L.imageOverlay('country.svg', [topleft, bottomright], { className: 'countries', zIndex: 2 }).addTo(map);
-    // L.imageOverlay('political.jpg', [topleft, bottomright], { className: 'political', zIndex: 1 }).addTo(map);
+    L.imageOverlay('political.jpg', [topleft, bottomright], { className: 'political', zIndex: 1 }).addTo(map);
     L.imageOverlay('lines.svg', [topleft, bottomright], { className: 'lines', zIndex: 3 }).addTo(map);
   
     var svgElement = document.createElementNS("http://www.w3.org/2000/svg", "svg");
