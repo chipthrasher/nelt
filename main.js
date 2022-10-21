@@ -48,15 +48,13 @@ function objectify(arr) {
   for (var i of arr) {
     var title = Object.values(i)[0];
     newDict[title] = {};
-    delete i["album"];
+    delete i["Name"];
     for (const [key, value] of Object.entries(i)) {
       newDict[title][key] = value;
     }
   }
   return newDict;
 }
-
-var exits = [], colors = {};
 
 // var colors = {
 //   "Askar": "#e6b8af",
@@ -90,240 +88,257 @@ var exits = [], colors = {};
 //   "IBWH": "#fff"
 // };
 
-$(document).ready(function() {
+async function main() {
+  var exits = [], colors = {}, innerLines = [];
+  var content = '', directory = '';
+  
+  const mapTSV = await $.get("https://docs.google.com/spreadsheets/d/e/2PACX-1vSwok3n0HC0TmlJt4gG-C6JXFEInJfcm4zDb4YKtwsLW78TZu5BA3r9FM_EbarcO0q5V2QDAv2QdTGQ/pub?gid=0&single=true&output=tsv&callback=?");
+  const innerLineTSV = await $.get("https://docs.google.com/spreadsheets/d/e/2PACX-1vSwok3n0HC0TmlJt4gG-C6JXFEInJfcm4zDb4YKtwsLW78TZu5BA3r9FM_EbarcO0q5V2QDAv2QdTGQ/pub?gid=576744292&single=true&output=tsv");
+  const colorTSV = await $.get("https://docs.google.com/spreadsheets/d/e/2PACX-1vSwok3n0HC0TmlJt4gG-C6JXFEInJfcm4zDb4YKtwsLW78TZu5BA3r9FM_EbarcO0q5V2QDAv2QdTGQ/pub?gid=508864180&single=true&output=tsv");
+
+  /* Work with colors */
+
+  const colorData = tsvJSON(colorTSV);
+  for(i in colorData) {
+    colors[colorData[i]['Nation']] = colorData[i]['Color'];
+  }
+
+  /* Work with inner lines */
+
+  const innerLineData = tsvJSON(innerLineTSV);
+    for(i in innerLineData) {
+      // console.log(innerLineData[i]);
+      innerLines.push({
+        x1: innerLineData[i]['X Position 1'],
+        x2: innerLineData[i]['X Position 2'],
+        y1: innerLineData[i]['Z Position 1'],
+        y2: innerLineData[i]['Z Position 2']
+      });
+    }
+    // console.log(innerLines);
+
+  /* Work with map data */
+
+  const mapData = tsvJSON(mapTSV);
+
+  /* What to do with each line in the spreadsheet */
+
+  $.each(mapData, function(index, info) {
+
+    if(info['Hide'] == 1) return;
+    exits[index] = info;
+
+  });
   if(isMobileDevice()) {
     $('.right').addClass('mobileright');
     $('.left').addClass('mobileleft');
   }
-
-  var content = '', directory = '';
-
+  
   $('.itemcontent i').tooltip();
   $('.itemcontent i').hide(0);
   $('.wiki').hide(0);
-
-  /* Request Google Sheets COLORS data, put it into existing colors variable */
-
-  $.get({
-    url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSwok3n0HC0TmlJt4gG-C6JXFEInJfcm4zDb4YKtwsLW78TZu5BA3r9FM_EbarcO0q5V2QDAv2QdTGQ/pub?gid=508864180&single=true&output=tsv",
-    async: false,
-    success: function(tsv) {
-      var data = tsvJSON(tsv), thisColor;
-      for(i in data) {
-        // thisColor = data[i]['Color'].replace(/[\n\r]+/g, '');
-        // console.log(data[i]['Nation'], data[i]['Color']);
-        colors[data[i]['Nation']] = data[i]['Color'];
+    
+  for(i in exits) {
+    var name = exits[i]['Name'],
+      x = parseInt(exits[i]['X']),
+      z = parseInt(exits[i]['Z']),
+      specialX = exits[i]['X Connector'],
+      specialZ = exits[i]['Z Connector'],
+      tempColor = '',
+      tempIcons = '',
+      tempWiki = '';
+      
+    content += `<circle class="circle" data-name="${i}" r="4" cx="${450 + x}" cy="${450 + z}" title/>`;
+  
+    /* Somehow colors doesn't have an entry for the specific political entity */
+    if(colors[exits[i]['Political Entity']]) { // Set up itemright square color
+      tempColor = colors[exits[i]['Political Entity']];
+    } else tempColor = '';
+  
+    if(exits[i]['Wiki URL']) {
+      tempWiki = `<div><a class="wiki" href="${exits[i]['Wiki URL']}">Read more on the Wiki</a></div>`;
+    } else tempWiki = '';
+  
+    if(exits[i]['National'] == 1) tempIcons += '<i class="nation fas fa-flag" title="This is the official exit for its nation or political entity."></i>';
+  
+    if(exits[i]['End'] == 1) tempIcons += '<i class="end fas fa-atom" title="This exit leads to a public-access End Portal."></i>';
+  
+    if(exits[i]['IBWH'] == 1) tempIcons += '<i class="ibwh fas fa-globe" title="This exit is designated as an official IBWH site."></i>';
+  
+    if(exits[i]['Warning']) tempIcons += `<i class="warning fas fa-exclamation-triangle" title="${exits[i]['Warning']}"></i>`;
+  
+    directory += `<div class="item" data-name="${i}"><div class="itemtop"><div class="itemleft">${name}</div><div class="itemright" style="background: ${tempColor}">&nbsp;</div></div><div class="itemcontent"><div class="coords">${x}, ${z}</div><div class="entity">${exits[i]['Political Entity']}</div><div class="description">${exits[i]['Description']}</div>${tempWiki}<div>${tempIcons}</div></div></div>`;
+  
+    /* Render lines */
+  
+    if(specialX != '') { // HERE IS THE ISSUE
+      specialX = parseInt(specialX);
+      content +=`<line class="line" data-name="${i}" x1="${450 + x}" y1="${450 + z}" x2="${450 + specialX}" y2="${450 + z}"/>`;
+  
+    } else if(specialZ != '') {
+      specialZ = parseInt(specialZ);
+      content +=`<line class="line" data-name="${i}" x1="${450 + x}" y1="${450 + z}" x2="${450 + x}" y2="${450 + specialZ}"/>`;
+  
+    } else {
+  
+      function findClosestX(num) { // Vertical lines
+        let lines = [-300,-200,-100,0,100,200,300];
+        let closestLine = lines[0];
+        for(let item of lines) {
+          if(Math.abs(item - num) < Math.abs(closestLine - num)) closestLine = item;
+        }
+        return closestLine;
+      }
+  
+      function findClosestZ(num) { // Horizontal lines
+        let lines = [-300,-200,-100,0,100,200,300];
+        let closestLine = lines[0];
+        for(let item of lines) {
+          if(Math.abs(item - num) < Math.abs(closestLine - num)) closestLine = item;
+        }
+        return closestLine;
+      }
+  
+      if(Math.abs(x - findClosestX(x)) < Math.abs(z - findClosestZ(z))) {
+        content +=`<line class="line" data-name="${i}" x1="${450 + x}" y1="${450 + z}" x2="${450 + findClosestX(x)}" y2="${450 + z}"/>`;
+      } else {
+        content +=`<line class="line" data-name="${i}" x1="${450 + x}" y1="${450 + z}" x2="${450 + x}" y2="${450 + findClosestZ(z)}"/>`;
       }
     }
-  });
-
-  /* Request Google Sheets NELT MAP data, initialize map */
+  }
   
-  $.get({
-    url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSwok3n0HC0TmlJt4gG-C6JXFEInJfcm4zDb4YKtwsLW78TZu5BA3r9FM_EbarcO0q5V2QDAv2QdTGQ/pub?gid=0&single=true&output=tsv&callback=?",
-    async: false,
-    success: function(tsv) {
-      var data = tsvJSON(tsv);
+  for(i in innerLines) {
+    var id = innerLines[i]['ID'];
+    var x1 = parseInt(innerLines[i]['x1']);
+    var x2 = parseInt(innerLines[i]['x2']);
+    var y1 = parseInt(innerLines[i]['y1']);
+    var y2 = parseInt(innerLines[i]['y2']);
 
-      /* What to do with each line in the spreadsheet */
+    /* TODO: filter lines in case there's empty ones */
 
-      $.each(data, function(index, info) {
-
-        if(info['Hide'] == 1) return;
-        exits[index] = info;
-
-      });
-    }
-  }).then(function() {
-    for(i in exits) {
+    content += `<line class="line inner" data-name="${id}" x1="${450 + x1}" y1="${450 + y1}" x2="${450 + x2}" y2="${450 + y2}"/>`;
+  }
+  
+  /* Render map with Leaflet */
+  
+  var map = L.map('layers', {
+    crs: L.CRS.Simple,
+    zoom: -3,
+    minZoom: -4,
+    maxZoom: 0
+  });
+  
+  var topleft = [-3600, -3600];
+  var bottomright = [3600, 3600];
+  
+  L.imageOverlay('political.jpg', [topleft, bottomright], { className: 'political', zIndex: 1 }).addTo(map);
+  L.imageOverlay('lines.svg', [topleft, bottomright], { className: 'lines', zIndex: 3 }).addTo(map);
+  
+  var svgElement = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  svgElement.setAttribute('viewBox', "0 0 900 900");
+  svgElement.innerHTML = content;
+  L.svgOverlay(svgElement, [topleft, bottomright], {
+    interactive: true, zIndex: 5
+  }).addTo(map);
+  
+  $('.directory').append(directory);
+  $('.itemcontent i').tooltip();
+  
+  map.panTo([0, 0]);
+  
+  var c = new L.Control.Coordinates({
+    position: 'topleft'
+  });
+  c.addTo(map);
+  
+  // Map opacity slider
+  $('.leaflet-control-attribution').html('<b>Map opacity:</b><br><input type="range" min="0" max="0.5" step="0.01" value="0.2">');
+  $('.leaflet-control-attribution input').mousemove(function() {
+    $('.political').css('opacity', this.value);
+  });
+  
+  map.on('mousemove', function(e) {
+      c.setCoordinates(e);
+  });
+  
+  /* Create hover tooltips */
+  
+  $(".circle").tooltip({
+    content: function() {
+      var i = $(this).data('name');
       var name = exits[i]['Name'],
-        x = parseInt(exits[i]['X']),
-        z = parseInt(exits[i]['Z']),
-        specialX = exits[i]['X Connector'],
-        specialZ = exits[i]['Z Connector'],
-        tempColor = '',
-        tempIcons = '',
-        tempWiki = '';
-        
-      content += `<circle class="circle" data-name="${i}" r="4" cx="${450 + x}" cy="${450 + z}" title/>`;
+          x = exits[i]['X'],
+          z = exits[i]['Z'];
   
-      /* Somehow colors doesn't have an entry for the specific political entity */
-      if(colors[exits[i]['Political Entity']]) { // Set up itemright square color
-        tempColor = colors[exits[i]['Political Entity']];
-        console.log('its happening!');
-      } else tempColor = '';
-  
-      if(exits[i]['Wiki URL']) {
-        tempWiki = `<div><a class="wiki" href="${exits[i]['Wiki URL']}">Read more on the Wiki</a></div>`;
-      } else tempWiki = '';
-  
-      if(exits[i]['National'] == 1) tempIcons += '<i class="nation fas fa-flag" title="This is the official exit for its nation or political entity."></i>';
-  
-      if(exits[i]['End'] == 1) tempIcons += '<i class="end fas fa-atom" title="This exit leads to a public-access End Portal."></i>';
-  
-      if(exits[i]['IBWH'] == 1) tempIcons += '<i class="ibwh fas fa-globe" title="This exit is designated as an official IBWH site."></i>';
-  
-      if(exits[i]['Warning']) tempIcons += `<i class="warning fas fa-exclamation-triangle" title="${exits[i]['Warning']}"></i>`;
-  
-      directory += `<div class="item" data-name="${i}"><div class="itemtop"><div class="itemleft">${name}</div><div class="itemright" style="background: ${tempColor}">&nbsp;</div></div><div class="itemcontent"><div class="coords">${x}, ${z}</div><div class="entity">${exits[i]['Political Entity']}</div><div class="description">${exits[i]['Description']}</div>${tempWiki}<div>${tempIcons}</div></div></div>`;
-  
-      /* Render lines */
-  
-      if(specialX != '') { // HERE IS THE ISSUE
-        specialX = parseInt(specialX);
-        content +=`<line class="line" data-name="${i}" x1="${450 + x}" y1="${450 + z}" x2="${450 + specialX}" y2="${450 + z}"/>`;
-  
-      } else if(specialZ != '') {
-        specialZ = parseInt(specialZ);
-        content +=`<line class="line" data-name="${i}" x1="${450 + x}" y1="${450 + z}" x2="${450 + x}" y2="${450 + specialZ}"/>`;
-  
-      } else {
-  
-        function findClosestX(num) { // Vertical lines
-          let lines = [-300,-200,-100,0,100,200];
-          let closestLine = lines[0];
-          for(let item of lines) {
-            if(Math.abs(item - num) < Math.abs(closestLine - num)) closestLine = item;
-          }
-          return closestLine;
-        }
-  
-        function findClosestZ(num) { // Horizontal lines
-          let lines = [-300,-200,-100,0,100,200,300];
-          let closestLine = lines[0];
-          for(let item of lines) {
-            if(Math.abs(item - num) < Math.abs(closestLine - num)) closestLine = item;
-          }
-          return closestLine;
-        }
-  
-        if(Math.abs(x - findClosestX(x)) < Math.abs(z - findClosestZ(z))) {
-          content +=`<line class="line" data-name="${i}" x1="${450 + x}" y1="${450 + z}" x2="${450 + findClosestX(x)}" y2="${450 + z}"/>`;
-        } else {
-          content +=`<line class="line" data-name="${i}" x1="${450 + x}" y1="${450 + z}" x2="${450 + x}" y2="${450 + findClosestZ(z)}"/>`;
-        }
-      }
+      var content = `<div><div class="name">${name} <div class="coords">${x}, ${z}</div></div>`;
+      return content;
     }
+  });
   
-    /* Render map with Leaflet */
+  /* Display info on sidebar */
   
-    var map = L.map('layers', {
-      crs: L.CRS.Simple,
-      zoom: -3,
-      minZoom: -4,
-      maxZoom: 0
-    });
+  $('.search').keyup(function() {
+    $('.itemcontent').slideUp(0); // Hide any sidebar that is already open
   
-    var topleft = [-3600, -3600];
-    var bottomright = [3600, 3600];
+    // Filter lines, circles, and sidebar items on search
+    $('.circle, .line, .item').each(function() {
+      if(!exits[$(this).data('name')]) return false; // Sometimes there are weird undefineds floating around
+      
+      var i = exits[$(this).data('name')];
+      var name = i['Name'];
+      var searchString = `${name} ${i['X']} ${i['Z']} ${i['Political Entity']} ${i['Description']}`.toLowerCase();
+      var inputString = $('.search').val().toLowerCase();
+      var searchFlag = searchString.search(inputString);
   
-    // L.imageOverlay('dynmap.jpg', [topleft, bottomright], { className: 'dynmap', zIndex: 1 }).addTo(map);
-    // L.imageOverlay('country.svg', [topleft, bottomright], { className: 'countries', zIndex: 2 }).addTo(map);
-    L.imageOverlay('political.jpg', [topleft, bottomright], { className: 'political', zIndex: 1 }).addTo(map);
-    L.imageOverlay('lines.svg', [topleft, bottomright], { className: 'lines', zIndex: 3 }).addTo(map);
-  
-    var svgElement = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-    svgElement.setAttribute('viewBox', "0 0 900 900");
-    svgElement.innerHTML = content;
-    L.svgOverlay(svgElement, [topleft, bottomright], {
-      interactive: true, zIndex: 5
-    }).addTo(map);
-  
-    $('.directory').append(directory);
-    $('.itemcontent i').tooltip();
-  
-    map.panTo([0, 0]);
-  
-    var c = new L.Control.Coordinates({
-      position: 'topleft'
-    });
-    c.addTo(map);
-  
-    $('.leaflet-control-attribution').html('<b>Map opacity:</b><br><input type="range" min="0" max="0.5" step="0.01" value="0.15">');
-    $('.leaflet-control-attribution input').mousemove(function() {
-      $('.political').css('opacity', this.value);
-    });
-  
-    map.on('mousemove', function(e) {
-        c.setCoordinates(e);
-    });
-  
-    /* Create hover tooltips */
-  
-    $(".circle").tooltip({
-      content: function() {
-        var i = $(this).data('name');
-        var name = exits[i]['Name'],
-            x = exits[i]['X'],
-            z = exits[i]['Z'];
-  
-        var content = `<div><div class="name">${name} <div class="coords">${x}, ${z}</div></div>`;
-        return content;
-      }
-    });
-  
-    /* Display info on sidebar */
-  
-    $('.search').keyup(function() {
-      $('.itemcontent').slideUp(0); // Hide any sidebar that is already open
-  
-      // Filter lines, circles, and sidebar items on search
-      $('.circle, .line, .item').each(function() {
-        var i = $(this).data('name'),
-          name = exits[i]['Name'];
-        var searchString = `${name} ${exits[i]['X']} ${exits[i]['Z']} ${exits[i]['Political Entity']} ${exits[i]['Description']}`.toLowerCase();
-        var thisString = $('.search').val().toLowerCase();
-        var searchFlag = searchString.search(thisString);
-  
-        if(searchFlag == -1) {
-          // console.log(`${thisString} NOT found in ${searchString}`);
-          $(this).fadeOut(0);
-        } else {
-          // console.log(`${thisString} found at position ${searchFlag} in ${searchString}`);
-          $(this).fadeIn(0);
-        }
-      });
-    });
-  
-    // UPDATE THE SIDEBAR WITH STOP INFO!!!
-    $('.circle').click(function() {
-      var i = $(this).data('name'),
-        name = exits[i]['Name'];
-      if($(`.item[data-name="${i}"]`).children('.itemcontent').css('display') != 'none') {
-        // Clicking an already open one means everything should unhide & all items should close & search should clear
-        $('.circle').each(function() {
-          $(this).show(0);
-        });
-        $('.line').each(function() {
-          $(this).show(0);
-        });
-        $('.search').val('');
-        $('.search').trigger('keyup');
+      if(searchFlag == -1) {
+        $(this).fadeOut(0);
       } else {
-        $('.search').val(name);
-        $('.search').trigger('keyup');
-        $(`.item[data-name="${i}"]`).children('.itemtop').trigger('click');
+        $(this).fadeIn(0);
       }
-    });
-  
-    $('.itemtop').click(function() {
-      if($(this).siblings('.itemcontent').css('display') != 'none') {
-        // It's open, so close it
-        $(this).siblings('.itemcontent').slideUp(300);
-      } else {
-        // It's closed, so close everything else and open it
-        $('.itemcontent').slideUp(300);
-        $(this).siblings('.itemcontent').slideDown(300);
-      };
-    });
-  
-    $('.entity').click(function() { // Show all portals of same country
-      $('.search').val(exits[$(this).parent().parent().data('name')]['Political Entity']);
-      $('.search').trigger('keyup');
-    });
-  
-    $('.clear').click(function() {
-      $('.search').val('').trigger('keyup').focus();
     });
   });
-});
+  
+  // UPDATE THE SIDEBAR WITH STOP INFO!!!
+  $('.circle').click(function() {
+    var i = $(this).data('name');
+    var exitName = exits[i]['Name'];
+    if($(`.item[data-name="${i}"]`).children('.itemcontent').css('display') != 'none') {
+      // Clicking an already open one means everything should unhide & all items should close & search should clear
+      $('.circle').each(function() {
+        $(this).show(0);
+      });
+      $('.line').each(function() {
+        $(this).show(0);
+      });
+      $('.search').val('');
+      $('.search').trigger('keyup');
+    } else {
+      $('.search').val(exitName);
+      $('.search').trigger('keyup');
+      $(`.item[data-name="${i}"]`).children('.itemtop').trigger('click');
+    }
+  });
+  
+  $('.itemtop').click(function() {
+    console.log('Success');
+    if($(this).siblings('.itemcontent').css('display') != 'none') {
+      // It's open, so close it
+      $(this).siblings('.itemcontent').slideUp(300);
+    } else {
+      // It's closed, so close everything else and open it
+      $('.itemcontent').slideUp(300);
+      $(this).siblings('.itemcontent').slideDown(300);
+    };
+  });
+  
+  $('.entity').click(function() { // Show all portals of same country
+    $('.search').val(exits[$(this).parent().parent().data('name')]['Political Entity']);
+    $('.search').trigger('keyup');
+  });
+  
+  $('.clear').click(function() {
+    $('.search').val('').trigger('keyup').focus();
+  });
+}
+
+main();

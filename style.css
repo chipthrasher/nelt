@@ -203,7 +203,7 @@ a {
 .lines { z-index: 2; }
 .countries { z-index: 1; opacity: 0.6; }
 .dynmap { z-index: 0; opacity: 0.1; }
-.political { z-index: 0; opacity: 0.15; }
+.political { z-index: 0; opacity: 0.2; }
 
 /* SVG Styling */
 
@@ -216,6 +216,9 @@ a {
 line {
   stroke-width: 1;
   stroke: black;
+}
+.inner {
+
 }
 .leaflet-control {
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
