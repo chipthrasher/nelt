@@ -272,7 +272,7 @@ async function main() {
   
       var content = `<div><div class="name">${name} <div class="coords">${x}, ${z}</div></div>`;
       return content;
-    }
+    },
   });
   
   /* Display info on sidebar */
@@ -282,6 +282,22 @@ async function main() {
   
     // Filter lines, circles, and sidebar items on search
     $('.circle, .line, .item').each(function() {
+      if(!exits[$(this).data('name')]) return false; // Sometimes there are weird undefineds floating around
+      
+      var i = exits[$(this).data('name')];
+      var name = i['Name'];
+      var searchString = `${name} ${i['X']} ${i['Z']} ${i['Political Entity']} ${i['Description']}`.toLowerCase();
+      var inputString = $('.search').val().toLowerCase();
+      var searchFlag = searchString.search(inputString);
+  
+      if(searchFlag == -1) {
+        $(this).fadeOut(0);
+      } else {
+        $(this).fadeIn(0);
+      }
+    });
+
+    $('.item').each(function() {
       if(!exits[$(this).data('name')]) return false; // Sometimes there are weird undefineds floating around
       
       var i = exits[$(this).data('name')];
