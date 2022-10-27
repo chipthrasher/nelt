@@ -336,7 +336,7 @@ async function main() {
   });
   
   $('.itemtop').click(function() {
-    console.log('Success');
+    // console.log('Success');
     if($(this).siblings('.itemcontent').css('display') != 'none') {
       // It's open, so close it
       $(this).siblings('.itemcontent').slideUp(300);
