@@ -102,6 +102,7 @@ async function main() {
   
   let params = new URLSearchParams(window.location.search);
   let q = params.get('q');
+  if(q == null) q = '';
   document.querySelector('.search').value = decodeURIComponent(q);
   
   /* Render map with Leaflet */
