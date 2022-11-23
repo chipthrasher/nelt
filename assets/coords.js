@@ -76,11 +76,11 @@ L.Control.Coordinates = L.Control.extend({
 		}
 
 		if (obj.latlng) {
-      L.DomUtil.get(this._lng).innerHTML = '<strong>Overworld: </strong><br>' + (obj.latlng.lng * 1).toFixed(0).toString();
-      L.DomUtil.get(this._lat).innerHTML = ', ' + (obj.latlng.lat * -1).toFixed(0).toString();
+      L.DomUtil.get(this._lng).innerHTML = '<strong>Overworld: </strong><br><span class="mono">' + (obj.latlng.lng * 1).toFixed(0).toString() + '</span>';
+      L.DomUtil.get(this._lat).innerHTML = ', <span class="mono">' + (obj.latlng.lat * -1).toFixed(0).toString() + '</span>';
 
-      L.DomUtil.get(this._nethlng).innerHTML = '<br><strong>Nether: </strong><br>' + (obj.latlng.lng / 8).toFixed(0).toString();
-      L.DomUtil.get(this._nethlat).innerHTML = ', ' + (obj.latlng.lat / -8).toFixed(0).toString();
+      L.DomUtil.get(this._nethlng).innerHTML = '<br><strong>Nether: </strong><br><span class="mono">' + (obj.latlng.lng / 8).toFixed(0).toString() + '</span>';
+      L.DomUtil.get(this._nethlat).innerHTML = ', <span class="mono">' + (obj.latlng.lat / -8).toFixed(0).toString() + '</span>';
 		}
 	}
 });

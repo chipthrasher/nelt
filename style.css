@@ -1,20 +1,58 @@
-@import url('leaflet/jquery-ui.css');
-@import url('leaflet/leaflet.css');
-@import url('leaflet/coords.css');
-/* TRAIN WIFI @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'); */
+@import url('assets/jquery-ui.css');
+@import url('assets/leaflet/leaflet.css');
+@import url('assets/coords.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+:root {
+  /* Dark mode */
+  --col-darkest: #111;
+  --col-darker: #222;
+  --col-dark: #333;
+  --col-light: #888;
+  --col-lighter: #ccc;
+  --col-lightest: #eee;
+  --col-white-faded: rgba(255, 255, 255, 0.5);
+
+  /* Light mode */
+  /* --col-lightest: #111;
+  --col-lighter: #222;
+  --col-light: #333;
+  --col-dark: #aaa;
+  --col-darker: #ddd;
+  --col-darkest: #eee;
+  --col-white-faded: rgba(255, 255, 255, 0.5); */
+
+  --col-pastel-blue: #68b3e8;
+  --col-pastel-green: #66bb6b;
+  --col-pastel-purple: #a066bb;
+  --col-pastel-red: #e65c46;
+
+  --col-lines: var(--col-lighter);
+  --col-innerlines: var(--col-lighter);
+  --col-circles: var(--col-lightest);
+
+  --opacity-political: 0.5;
+  --line-width: 0.12rem;
+  --circle-width: 0.28rem;
+  --box-shadow: 0.3rem 0.3rem 1.3rem rgba(0, 0, 0, 0.2);
+  --box-shadow-dark: 0.3rem 0.3rem 1.3rem rgba(0, 0, 0, 0.4);
+
+  --font-sans: "Roboto", sans-serif;
+  --font-mono: "Roboto Mono", monospace;
+}
 html {
-  background: #E5E5E5;
+  background: var(--col-lightest);
+  font-size: 15px;
 }
 body {
-  background: #E5E5E5;
-  font-family: "Roboto", sans-serif;
-  font-size: 15px;
-  margin: 0px;
+  background: var(--col-darkest);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  margin: 0;
   height: 100vh;
   display: flex;
   overflow: hidden;
-  line-height: 1.5;
+  line-height: 1.5rem;
 }
 a {
   text-decoration: none;
@@ -23,19 +61,19 @@ a {
 
 @media screen and (min-width: 800px) {
   /* For big screens, show the normal map */
-  .left {
+  #left {
     width: 100vw;
   }
-  .right {
+  #right {
     width: 400px;
   }
 }
 @media screen and (max-width: 800px) {
   /* For small screens, just show the directory */
-  .left {
+  #left {
     display: none;
   }
-  .right {
+  #right {
     width: 100vw;
   }
 }
@@ -46,148 +84,141 @@ a {
 .mobileright {
   width: 100vw;
 }
-.left {
+#left {
 
 }
-.right {
+#right {
   z-index: 7;
 
-  background: #222;
-  color: #ddd;
+  background: var(--col-darker);
+  color: var(--col-lightest);
+  box-shadow: var(--box-shadow);
   height: 100vh;
   overflow: scroll;
 }
-.clear i {
-  font-size: 20px;
-  margin-left: -28px;
-  color: #aaa;
+.clear svg {
+  width: 1.5rem;
+  margin-left: -2.3rem;
+  stroke: var(--col-light);
+  fill: var(--col-dark);
+  stroke-width: 0.2rem;
   position: relative;
-  top: 2px;
+  top: 7px;
 }
 .top {
-  padding: 35px 35px 10px 35px;
+  padding: 3rem 1.5rem 0.75rem 1.5rem;
 }
 .title {
-  font-size: 30px;
+  font-size: 2rem;
   font-weight: 900;
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 1.75rem;
 }
 .subtitle {
   text-align: center;
   color: #aaa;
   font-weight: 500;
   font-style: italic;
-  margin-bottom: 10px;
-}
-.image {
-  margin-bottom: 25px;
-  width: 100%;
-  height: 160px;
-  display: none;
-}
-.image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  margin-bottom: 0.75rem;
 }
 .searchbox {
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 0.75rem;
 }
 .search {
-  font-family: "Roboto Mono", monospace;
-  color: #ddd;
-  background: #333;
-  border: 1px solid #555;
-  border-radius: 5px;
-  padding: 10px;
-  margin-bottom: 10px;
+  font-family: var(--font-mono);
+  color: var(--col-lightest);
+  background: var(--col-dark);
+  border: 0.1rem solid var(--col-dark);
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+  width: 70%;
 }
-.directory {
-  grid-template-columns: 1fr 50px;
-}
+
+/* Directory */
+
 .item {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
 }
 .itemtop {
   cursor: pointer;
-  background: #2f2f2f;
+  background: var(--darker);
   display: flex;
   transition: 0.2s all;
 }
 .itemtop:hover {
-  background: #444;
+  background: var(--col-dark);
 }
 .itemleft {
   width: 80%;
-  padding: 10px 30px;
+  padding: 0.75rem 2rem;
 }
 .itemright {
   width: 20%;
 }
 .itemcontent {
-  padding: 15px 30px;
+  padding: 1rem 2rem;
   display: none;
 }
 .itemcontent .name {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 500;
 }
 .itemcontent .entity {
-  font-size: 15px;
+  font-size: 1rem;
   font-style: italic;
   color: #aaa;
   font-weight: 500;
 
-  margin-bottom: 10px;
+  margin-bottom: 0.75rem;
   cursor: pointer;
   transition: 0.2s all;
 }
 .itemcontent .entity:hover {
-  color: #ddd;
+  color: var(--col-lightest);
 }
 .itemcontent .wiki {
   display: block;
-  font-size: 15px;
+  font-size: 1rem;
   font-style: italic;
   font-weight: 500;
 
-  color: #aaa;
+  color: var(--col-light);
 
-  padding-bottom: 15px;
+  padding-bottom: 1rem;
   text-decoration: none;
   transition: 0.2s all;
 }
 .itemcontent .wiki:hover {
-  color: #ddd;
+  color: var(--col-lightest);
 }
 .itemcontent .coords {
-  font-family: "Roboto Mono", monospace;
-  color: #ddd;
-  font-size: 18px;
+  font-family: var(--font-mono);
+  color: var(--col-lightest);
+  font-size: 1.25rem;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 0.75rem;
 }
 .itemcontent .description {
-  font-size: 14px;
-  margin: 15px 0px;
+  font-size: 0.9rem;
+  margin: 1rem 0;
   font-weight: 400;
 }
 .itemcontent i {
-  font-size: 20px;
+  font-size: 1.25rem;
   transition: 0.2s all;
   display: inline;
-  margin-right: 10px;
-  color: #aaa;
+  margin-right: 0.75rem;
+  color: var(--col-light);
 }
 
 .ibwh, .nation, .end, .warning { display: none; }
-.ibwh:hover { color: #68b3e8; }
-.nation:hover { color: #66bb6b; }
-.end:hover { color: #a066bb; }
-.warning:hover { color: #e65c46; }
+.ibwh:hover { color: var(--col-pastel-blue); }
+.nation:hover { color: var(--col-pastel-green); }
+.end:hover { color: var(--col-pastel-purple); }
+.warning:hover { color: var(--col-pastel-red); }
 
 /* Sizing & layering */
 
@@ -199,54 +230,97 @@ a {
   z-index: 1;
 }
 
-.stops { z-index: 4; }
-.lines { z-index: 2; }
-.countries { z-index: 1; opacity: 0.6; }
-.dynmap { z-index: 0; opacity: 0.1; }
-.political { z-index: 0; opacity: 0.2; }
+.political {
+  z-index: 0;
+  opacity: var(--opacity-political);
+}
 
 /* SVG Styling */
 
 .circle {
   transition: 0.2s all;
   stroke: transparent;
-  stroke-width: 10;
-  fill: black;
+  r: var(--circle-width);
+  fill: var(--col-circles);
+  z-index: 10;
 }
-line {
-  stroke-width: 1;
-  stroke: black;
+
+.line {
+  z-index: 9;
+  stroke-width: var(--line-width);
+  stroke: var(--col-lines);
+  stroke-linecap: square;
 }
-.inner {
+
+g[role="lines"] {
+  
+}
+
+g[role="portals"] g {
 
 }
-.leaflet-control {
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+
+.hidden {
+  opacity: 0;
 }
+
+.line[role="inner"] {
+  stroke: var(--col-innerlines);
+}
+
+.leaflet-control {
+  box-shadow: var(--box-shadow);
+}
+
 .leaflet-control-coordinates {
-  padding: 10px;
+  padding: 0.6rem;
 }
 
 /* jQuery Tooltip */
 
 .ui-tooltip {
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: var(--box-shadow-dark);
   font-family: inherit;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
   border: none!important;
-  border-radius: 4px;
-  padding: 15px;
-  margin: 0px;
-  color: #ddd;
-  background: #222;
+  border-radius: 0.3rem;
+  padding: 1rem;
+  margin: 0;
+  color: var(--col-lightest);
+  background: var(--col-darker);
   overflow: hidden;
 }
 .ui-tooltip .name {
   font-weight: 500;
 }
 .ui-tooltip .coords {
-  font-family: "Roboto Mono", monospace;
-  color: #999;
+  font-family: var(--font-sans);
+  color: var(--col-light);
   font-weight: 500;
+}
+
+/* Coordinates */
+
+.leaflet-control-coordinates {
+	background: var(--col-darker);
+	border-radius: 0.3rem;
+	cursor: pointer;
+  color: var(--col-lightest);
+  line-height: 1.5rem;
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+.leaflet-control-coordinates.hidden {
+	display: none;
+}
+
+.leaflet-control-coordinates strong {
+
+}
+.leaflet-control-coordinates, .leaflet-control-zoom {
+  box-shadow: 0.3rem 0.3rem 1.3rem rgba(0, 0, 0, 0.2);
 }
