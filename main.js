@@ -62,7 +62,6 @@ async function main() {
     }
 
     const innerLineData = functions.tsvJSON(innerLineTSV);
-    // console.log(innerLineData);
 
     for(i in innerLineData) {
         let x1 = parseInt(innerLineData[i]['X Position 1']),
@@ -72,22 +71,20 @@ async function main() {
             ID = innerLineData[i]['ID'],
             main = parseInt(innerLineData[i]['Main']);
 
-        // console.log(x1, z1, x2, z2, ID, main);
-        // Filter incomplete inner line entries
+    
         if(isNaN(x1) || isNaN(x2) || isNaN(z1) || isNaN(z2) || isNaN(main) ) {
-        continue;
+            continue;
         } else {
-        innerLines.push({
-            x1: x1,
-            x2: x2,
-            z1: z1,
-            z2: z2,
-            ID: ID,
-            main: main
-        });
+            innerLines.push({
+                x1: x1,
+                x2: x2,
+                z1: z1,
+                z2: z2,
+                ID: ID,
+                main: main
+            });
         }
     }
-    // console.log(innerLines);
 
     const mapData = functions.tsvJSON(mapTSV);
 
@@ -129,10 +126,18 @@ async function main() {
 
     map.panTo([0, 0]);
 
-    const c = new L.Control.Coordinates({
-        position: 'topleft'
+    L.Control.Coords = L.Control.extend({
+        onAdd: function(map) {
+            var className = 'leaflet-control-coordinates';
+			container = L.DomUtil.create('div', className);
+		    L.DomEvent.disableClickPropagation(container);
+		    return container;
+        }
     });
-    c.addTo(map);
+
+    const c = new L.Control.Coords({
+        position: 'topleft'
+    }).addTo(map);
 
     /*
 
@@ -250,10 +255,10 @@ async function main() {
 
                 if(line.x1 == line.x2) {
                 // console.log(line.ID, line.x1, line.x2, line.z1, line.y2, 'is vertical');
-                x2 = line.x2;
+                    x2 = line.x2;
                 } else if(line.z1 == line.z2) {
                 // console.log(line.ID, line.x1, line.x2, line.z1, line.y2, 'is horizontal');
-                z2 = line.z2;
+                    z2 = line.z2;
                 }
             }
             }
@@ -319,8 +324,25 @@ async function main() {
         $('.political').css('opacity', this.value);
     });
 
+    const updateCoords = (e) => {
+        let x = (e.latlng.lng * 1).toFixed(0);
+        let y = (e.latlng.lat * -1).toFixed(0);
+
+        let nethX = Math.floor(x / 8);
+        let nethY = Math.floor(y / 8);
+
+        document.querySelector('.leaflet-control-coordinates').innerHTML =
+        `
+            <strong>Overworld:</strong><br>
+            <span class="mono">${x}, ${y}</span><br>
+            <strong>Nether:</strong><br>
+            <span class="mono">${nethX}, ${nethY}</span>
+        `;
+        // highlightedChunk.innerHTML = `(${chunkX}, ${chunkY})`;
+    }
+    
     map.on('mousemove', function(e) {
-        c.setCoordinates(e);
+        updateCoords(e);
     });
 
     /* Create hover tooltips */
