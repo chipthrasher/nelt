@@ -120,6 +120,13 @@ a {
   font-weight: 500;
   font-style: italic;
   margin-bottom: 0.75rem;
+  line-height: 1.75rem;
+}
+.subtitle a {
+    color: var(--col-lightest);
+}
+.subtitle a:hover {
+    color: var(--col-lighter);
 }
 .searchbox {
   text-align: center;
