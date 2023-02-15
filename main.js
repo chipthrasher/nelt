@@ -24,7 +24,7 @@ const functions = {
         return closestLine;
     },
     findClosestZ: (num) => { // Horizontal lines
-        let lines = [-300,-200,-100,0,100,200,300];
+        let lines = [-400,-300,-200,-100,0,100,200,300];
         let closestLine = lines[0];
         for(let item of lines) {
             if(Math.abs(item - num) < Math.abs(closestLine - num)) closestLine = item;
@@ -338,7 +338,6 @@ async function main() {
             <strong>Nether:</strong><br>
             <span class="mono">${nethX}, ${nethY}</span>
         `;
-        // highlightedChunk.innerHTML = `(${chunkX}, ${chunkY})`;
     }
     
     map.on('mousemove', function(e) {
