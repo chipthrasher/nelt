@@ -1,3 +1,5 @@
+// Test new addition
+
 const functions = {
     isMobile: () => {
         let check = false;
