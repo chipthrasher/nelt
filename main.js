@@ -16,7 +16,7 @@ const functions = {
         });
     },
     findClosestX: (num) => { // Vertical lines
-        let lines = [-300,-200,-100,0,100,200,300];
+        let lines = [-300,-200,-100,0,100,200,300,400];
         let closestLine = lines[0];
         for(let item of lines) {
             if(Math.abs(item - num) < Math.abs(closestLine - num)) closestLine = item;
