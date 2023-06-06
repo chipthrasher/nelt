@@ -112,7 +112,8 @@ async function main() {
         x1: innerLineData[i]['X Position 1'],
         x2: innerLineData[i]['X Position 2'],
         y1: innerLineData[i]['Z Position 1'],
-        y2: innerLineData[i]['Z Position 2']
+        y2: innerLineData[i]['Z Position 2'],
+        ID: innerLineData[i]['ID']
       });
     }
     // console.log(innerLines);
