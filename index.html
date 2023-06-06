@@ -12,8 +12,8 @@
   <head>
     <meta charset="utf-8">
     <title>Chipt's Nelt Map</title>
-    <script src="leaflet/leaflet.js"></script>
-    <script src="leaflet/coords.js"></script>
+    <script src="assets/leaflet/leaflet.js"></script>
+    <!-- <script src="assets/coords.js"></script> -->
     <script src="https://kit.fontawesome.com/64fcc6f5cf.js" crossorigin="anonymous"></script>
     <meta property="og:title" content="Chipt's Nelt Map">
     <meta property="og:site_name" content="chipthrasher.com">
@@ -23,22 +23,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="favicon.png" type="image/png"/>
     <link rel="stylesheet" href="style.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-53HB8HLF9D"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-53HB8HLF9D');
+    </script>
   </head>
   <body>
-    <div class="left">
+    <div id="left">
       <div id="layers" class="layers"></div>
     </div>
-    <div class="right">
+    <div id="right">
       <div class="top">
         <div class="title"><a href="">Nelt Map</a></div>
-        <div class="searchbox"><input class="search" placeholder="Search for a stop"><span class="clear" title="Clear search"><i class="fas fa-times"></i></span></div>
-        <div class="subtitle">Tap on an exit to learn more.</div>
+        <div class="searchbox">
+          <input class="search" placeholder="Search for a stop">
+          <span class="clear" title="Clear search">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </span>
+        </div>
+        <div class="subtitle">Tap on an exit to learn more!<br><a href="https://github.com/chipthrasher/nelt#readme">Learn more</a> about the Nelt Map.</div>
       </div>
-      <div class="directory"></div>
+      <div id="directory"></div>
     </div>
-    <script src="leaflet/jquery.min.js"></script>
-    <script src="leaflet/jquery-ui.min.js"></script>
-    <script src="leaflet/scroll.js"></script>
+    <script src="assets/jquery.min.js"></script>
+    <script src="assets/jquery-ui.min.js"></script>
+    <script src="assets/scroll.js"></script>
     <script src="main.js" defer></script>
   </body>
 </html>
