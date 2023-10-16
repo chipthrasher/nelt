@@ -101,7 +101,7 @@ async function main() {
 
     const mapChangeFadeLength = 0;
     const slideLength = 300;
-    const mapSizeMultiplier = 450;
+    const mapSizeMultiplier = 500;
 
     $('.itemcontent i').hide(0);
     $('.wiki').hide(0);
