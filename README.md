@@ -7,7 +7,7 @@
 
 ## Overview 
 
-The Nelt is a **Nether ice road highway** on the [Elgeis](https://www.elgeis.com) geopolitical Minecraft server. It is based on a specific [game mechanic](https://minecraft.gamepedia.com/The_Nether#Traits) where each block in the Nether counts for 8 blocks in the overworld, making Nether travel highly efficient.
+The Nelt is a **Nether ice road highway** on the [Elgeis](https://www.elgeis.com) geopolitical Minecraft server. It is based on a specific [game mechanic](https://minecraft.wiki/The_Nether#Traits) where each block in the Nether counts for 8 blocks in the overworld, making Nether travel highly efficient.
 
 The community of Elgeis has built a grid system of ice roads, allowing players to run, fly, or boat across at high speeds. Each portal connects to these roads, making travel between any two portals very simple.
 
