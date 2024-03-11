@@ -42,7 +42,7 @@ async function main() {
         linesContent = '',
         circlesContent = '',
         directory = '';
-    
+
     const animLen = 200;
 
     const mapTSV = await $.get("https://docs.google.com/spreadsheets/d/e/2PACX-1vSwok3n0HC0TmlJt4gG-C6JXFEInJfcm4zDb4YKtwsLW78TZu5BA3r9FM_EbarcO0q5V2QDAv2QdTGQ/pub?gid=0&single=true&output=tsv&callback=?");
@@ -481,8 +481,9 @@ async function main() {
         mapUpdate();
     };
 
+    // Update map based on search
+
     document.querySelector('.search').addEventListener('keyup', (e) => {
-        // console.log('Search updated');
         mapUpdate();
     });
 
@@ -490,7 +491,7 @@ async function main() {
     const itemtopElements = document.getElementsByClassName('itemtop');
 
     for (let i = 0; i < itemtopElements.length; i++) {
-        
+
         // On click, open directory
 
         itemtopElements[i].addEventListener('click', (e) => {
@@ -565,8 +566,8 @@ async function main() {
         }, false);
     }
 
-
     // Search clear clicked
+
     document.querySelector('.clear').addEventListener('click', (e) => {
         document.querySelector('.search').value = '';
         mapUpdate();
