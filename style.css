@@ -39,10 +39,12 @@
   --font-sans: "Roboto", sans-serif;
   --font-mono: "Roboto Mono", monospace;
 }
+
 html {
   background: var(--col-lightest);
   font-size: 15px;
 }
+
 body {
   background: var(--col-darkest);
   font-family: var(--font-sans);
@@ -53,25 +55,31 @@ body {
   overflow: hidden;
   line-height: 1.5rem;
 }
+
 a {
   text-decoration: none;
   color: inherit;
 }
 
 @media screen and (min-width: 800px) {
+
   /* For big screens, show the normal map */
   #left {
     width: 100vw;
   }
+
   #right {
     width: 400px;
   }
 }
+
 @media screen and (max-width: 800px) {
+
   /* For small screens, just show the directory */
   #left {
     display: none;
   }
+
   #right {
     width: 100vw;
   }
@@ -80,12 +88,13 @@ a {
 .mobileleft {
   display: none;
 }
+
 .mobileright {
   width: 100vw;
 }
-#left {
 
-}
+#left {}
+
 #right {
   z-index: 7;
 
@@ -95,6 +104,7 @@ a {
   height: 100vh;
   overflow: scroll;
 }
+
 .clear svg {
   width: 1.5rem;
   margin-left: -2.3rem;
@@ -104,15 +114,18 @@ a {
   position: relative;
   top: 7px;
 }
+
 .top {
   padding: 3rem 1.5rem 0.75rem 1.5rem;
 }
+
 .title {
   font-size: 2rem;
   font-weight: 900;
   text-align: center;
   margin-bottom: 1.75rem;
 }
+
 .subtitle {
   text-align: center;
   color: #aaa;
@@ -121,16 +134,20 @@ a {
   margin-bottom: 0.75rem;
   line-height: 1.75rem;
 }
+
 .subtitle a {
-    color: var(--col-lightest);
+  color: var(--col-lightest);
 }
+
 .subtitle a:hover {
-    color: var(--col-lighter);
+  color: var(--col-lighter);
 }
+
 .searchbox {
   text-align: center;
   margin-bottom: 0.75rem;
 }
+
 .search {
   font-family: var(--font-mono);
   color: var(--col-lightest);
@@ -148,33 +165,41 @@ a {
   font-size: 1rem;
   font-weight: 500;
 }
+
 .itemtop {
   cursor: pointer;
   background: var(--darker);
   display: flex;
   transition: 0.2s all;
 }
+
 .itemtop:hover {
   background: var(--col-dark);
 }
+
 .itemtopHover {
   background: var(--col-dark);
 }
+
 .itemleft {
   width: 80%;
   padding: 0.75rem 2rem;
 }
+
 .itemright {
   width: 20%;
 }
+
 .itemcontent {
   padding: 1rem 2rem;
   display: none;
 }
+
 .itemcontent .name {
   font-size: 1.25rem;
   font-weight: 500;
 }
+
 .itemcontent .entity {
   font-size: 1rem;
   font-style: italic;
@@ -185,9 +210,11 @@ a {
   cursor: pointer;
   transition: 0.2s all;
 }
+
 .itemcontent .entity:hover {
   color: var(--col-lightest);
 }
+
 .itemcontent .wiki {
   display: block;
   font-size: 1rem;
@@ -200,9 +227,11 @@ a {
   text-decoration: none;
   transition: 0.2s all;
 }
+
 .itemcontent .wiki:hover {
   color: var(--col-lightest);
 }
+
 .itemcontent .coords {
   font-family: var(--font-mono);
   color: var(--col-lightest);
@@ -210,11 +239,13 @@ a {
   font-weight: bold;
   margin-bottom: 0.75rem;
 }
+
 .itemcontent .description {
   font-size: 0.9rem;
   margin: 1rem 0;
   font-weight: 400;
 }
+
 .itemcontent i {
   font-size: 1.25rem;
   transition: 0.2s all;
@@ -223,11 +254,28 @@ a {
   color: var(--col-light);
 }
 
-.ibwh, .nation, .end, .warning { display: none; }
-.ibwh:hover { color: var(--col-pastel-blue); }
-.nation:hover { color: var(--col-pastel-green); }
-.end:hover { color: var(--col-pastel-purple); }
-.warning:hover { color: var(--col-pastel-red); }
+.ibwh,
+.nation,
+.end,
+.warning {
+  display: none;
+}
+
+.ibwh:hover {
+  color: var(--col-pastel-blue);
+}
+
+.nation:hover {
+  color: var(--col-pastel-green);
+}
+
+.end:hover {
+  color: var(--col-pastel-purple);
+}
+
+.warning:hover {
+  color: var(--col-pastel-red);
+}
 
 /* Sizing & layering */
 
@@ -268,16 +316,13 @@ a {
   opacity: 0.5;
 }
 
-g[role="lines"] {
+g[role="lines"] {}
 
-}
-
-g[role="portals"] g {
-
-}
+g[role="portals"] g {}
 
 .hidden {
   opacity: 0;
+  display: none;
 }
 
 .line[role="inner"] {
@@ -299,7 +344,7 @@ g[role="portals"] g {
   font-family: inherit;
   font-size: 1rem;
   font-weight: 500;
-  border: none!important;
+  border: none !important;
   border-radius: 0.3rem;
   padding: .75rem;
   margin: 0;
@@ -307,12 +352,15 @@ g[role="portals"] g {
   background: var(--col-darker);
   overflow: hidden;
 }
+
 [data-tippy-root] div {
   background: inherit;
 }
+
 [data-tippy-root] .name {
   font-weight: 500;
 }
+
 [data-tippy-root] .coords {
   font-family: var(--font-sans);
   color: var(--col-light);
@@ -322,9 +370,9 @@ g[role="portals"] g {
 /* Coordinates */
 
 .leaflet-control-coordinates {
-	background: var(--col-darker);
-	border-radius: 0.3rem;
-	cursor: pointer;
+  background: var(--col-darker);
+  border-radius: 0.3rem;
+  cursor: pointer;
   color: var(--col-lightest);
   line-height: 1.5rem;
 }
@@ -334,12 +382,12 @@ g[role="portals"] g {
 }
 
 .leaflet-control-coordinates.hidden {
-	display: none;
+  display: none;
 }
 
-.leaflet-control-coordinates strong {
+.leaflet-control-coordinates strong {}
 
-}
-.leaflet-control-coordinates, .leaflet-control-zoom {
+.leaflet-control-coordinates,
+.leaflet-control-zoom {
   box-shadow: 0.3rem 0.3rem 1.3rem rgba(0, 0, 0, 0.2);
 }

@@ -1,41 +1,39 @@
-// Test new addition
-
-const functions = {
-    isMobile: () => {
-        let check = false;
-        (function (a) { if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0, 4))) check = true; })(navigator.userAgent || navigator.vendor || window.opera);
-        return check;
-    },
-    tsvJSON: (tsv) => {
-        const lines = tsv.split('\n');
-        const headers = lines.shift().split('\t');
-        return lines.map(line => {
-            const data = line.split('\t');
-            return headers.reduce((obj, nextKey, index) => {
-                obj[nextKey] = data[index];
-                return obj;
-            }, {});
-        });
-    },
-    findClosestX: (num) => { // Vertical lines
-        let lines = [-300, -200, -100, 0, 100, 200, 300, 400];
-        let closestLine = lines[0];
-        for (let item of lines) {
-            if (Math.abs(item - num) < Math.abs(closestLine - num)) closestLine = item;
-        }
-        return closestLine;
-    },
-    findClosestZ: (num) => { // Horizontal lines
-        let lines = [-400, -300, -200, -100, 0, 100, 200, 300, 400];
-        let closestLine = lines[0];
-        for (let item of lines) {
-            if (Math.abs(item - num) < Math.abs(closestLine - num)) closestLine = item;
-        }
-        return closestLine;
-    }
-}
-
 async function main() {
+    const functions = {
+        isMobile: () => {
+            let check = false;
+            (function (a) { if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0, 4))) check = true; })(navigator.userAgent || navigator.vendor || window.opera);
+            return check;
+        },
+        tsvJSON: (tsv) => {
+            const lines = tsv.split('\n');
+            const headers = lines.shift().split('\t');
+            return lines.map(line => {
+                const data = line.split('\t');
+                return headers.reduce((obj, nextKey, index) => {
+                    obj[nextKey] = data[index];
+                    return obj;
+                }, {});
+            });
+        },
+        findClosestX: (num) => { // Vertical lines
+            let lines = [-300, -200, -100, 0, 100, 200, 300, 400];
+            let closestLine = lines[0];
+            for (let item of lines) {
+                if (Math.abs(item - num) < Math.abs(closestLine - num)) closestLine = item;
+            }
+            return closestLine;
+        },
+        findClosestZ: (num) => { // Horizontal lines
+            let lines = [-400, -300, -200, -100, 0, 100, 200, 300, 400];
+            let closestLine = lines[0];
+            for (let item of lines) {
+                if (Math.abs(item - num) < Math.abs(closestLine - num)) closestLine = item;
+            }
+            return closestLine;
+        }
+    }
+
     let portals = [],
         colors = {},
         innerLines = [],
@@ -45,35 +43,54 @@ async function main() {
 
     const animLen = 200;
 
-    // const mapTSV = await $.get("https://docs.google.com/spreadsheets/d/e/2PACX-1vSwok3n0HC0TmlJt4gG-C6JXFEInJfcm4zDb4YKtwsLW78TZu5BA3r9FM_EbarcO0q5V2QDAv2QdTGQ/pub?gid=0&single=true&output=tsv&callback=?");
-    // const innerLineTSV = await $.get("https://docs.google.com/spreadsheets/d/e/2PACX-1vSwok3n0HC0TmlJt4gG-C6JXFEInJfcm4zDb4YKtwsLW78TZu5BA3r9FM_EbarcO0q5V2QDAv2QdTGQ/pub?gid=576744292&single=true&output=tsv");
-    // const colorTSV = await $.get("https://docs.google.com/spreadsheets/d/e/2PACX-1vSwok3n0HC0TmlJt4gG-C6JXFEInJfcm4zDb4YKtwsLW78TZu5BA3r9FM_EbarcO0q5V2QDAv2QdTGQ/pub?gid=508864180&single=true&output=tsv");
-
-    const mapTSV = await $.get("data/map.tsv");
-    const innerLineTSV = await $.get("data/lines.tsv");
-    const colorTSV = await $.get("data/colors.tsv");
+    let searchVal;
 
     /*
-
+    
     Import data for map
-
+    
     */
 
+    // Load cached data
+
+    let mapTSV, lineTSV, colorTSV, response = await fetch("data/map.tsv");
+    if (response.ok) {
+        mapTSV = await response.text();
+    } else {
+        console.error("Failed to fetch map.tsv:", response.status);
+    }
+
+    response = await fetch("data/lines.tsv");
+    if (response.ok) {
+        lineTSV = await response.text();
+    } else {
+        console.error("Failed to fetch lines.tsv:", response.status);
+    }
+
+    response = await fetch("data/colors.tsv");
+    if (response.ok) {
+        colorTSV = await response.text();
+    } else {
+        console.error("Failed to fetch colors.tsv:", response.status);
+    }
+
+    // Process colors
     const colorData = functions.tsvJSON(colorTSV);
 
     for (i in colorData) {
         colors[colorData[i]['Nation']] = colorData[i]['Color'];
     }
 
-    const innerLineData = functions.tsvJSON(innerLineTSV);
+    // Process lines
+    const lineData = functions.tsvJSON(lineTSV);
 
-    for (i in innerLineData) {
-        let x1 = parseInt(innerLineData[i]['X Position 1']),
-            z1 = parseInt(innerLineData[i]['Z Position 1']),
-            x2 = parseInt(innerLineData[i]['X Position 2']),
-            z2 = parseInt(innerLineData[i]['Z Position 2']),
-            ID = innerLineData[i]['ID'],
-            main = parseInt(innerLineData[i]['Main']);
+    for (i in lineData) {
+        let x1 = parseInt(lineData[i]['X Position 1']),
+            z1 = parseInt(lineData[i]['Z Position 1']),
+            x2 = parseInt(lineData[i]['X Position 2']),
+            z2 = parseInt(lineData[i]['Z Position 2']),
+            ID = lineData[i]['ID'],
+            main = parseInt(lineData[i]['Main']);
 
 
         if (isNaN(x1) || isNaN(x2) || isNaN(z1) || isNaN(z2) || isNaN(main)) {
@@ -90,23 +107,22 @@ async function main() {
         }
     }
 
+    // Process map data
+
     const mapData = functions.tsvJSON(mapTSV);
 
-    $.each(mapData, (index, info) => {
-
-        if (info['Hide'] == 1) return;
+    for (const [index, info] of Object.entries(mapData)) {
+        if (info['Hide'] === 1) break;
         portals[index] = info;
-
-    });
+    }
 
     /* Render map with Leaflet */
 
-    const mapChangeFadeLength = 0;
-    const slideLength = 300;
     const mapSizeMultiplier = 500;
 
-    $('.itemcontent i').hide(0);
-    $('.wiki').hide(0);
+    for (let i of document.querySelectorAll('.itemcontent i, .wiki')) {
+        i.classList.add('hidden')
+    }
 
     const map = L.map('layers', {
         crs: L.CRS.Simple,
@@ -139,7 +155,7 @@ async function main() {
         }
     });
 
-    const c = new L.Control.Coords({
+    new L.Control.Coords({
         position: 'topleft'
     }).addTo(map);
 
@@ -159,8 +175,8 @@ async function main() {
 
     if (functions.isMobile()) {
 
-        $('#right').addClass('mobileright');
-        $('#left').addClass('mobileleft');
+        document.getElementById('right').classList.add('mobileright');
+        document.getElementById('left').classList.add('mobileleft');
 
     }
 
@@ -330,7 +346,7 @@ async function main() {
     //     $('g[role="lines"]').css('opacity', this.value);
     // });
 
-    const updateCoords = (e) => {
+    function updateCoords(e) {
         let x = (e.latlng.lng * 1).toFixed(0);
         let y = (e.latlng.lat * -1).toFixed(0);
 
@@ -381,23 +397,29 @@ async function main() {
     }
 
     const mapUpdate = () => {
-        $('.item').children('.itemcontent').slideUp(animLen);
+        // Close all item contents
+        for (let i of document.querySelectorAll('.item')) {
 
-        let searchVal = document.querySelector('.search').value;
+            window.domSlider.slideUp({
+                element: i.children[1],
+                slideSpeed: animLen
+            })
+            // i.children[1].style.display = 'none'
+            i.children[1].classList.add('none')
+        }
+
+        searchVal = document.querySelector('.search').value
 
         // Update URL
 
         params.set('q', encodeURIComponent(searchVal));
-        let newRelativePathQuery = window.location.pathname + "?" + params.toString();
-        history.replaceState(null, "", newRelativePathQuery);
+        let newRelativePathQuery = window.location.pathname + "?" + params.toString()
+        history.replaceState(null, "", newRelativePathQuery)
 
-        // console.log(searchVal);
+        let linesToShow = []
 
-        let portalsToShow = [];
-        let linesToShow = [];
-
-        let portalParentGroup = document.querySelector('g[role="portals"]');
-        let portalNodes = portalParentGroup.childNodes;
+        let portalParentGroup = document.querySelector('g[role="portals"]')
+        let portalNodes = portalParentGroup.childNodes
 
         portalNodes.forEach((node) => {
             // For each g node in the portal group, use its ID to make a search string to check against the search val.
@@ -414,20 +436,24 @@ async function main() {
             ${portals[thisId]['Political Entity']}`;
 
             if (stringToSearch.toLowerCase().includes(searchVal.toLowerCase())) {
-                node.classList.remove('hidden');
-                $('.item[data-name="' + thisId + '"]').show(0);
-                // portalsToShow.push(thisId);
                 // Show portal
+                node.classList.remove('hidden');
+
+                // Show directory item (whitelist)
+                document.querySelector('.item[data-name="' + thisId + '"]').classList.remove('hidden')
+
                 // If this portal has an inner line, show that line
                 if (portals[thisId]['Inner Line'] !== '') {
                     // console.log(portals[thisId]['Inner Line']);
                     let innerLineToAdd = portals[thisId]['Inner Line'];
-                    if (!linesToShow.includes(innerLineToAdd) /* If this portal has an inner line */) linesToShow.push(innerLineToAdd);
+                    if (!linesToShow.includes(innerLineToAdd) /* If this portal has an inner line */)
+                        linesToShow.push(innerLineToAdd);
                 }
             } else {
-                node.classList.add('hidden');
-                $('.item[data-name="' + thisId + '"]').hide(0);
                 // Hide portal
+                node.classList.add('hidden')
+
+                document.querySelector('.item[data-name="' + thisId + '"]').classList.add('hidden')
             }
         });
         // console.log(linesToShow);
@@ -465,10 +491,16 @@ async function main() {
 
         // Slide down/up as needed
 
-        if ($('.item[data-name=' + portalId + ']').children('.itemcontent').css('display') == 'none') { // Is hidden
-            $('.item[data-name=' + portalId + ']').children('.itemcontent').slideDown(animLen);
+        if (document.querySelector('.item[data-name="' + portalId + '"] .itemcontent').classList.contains('DOM-slider-hidden')) { // Is hidden
+        window.domSlider.slideDown({
+                element: document.querySelector('.item[data-name="' + portalId + '"] .itemcontent'),
+                slideSpeed: animLen
+            })
         } else { // Is shown
-            $('.item[data-name=' + portalId + ']').children('.itemcontent').slideUp(animLen);
+            window.domSlider.slideUp({
+                element: document.querySelector('.item[data-name="' + portalId + '"] .itemcontent'),
+                slideSpeed: animLen
+            })
         }
     }
 
@@ -484,7 +516,8 @@ async function main() {
     // Update map based on search
 
     document.querySelector('.search').addEventListener('keyup', (e) => {
-        mapUpdate();
+        if(document.querySelector('.search').value != searchVal)
+            mapUpdate(); // Ignore keyup if the search value hasn't changed
     });
 
     // Directory item events
