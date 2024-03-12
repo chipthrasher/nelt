@@ -1,0 +1,42 @@
+X Position 1	Z Position 1	X Position 2	Z Position 2	ID	Main	Notes
+-500	400	500	400	400s	1	400 South
+-500	300	500	300	300s	1	300 South
+-500	200	500	200	200s	1	200 South
+-500	100	500	100	100s	1	100 South
+-500	0	500	0	0h	1	Central E/W
+-500	-100	500	-100	100n	1	100 North
+-500	-200	500	-200	200n	1	200 North
+-500	-300	500	-300	300n	1	300 North
+-500	-400	500	-400	400n	1	400 North
+-400	-500	-400	500	400w	1	400 West
+-300	-500	-300	500	300w	1	300 West
+-200	-500	-200	500	200w	1	200 West
+-100	-500	-100	500	100w	1	100 West
+0	-500	0	500	0v	1	Central N/S
+100	-500	100	500	100e	1	100 East
+200	-500	200	500	200e	1	200 East
+300	-500	300	500	300e	1	300 East
+400	-500	400	500	400e	1	400 East
+200	266	277	266	etaigah	0	East Taiga horizontal
+-357	-300	-357	-200	emerald	0	Emerald Enclave vertical
+-59	300	-59	370	obios1	0	Left obios
+-46	300	-46	370	obios2	0	Middle obios
+-19	300	-19	370	obios3	0	Right obios
+-59	370	-19	370	obiosh	0	Obios horizontal
+164	200	164	300	baguette	0	B & I
+360	100	360	158	azrainir	0	Azrainir's original vertical
+360	150	441	150	azrainirh	0	Azrainir horizontal
+441	100	441	150	azrainire	0	Azrainir's eastern vertical
+46	-100	46	0	goomv	0	Goom vertical
+0	-35	100	-35	goomh	0	Goom horizontal
+66	-35	66	0	jaune	0	Goom Jaune line
+-187	-74	-65	-74	montroseh	0	Montrose horizontal
+-82	-118	-82	0	montrosev	0	Montrose vertical
+-187	0	-187	-74	montrosevw	0	Montrose vertical west
+-215	-39	-180	-39	montrosehw	0	Montrose horizontal west, for Gold District
+-364	-134	-364	-100	syltheim	0	
+0	36	23	36	fianna	0	
+0	110	40	110	rsv	0	
+-353	300	-353	400	spoingusv	0	Spoingus vertical (main)
+-400	355	-353	355	spoingush	0	Spoingus horizontal
+-389	355	-389	400	spoingusvw	0	Spoingus vertical (secondary)
