@@ -112,12 +112,14 @@ async function main() {
     const mapData = functions.tsvJSON(mapTSV)
 
     for (const [index, info] of Object.entries(mapData)) {
-        if (info['Hide'] === 1) break
+        if (info['Hide'] == '1')
+            continue;
         portals[index] = info
     }
 
     /* Render map with Leaflet */
 
+    // A constant representing the distance between the world border and 0, 0 in the Nether. 
     const mapSizeMultiplier = 500
 
     for (let i of document.querySelectorAll('.itemcontent i, .wiki')) {
@@ -476,6 +478,7 @@ async function main() {
     }
 
     // Handle closing & opening directory items, depending on what's clicked
+    // Also now, zoom to the clicked portal!
 
     const directoryUpdate = (event) => {
         // Get portal ID from event
@@ -496,12 +499,18 @@ async function main() {
                 element: document.querySelector('.item[data-name="' + portalId + '"] .itemcontent'),
                 slideSpeed: animLen
             })
+
+            // Needs to be zoomed to
+
         } else { // Is shown
             window.domSlider.slideUp({
                 element: document.querySelector('.item[data-name="' + portalId + '"] .itemcontent'),
                 slideSpeed: animLen
             })
+
+            // Don't zoom here because it's just being closed
         }
+
     }
 
     // At page load, set search bar from URL params
@@ -530,7 +539,28 @@ async function main() {
         itemtopElements[i].addEventListener('click', (e) => {
             // e.target.parentNode is the itemtop element
             // console.log('Itemtop got clicked', e.target.parentNode)
-            directoryUpdate(e)
+            directoryUpdate(e) // Slide down/up as needed
+
+            // Pan to portal, if necessary
+
+            const id = e.target.parentNode.parentNode.getAttribute('data-name')
+            const rect = document.querySelector(`.circle[data-name="${id}"]`).getBoundingClientRect()
+
+
+
+            // Special case for the right side, which is blocked by #right.
+            const viewportRight = document.querySelector('#right').getBoundingClientRect().left
+
+            const shouldBePanned = rect.right > viewportRight || rect.left < 0 || rect.bottom > window.innerHeight || rect.top < 0
+            if (shouldBePanned) {
+                const x = portals[i]['X']
+                const z = portals[i]['Z']
+
+                map.panTo([-z * 8, x * 8], {
+                    duration: (animLen / 1000),
+                    animate: true
+                })
+            }
         }, false)
 
         // On mouseover, show tooltip
