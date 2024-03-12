@@ -1,10 +1,14 @@
+# This script 
+
 # Copy files for comparison
 cp data/map.tsv data/map.tsv.old
 cp data/colors.tsv data/colors.tsv.old
 cp data/lines.tsv data/lines.tsv.old
 
 # Download data
-python3 cache.py
+curl -L -o "data/map.tsv" "https://docs.google.com/spreadsheets/d/e/2PACX-1vSwok3n0HC0TmlJt4gG-C6JXFEInJfcm4zDb4YKtwsLW78TZu5BA3r9FM_EbarcO0q5V2QDAv2QdTGQ/pub?gid=0&single=true&output=tsv&callback=?"
+curl -L -o "data/lines.tsv" "https://docs.google.com/spreadsheets/d/e/2PACX-1vSwok3n0HC0TmlJt4gG-C6JXFEInJfcm4zDb4YKtwsLW78TZu5BA3r9FM_EbarcO0q5V2QDAv2QdTGQ/pub?gid=576744292&single=true&output=tsv"
+curl -L -o "data/colors.tsv" "https://docs.google.com/spreadsheets/d/e/2PACX-1vSwok3n0HC0TmlJt4gG-C6JXFEInJfcm4zDb4YKtwsLW78TZu5BA3r9FM_EbarcO0q5V2QDAv2QdTGQ/pub?gid=508864180&single=true&output=tsv"
 
 # Find differences
 map=$(diff data/map.tsv data/map.tsv.old)
@@ -23,10 +27,10 @@ This daily update was executed on '$long_date''
 
     echo $commit_message
 
-    git status
-    git add data
-    git commit -m "$commit_message"
-    git push 
+    # git status
+    # git add data
+    # git commit -m "$commit_message"
+    # git push 
 else
     echo "Everything up to date, nothing to commit!"
 fi
