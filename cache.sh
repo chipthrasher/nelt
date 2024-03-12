@@ -1,4 +1,6 @@
-# This script 
+# This script caches the data from the Google Sheets to the local files and commits the changes to the repository.
+# Should be run daily. It's not ideal to have to do this, but GitHub Pages prevents any server-side solution, so
+# this is the best solution for load times for now.
 
 # Copy files for comparison
 cp data/map.tsv data/map.tsv.old
