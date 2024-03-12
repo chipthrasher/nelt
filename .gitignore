@@ -1,3 +1,4 @@
 *.DS_Store
 test/*
 images/*
+# data/*.old
