@@ -546,15 +546,13 @@ async function main() {
             const id = e.target.parentNode.parentNode.getAttribute('data-name')
             const rect = document.querySelector(`.circle[data-name="${id}"]`).getBoundingClientRect()
 
-
-
             // Special case for the right side, which is blocked by #right.
             const viewportRight = document.querySelector('#right').getBoundingClientRect().left
 
             const shouldBePanned = rect.right > viewportRight || rect.left < 0 || rect.bottom > window.innerHeight || rect.top < 0
             if (shouldBePanned) {
-                const x = portals[i]['X']
-                const z = portals[i]['Z']
+                const x = portals[id]['X']
+                const z = portals[id]['Z']
 
                 map.panTo([-z * 8, x * 8], {
                     duration: (animLen / 1000),
