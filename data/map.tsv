@@ -2,21 +2,21 @@ Name	X	Z	X Connector	Z Connector	Inner Line	Political Entity	National	IBWH	End	H
 Adfelis	78	428				Adfelis	1						
 Algrid	207	-163				High Easternia							
 Alliance City	218	-253				High Easternia						Formerly the UAC	
-Anjunis 	-172	-321	-200		200w	Anjunis						Colony of H0PLlTE's estate	
+Anjunis 	-172	-321	-200		200w	Ozai						Colony of H0PLlTE's estate	
 Archives of Montrose	-76	-83		-74	montroseh	Montrose		1				Elgeis's oldest public library	
 Arkavollur	-318	-281				Wohlstand						The capital of Askar	
 Auckaneck	-367	355			spoingush	Ozai							
 Azrainir Industrial	369	134	360		azrainir	Azrainir							
 Baguette	164	245	164		baguette	Azrainir						Northern half of B&I	https://wiki.elgeis.com/wiki/Baguette_%26_Inquisition
-Ballford	-235	-413			200w	Stradova							
+Ballford	-235	-413			200w	North Syltian Confederation							
 Banapo	-35	-109				Montrose						Montrosian estate inhabited by Banastair and Scampo12	https://wiki.elgeis.com/wiki/Banapo
 Banksy Bunker	335	368				Azrainir							
-Bardum Industrial District	-77	-253				Vailan				1			
+Bardum Industrial District	-77	-253				HUM				1			
 Bear Enterprises	-187	-9			montrosevw	Montrose						Estate of Bear12Tiger	
 Bialya	249	335				Redstone Valley							
 Bingard	-357	136				Ozai	1					Ozai's capital	
-Bingus Iron Farm	-200	-340				Anjunis							
-Bingus Province	-191	-346				Anjunis							
+Bingus Iron Farm	-200	-340				Ozai							
+Bingus Province	-191	-346				Ozai							
 Blindvé Village	-289	-73				Sternmark							
 Bloxford	-250	-187				North Syltian Confederation						Future site of Bloxford University	
 Botania	-204	93											
@@ -38,9 +38,9 @@ Comus	342	-333				High Easternia						Residence of Lucyinthesky127
 COOP	257	-60				Redstone Valley						Commander's Offshore Operations Platform, now abandoned	
 Creenis	297	-282				Creenis	1						
 Dej Prjnkei	10	-364				Wohlstand							
-Dingus Province	-192	-320				Anjunis							
+Dingus Province	-192	-320				Ozai							
 Dottia	-48	-355	0			Wohlstand							
-Drakaniru	282	434				Drakaniru							
+Drakaniru	282	434											
 Dreidour	-2	-338				Wohlstand							
 Dwarf Island	6	33		36	fianna	Montrose						Fianna's capital	https://wiki.elgeis.com/wiki/Fianna
 East Syltheim	-338	-134	-364		syltheim	North Syltian Confederation						East Syltheim is home to the famous Tea Garden, as well as many residences, government buildings, and mountainous forests	https://wiki.elgeis.com/wiki/Syltheim
@@ -50,9 +50,9 @@ Emerald District	-82	-118	-82		montrosev	Montrose						The Emerald District of t
 Emerald Enclave	-357	-292			emerald	Redstone Valley						Residence of Strider112358	https://wiki.elgeis.com/wiki/Emerald_Enclave
 Etel Metsia	-104	5				HUM						Formerly known as the Sylvian Federal Province	https://wiki.elgeis.com/wiki/Sylvian_Union
 Farmronesia	-310	304				Emeraldia							
-Fauxford	-203	-265				Stradova						Residence of FinFaux	
-Fjall	-120	-169				Vailan						Vailan's capital	https://wiki.elgeis.com/wiki/Kingdom_of_Vailan
-Flont's Town	-105	-276				Vailan						Former residence of Flint_Westwood_	
+Fauxford	-203	-265				North Syltian Confederation						Residence of FinFaux	
+Fjall	-120	-169				HUM						Vailan's capital	https://wiki.elgeis.com/wiki/Kingdom_of_Vailan
+Flont's Town	-105	-276				HUM						Former residence of Flint_Westwood_	
 Fort Doran	360	96				Azrainir							
 Fort Graham Area	-78	-91	-82		montrosev	Montrose		1					https://wiki.elgeis.com/wiki/Fort_Graham
 Fort Skardaz	-217	194				Montrose							
@@ -101,7 +101,7 @@ LaitChat	381	431										Residence of MilkedCat1225
 Lateria	-19	345	-19		obios3	High Easternia							
 Lazarica	156	120				Vostok							
 Leh'o*hraq* Nenniur	-250	-125				Montrose						The estate of knightofkessler.	
-Lil Floppa Islands	-169	-300				Anjunis							
+Lil Floppa Islands	-169	-300				Ozai							
 Lindisfarne	120	-313				Wohlstand							
 Lososha Village	203	-388				High Easternia							
 MAC	-51	-98				Montrose						Montrosian Agricultural Center	https://wiki.elgeis.com/wiki/Montrosian_Production_Emporium
@@ -140,7 +140,8 @@ Ozan Agricultural District	-307	96				Ozai
 Ozan Home Island	-353	226				Ozai							
 Ozan Prison Island	-298	249				Ozai					Private portal, likely trapped		
 Pain	483	481											
-Phildor	-346	-33				Phildor	1					They aren't compensating for anything	https://wiki.elgeis.com/wiki/Kaab
+Phildor	-346	-33				Sternmark	1					They aren't compensating for anything	https://wiki.elgeis.com/wiki/Kaab
+Pixie Stix	-490	-436				Pixie Stix	1						
 PLHQ Inn	-63	-25	-82		montrosev	Montrose						Former Prosperity League headquarters	https://wiki.elgeis.com/wiki/Prosperity_League
 Polar Island	38	-440				Wohlstand							
 Precipice	-363	489				Precipice	1						
@@ -181,7 +182,7 @@ Spruceville	-110	-79		-74	montroseh	Montrose						Elgeis's first village	https:/
 Squink Square	295	-105				Redstone Valley							
 SquishMellow	342	-26				HUM						Former residence of SleepingNinja60	
 Statue of jpbeecher	76	-247	76			High Easternia							
-Stoako	-138	-270				Anjunis							
+Stoako	-138	-270				Montrose							
 Stone District	-89	-111	-82		montrosev	Montrose						Montrosian Bureau of Logistics, Montrosian Villager Production Co.	
 Stradova	94	-136				Stradova							
 Sunflame's Estate	-130	-77		-74	montroseh	Montrose						Residence of Sunflame1155	
@@ -197,7 +198,7 @@ Tsarevets	97	117				Vostok						Current headquarters of the IBWH, formerly a cou
 Tsarigrad	235	-349				High Easternia							
 Twiceland	-286	-204				North Syltian Confederation						Now protected by Syltheim, this land features the world's largest cathedral	
 Urice Island	-130	157				Terrae Machinae							
-Vailan Pillager Farm	-146	-330				Vailan							
+Vailan Pillager Farm	-146	-330				HUM							
 Very Big Observatory	39	105		110	rsv	Redstone Valley							
 Vigi	226	372				Obios							https://wiki.elgeis.com/wiki/Wohlstand#.22Sj.C3.B3_av_Wohlstand.22
 Vijver	25	-109				Montrose							
@@ -209,4 +210,4 @@ Windiya Capitol Building	215	391				Obios
 Winterfell	-231	-12				Montrose						Former Vailic city built by MiksaSerbia	https://wiki.elgeis.com/wiki/Winterfell
 Wohlstandic Desert Settlement	-111	-316				Wohlstand							
 Wohlsteinn	-110	290	-100		100w	Wohlstand						A village on the island of Jarn Saari	
-Zolotow	-32	-235				Vailan						The capital of the Redania region	
+Zolotow	-32	-235				HUM						The capital of the Redania region	
