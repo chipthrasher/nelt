@@ -41,18 +41,19 @@ if [ -n "$map" ] || [ -n "$lines" ] || [ -n "$colors" ]; then
         intro="Manual cache update"
     fi
 
-    commit_message=$intro $short_date'
-Diff:'$map$lines$colors'
+#     commit_message=$intro $short_date'
+# Diff:'$map$lines$colors'
 
-This update was executed on '$long_date
+# This update was executed on '$long_date
 
-    # Run git commands from explicit directory
-    git -C $directory status
-    git -C $directory add data
-    git -C $directory commit -m "$commit_message"
-    git -C $directory push
+#     # Run git commands from explicit directory
+#     git -C $directory status
+#     git -C $directory add data
+#     git -C $directory commit -m "$commit_message"
+#     git -C $directory push
 else
-    echo "Everything up to date, nothing to commit!"
+    # echo "Everything up to date, nothing to commit!"
+    echo "Everything up to date!"
 fi
 
 # Clean up
