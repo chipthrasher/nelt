@@ -409,14 +409,18 @@ async function main() {
             // i.children[1].style.display = 'none'
             i.children[1].classList.add('none')
         }
-
+        
+        // Update URL based on search value
+        
         searchVal = document.querySelector('.search').value
 
-        // Update URL
-
-        params.set('q', encodeURIComponent(searchVal))
-        let newRelativePathQuery = window.location.pathname + "?" + params.toString()
+        let newRelativePathQuery = window.location.pathname;
+        if (searchVal !== '') {
+            params.set('q', encodeURIComponent(searchVal))
+            newRelativePathQuery += "?" + params.toString()
+        }
         history.replaceState(null, "", newRelativePathQuery)
+
 
         let linesToShow = []
 
@@ -512,17 +516,6 @@ async function main() {
         }
 
     }
-
-    // At page load, set search bar from URL params
-
-    let params = new URLSearchParams(window.location.search)
-    let q = params.get('q')
-    if (q == null) { q = '' } else {
-        document.querySelector('.search').value = decodeURIComponent(q)
-        mapUpdate()
-    }
-
-    // Update map based on search
 
     document.querySelector('.search').addEventListener('keyup', (e) => {
         if (document.querySelector('.search').value != searchVal)
@@ -633,6 +626,17 @@ async function main() {
         document.querySelector('.search').value = ''
         mapUpdate()
     }, false)
+
+    // At page load, set search bar from URL params
+
+    let params = new URLSearchParams(window.location.search)
+    let q = params.get('q')
+    if (q == null) { q = '' } else {
+        document.querySelector('.search').value = decodeURIComponent(q)
+    }
+    
+    // Start with an initial mapUpdate
+    mapUpdate()
 }
 
 main()

@@ -31,7 +31,8 @@ Cattlehead	44	-45	46		goomv	Goomlandia						Suburb of Goomtown	https://wiki.elge
 Champignon	85	-35		-35	goomh	Goomlandia						Suburb of Goomtown and residence of Grooge64	https://wiki.elgeis.com/wiki/Champignon
 Cheeseton	362	-211										Residence of BeholdTheCheese	
 Chene	62	44			0h	Goomlandia						The Fenian city of Chene	
-Chiptown	-144	-63		-74	montroseh	Montrose						Home of Chipt's Famous Chicken, and the Rabid Hen Tavern & Inn!	
+Chiptown Dining District	-144	-63		-74	montroseh	Montrose						Home of Chipt's Famous Chicken, Mellow Mooshroom, and the Rabid Hen Tavern & Inn!	
+Chiptown Metro	-130	-59			montroseh	Montrose						Home to Chipt's house and the Chiptown Metro station	
 Church	44	-239	44			High Easternia							
 Cjeni	21	-276				Wohlstand							
 Comus	342	-333				High Easternia						Residence of Lucyinthesky127	
@@ -119,6 +120,7 @@ Nature Publishing	25	105		110	rsv	Redstone Valley
 Nebula Springs	-90	389				Marisholm	1						
 New Bohdanburg	20	-259	20			High Easternia						New Bohdanburg, the capital of Nyania	
 New Spruceville	225	268		266	etaigah	HUM							
+New Stoako	-289	-455				Montrose							
 North Irkjat	-353	360			spoingusv	Emeraldia							
 North Shore	-94	-414				Wohlstand							
 North Uisceland	-112	-23				Montrose							
@@ -132,6 +134,7 @@ Nyanian Mountain Province	130	-225	130			High Easternia
 Oberos	209	-93				Oberos	1						https://wiki.elgeis.com/wiki/Drift
 Obios Northern Claim	225	-186				High Easternia							
 Old Cascadia	-180	-39				Montrose							
+Old Stoako	-138	-270				High Easternia							
 Olsen's Landing	220	-407				High Easternia							
 Oostland	355	-55				HUM							
 Osteau	-169	-71			montroseh	Montrose						Estate of pikachu_mgh	
@@ -182,7 +185,6 @@ Spruceville	-110	-79		-74	montroseh	Montrose						Elgeis's first village	https:/
 Squink Square	295	-105				Redstone Valley							
 SquishMellow	342	-26				HUM						Former residence of SleepingNinja60	
 Statue of jpbeecher	76	-247	76			High Easternia							
-Old Stoako	-138	-270				High Easternia						Residence of 3r5x4.	
 Stone District	-89	-111	-82		montrosev	Montrose						Montrosian Bureau of Logistics, Montrosian Villager Production Co.	
 Stradova	94	-136				Stradova							
 Sunflame's Estate	-130	-77		-74	montroseh	Montrose						Residence of Sunflame1155	
@@ -200,6 +202,7 @@ Twiceland	-286	-204				North Syltian Confederation						Now protected by Sylthei
 Urice Island	-130	157				Terrae Machinae							
 Vailan Pillager Farm	-146	-330				HUM							
 Very Big Observatory	39	105		110	rsv	Redstone Valley							
+Vestur Field	-14	-270				Wohlstand							
 Vigi	226	372				Obios							https://wiki.elgeis.com/wiki/Wohlstand#.22Sj.C3.B3_av_Wohlstand.22
 Vijver	25	-109				Montrose						A city in Banapo	
 Vladivostok	142	203				Vostok	1					Vostok's capital	https://wiki.elgeis.com/wiki/Vostok
@@ -211,4 +214,4 @@ Winterfell	-231	-12				Montrose						Former Vailic city built by MiksaSerbia	htt
 Wohlstandic Desert Settlement	-111	-316				Wohlstand							
 Wohlsteinn	-110	290	-100		100w	Wohlstand						A village on the island of Jarn Saari	
 Zolotow	-32	-235				HUM						The capital of the Redania region	
-New Stoako	-289	-455				Montrose							
+BMF	495	200											

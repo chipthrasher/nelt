@@ -2,3 +2,4 @@
 test/*
 images/*
 data/*.old
+cache.sh
