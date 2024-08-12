@@ -18,7 +18,7 @@ async function main() {
             })
         },
         findClosestX: (num) => { // Vertical lines
-            let lines = [-300, -200, -100, 0, 100, 200, 300, 400]
+            let lines = [-400, -300, -200, -100, 0, 100, 200, 300, 400]
             let closestLine = lines[0]
             for (let item of lines) {
                 if (Math.abs(item - num) < Math.abs(closestLine - num)) closestLine = item
@@ -146,7 +146,24 @@ async function main() {
         interactive: true, zIndex: 5
     }).addTo(map)
 
+    // // Get the width of #right and the width of #left in pixels, store in variables
+    // const rightWidth = document.querySelector('#right').offsetWidth
+    // const leftWidth = document.querySelector('#left').offsetWidth
+
+    // // compute width of svg given the current zoom level
+    // const svgWidth = 10
+
+    // const originalOffset = (leftWidth - svgWidth) / 2
+    // const newOffset = (leftWidth - rightWidth - svgWidth) / 2
+
+    // // Different between offsets
+    // const leftRightDifference = newOffset - originalOffset
+    // alert("hi " + rightWidth + " " + leftWidth + " " + leftRightDifference)
+
     map.panTo([0, 0])
+
+    // Turn the  leftRightDifference into a correclty scaled number for the map
+    // const leftRightDifferenceScaled = leftRightDifference * 8
 
     L.Control.Coords = L.Control.extend({
         onAdd: function (map) {
@@ -175,12 +192,10 @@ async function main() {
     portalGroup.setAttribute("role", "portals")
     svg.appendChild(portalGroup)
 
-    if (functions.isMobile()) {
-
-        document.getElementById('right').classList.add('mobileright')
-        document.getElementById('left').classList.add('mobileleft')
-
-    }
+    // if (functions.isMobile()) {
+    //     document.getElementById('right').classList.add('mobileright')
+    //     document.getElementById('left').classList.add('mobileleft')
+    // }
 
     for (i in portals) {
 

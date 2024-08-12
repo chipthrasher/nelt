@@ -60,9 +60,8 @@ a {
   color: inherit;
 }
 
-@media screen and (min-width: 800px) {
+/* @media screen and (min-width: 800px) {
 
-  /* For big screens, show the normal map */
   #left {
     width: 100vw;
   }
@@ -74,7 +73,6 @@ a {
 
 @media screen and (max-width: 800px) {
 
-  /* For small screens, just show the directory */
   #left {
     display: none;
   }
@@ -82,26 +80,42 @@ a {
   #right {
     width: 100vw;
   }
-}
+} */
 
-.mobileleft {
+/* .mobileleft {
   display: none;
 }
 
 .mobileright {
   width: 100vw;
+} */
+
+#left {
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 7;
 }
 
-#left {}
-
 #right {
-  z-index: 7;
+  z-index: 8;
 
   background: var(--col-darker);
   color: var(--col-lightest);
   box-shadow: var(--box-shadow);
   height: 100vh;
   overflow: scroll;
+
+  /* margin: 0.5rem; */
+  /* border-radius: 0.5rem; */
+  /* width: 400px;  */
+
+  right: 0;
+  top: 0;
+  /* position: absolute; */
+  width: 27.5rem;
 }
 
 .clear svg {
@@ -155,7 +169,7 @@ a {
   border-radius: 0.5rem;
   padding: 0.75rem;
   margin-bottom: 0.75rem;
-  width: 70%;
+  width: 80%;
 }
 
 /* Directory */
@@ -163,6 +177,7 @@ a {
 .item {
   font-size: 1rem;
   font-weight: 500;
+  margin: 0.4rem;
 }
 
 .itemtop {
@@ -170,6 +185,7 @@ a {
   background: var(--darker);
   display: flex;
   transition: 0.2s all;
+  border-radius: 0.5rem;
 }
 
 .itemtop:hover {
@@ -181,12 +197,14 @@ a {
 }
 
 .itemleft {
-  width: 80%;
-  padding: 0.75rem 2rem;
+  width: 85%;
+  padding: 0.75rem 1.4rem;
 }
 
 .itemright {
-  width: 20%;
+  width: 15%;
+  border-radius: 100px;
+  margin: 10px;
 }
 
 .itemcontent {
