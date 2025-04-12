@@ -382,7 +382,7 @@ async function main() {
     map.on('mousemove', function (e) {
         updateCoords(e)
     })
-
+ 
     /* Create hover tooltips */
 
     tippy.setDefaultProps({
