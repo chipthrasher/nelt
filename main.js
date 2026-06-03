@@ -120,7 +120,8 @@ async function main() {
     /* Render map with Leaflet */
 
     // A constant representing the distance between the world border and 0, 0 in the Nether. 
-    const mapSizeMultiplier = 500
+    // TODO: Rather than hardcoding this it would be nice to automatically calculate it from the dynmap endpoints
+    const mapSizeMultiplier = 687.5
 
     for (let i of document.querySelectorAll('.itemcontent i, .wiki')) {
         i.classList.add('hidden')
@@ -323,7 +324,12 @@ async function main() {
 
         // ADD CIRCLE (add circle to thisPortal)
 
-        thisPortal += `<circle data-name="${i}" ${dataInner} class="circle" cx="${mapSizeMultiplier + x}" cy="${mapSizeMultiplier + z}" title/>`
+        if (portals[i]['National']) {
+            thisPortal += `<circle class="circle-national-ring" cx="${mapSizeMultiplier + x}" cy="${mapSizeMultiplier + z}"/>`
+            thisPortal += `<circle data-name="${i}" ${dataInner} class="circle circle-national" cx="${mapSizeMultiplier + x}" cy="${mapSizeMultiplier + z}" title/>`
+        } else {
+            thisPortal += `<circle data-name="${i}" ${dataInner} class="circle" cx="${mapSizeMultiplier + x}" cy="${mapSizeMultiplier + z}" title/>`
+        }
 
         portalGroup.innerHTML += `<g data-name="${i}" ${dataInner}>${thisPortal}</g>`
     }
