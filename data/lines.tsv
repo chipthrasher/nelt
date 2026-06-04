@@ -25,7 +25,6 @@ X Position 1	Z Position 1	X Position 2	Z Position 2	ID	Main	Notes
 -59	370	-19	370	obiosh	0	Obios horizontal
 164	200	164	300	baguette	0	B & I
 360	100	360	158	azrainir	0	Azrainir's original vertical
-360	150	441	150	azrainirh	0	Azrainir horizontal
 441	100	441	150	azrainire	0	Azrainir's eastern vertical
 46	-100	46	0	goomv	0	Goom vertical
 0	-35	100	-35	goomh	0	Goom horizontal
@@ -40,3 +39,9 @@ X Position 1	Z Position 1	X Position 2	Z Position 2	ID	Main	Notes
 -353	300	-353	400	spoingusv	0	Spoingus vertical (main)
 -400	355	-353	355	spoingush	0	Spoingus horizontal
 -389	355	-389	400	spoingusvw	0	Spoingus vertical (secondary)
+136	-228	136	-200	nyania1	0	Nyania, serenity peak
+92	-228	200	-228	nyania2	0	Nyania, big horizontal one
+164	-228	164	-140	nyania3	0	Nyania, Shen noko & unidentified one
+92	-228	92	-248	nyania4	0	Nyania, melakiras tower, corner connector
+0	-248	100	-248	nyania5	0	Nyania, western horizontal one
+16	-260	16	-240	nyania6	0	Nyania, totally unnecessary one to south bohdanburg
