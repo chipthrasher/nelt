@@ -142,7 +142,7 @@ async function main() {
     const topleft = [-8 * mapSizeMultiplier, -8 * mapSizeMultiplier]
     const bottomright = [8 * mapSizeMultiplier, 8 * mapSizeMultiplier]
 
-    L.imageOverlay('political.jpg', [topleft, bottomright], { className: 'political', zIndex: 1 }).addTo(map)
+    L.imageOverlay('political.webp', [topleft, bottomright], { className: 'political', zIndex: 1 }).addTo(map)
 
     const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg")
     svg.setAttribute('viewBox', `0 0 ${mapSizeMultiplier * 2} ${mapSizeMultiplier * 2}`)
