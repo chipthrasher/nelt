@@ -319,6 +319,20 @@ a {
   z-index: 10;
 }
 
+.circle-national-ring {
+  r: var(--circle-width);
+  fill: transparent;
+  stroke: var(--col-circles);
+  stroke-width: 0.1rem;
+  transition: 0.2s all;
+}
+
+.circle-national {
+  r: calc(var(--circle-width) * 0.5);
+  fill: var(--col-circles);
+  transition: 0.2s all;
+}
+
 .hoveredCircle {
   stroke: white;
   stroke-width: 0.4rem;
