@@ -22,12 +22,6 @@ are implicit globals, and `for…in` over arrays is fragile.
 that it should be computed from the dynmap endpoints rather than pinned.
 
 
-### 5. Dependencies are unpinned and partly duplicated
-`index.html:62-66` loads popper + tippy **twice** (a "Development" pair and a
-"Production" pair, both from `unpkg @2`/`@6` floating major versions).
-`dom-slider` is loaded from a githack raw commit URL (`:68`). Leaflet, tippy, and
-`window.domSlider` are ambient globals with no manifest or lockfile.
-
 ### 6. Dead code and debugging cruft
 - `functions.isMobile` (`main.js:3-8`) — a giant device-detection regex — is
   never called.
