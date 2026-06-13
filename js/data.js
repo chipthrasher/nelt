@@ -1,6 +1,7 @@
 // Loads and normalizes the map data published from Google Sheets.
 
 import { tsvJSON } from './utils.js'
+import { MAP_TABLE, LINE_TABLE, COLOR_TABLE, validateColumns } from './schema.js'
 
 async function fetchTSV(path) {
     const response = await fetch(path)
@@ -18,10 +19,16 @@ async function fetchTSV(path) {
 //   innerLines  – array of highway segments with numeric coordinates
 export async function loadData() {
     const [mapTSV, lineTSV, colorTSV] = await Promise.all([
-        fetchTSV('data/map.tsv'),
-        fetchTSV('data/lines.tsv'),
-        fetchTSV('data/colors.tsv'),
+        fetchTSV(MAP_TABLE.path),
+        fetchTSV(LINE_TABLE.path),
+        fetchTSV(COLOR_TABLE.path),
     ])
+
+    // Fail loudly at parse time if the sheet's columns no longer match what the
+    // app reads, rather than silently rendering a blank map.
+    validateColumns(MAP_TABLE, mapTSV)
+    validateColumns(LINE_TABLE, lineTSV)
+    validateColumns(COLOR_TABLE, colorTSV)
 
     const colors = {}
     for (const row of tsvJSON(colorTSV)) {

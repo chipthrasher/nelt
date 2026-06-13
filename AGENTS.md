@@ -17,12 +17,10 @@ the repo to S3. It works, but several things actively fight maintainability.
 (`main.js:65, 72, 183, 251, 277, 331`) never declare the loop variable — these
 are implicit globals, and `for…in` over arrays is fragile.
 
-### 4. The data schema lives in a spreadsheet, referenced by magic string keys
-Column names like `'Political Entity'`, `'Inner Line'`, `'X Connector'`,
-`'National'`, `'IBWH'` are string literals scattered across the file. Rename a
-column in the sheet and the app silently breaks with no error. There's no schema
-definition or validation. `mapSizeMultiplier = 687.5` is a hardcoded magic
-constant the code itself flags as wrong (`main.js:127`).
+### 4. `MAP_SIZE_MULTIPLIER` is a hardcoded magic constant
+`MAP_SIZE_MULTIPLIER = 687.5` (`js/config.js`) is hardcoded; the code itself flags
+that it should be computed from the dynmap endpoints rather than pinned.
+
 
 ### 5. Dependencies are unpinned and partly duplicated
 `index.html:62-66` loads popper + tippy **twice** (a "Development" pair and a

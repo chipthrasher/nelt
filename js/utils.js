@@ -1,5 +1,10 @@
 // Generic helpers with no map-specific knowledge.
 
+// Return the column names from a TSV string's first (header) row.
+export function tsvHeaders(tsv) {
+    return tsv.replace(/\r/g, '').split('\n')[0].split('\t')
+}
+
 // Parse a tab-separated string (first row is the header) into an array of
 // objects keyed by column name.
 export function tsvJSON(tsv) {
