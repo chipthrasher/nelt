@@ -12,12 +12,6 @@ This is a single-page Leaflet map app: `index.html` + `main.js` (~650 lines) +
 `style.css`, with data pulled from a Google Sheet as TSV and deployed by syncing
 the repo to S3. It works, but several things actively fight maintainability.
 
-### 1. The entire app is one 650-line `async function main()`
-`main.js:1-650` is a single function. Data loading, geometry math, SVG
-rendering, directory HTML, tooltip setup, and all event wiring are interleaved in
-one scope with no modules, no top-level functions, and no separation of concerns.
-There's no `package.json`, no build step, no module system.
-
 ### 2. HTML is built by string concatenation and injected via `innerHTML`
 - Untrusted spreadsheet content goes straight into markup: `Wiki URL`
   (`main.js:204`), `Warning` title (`:213`), name/description/entity
@@ -76,11 +70,10 @@ to rendering order or filtering would break with no warning.
 URL still lives only inside that script.
 
 ### Priorities
-1. Decompose the monolithic `main()` into modules with extracted functions.
-2. Stop building DOM via `innerHTML +=` string concatenation — use
+1. Stop building DOM via `innerHTML +=` string concatenation — use
    `textContent`/`createElement`, which kills both the XSS exposure and the
    O(n²) reparse.
-3. Introduce a `package.json` with pinned dependencies and a minimal lint/format
+2. Introduce a `package.json` with pinned dependencies and a minimal lint/format
    step in CI.
 
 None of this requires a framework — it's the same vanilla approach, just
