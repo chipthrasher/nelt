@@ -127,7 +127,7 @@ async function main() {
     // TODO: Rather than hardcoding this it would be nice to automatically calculate it from the dynmap endpoints
     const mapSizeMultiplier = 687.5
 
-    for (let i of document.querySelectorAll('.itemcontent i')) {
+    for (let i of document.querySelectorAll('.itemcontent span')) {
         i.classList.add('hidden')
     }
 
@@ -151,24 +151,7 @@ async function main() {
         interactive: true, zIndex: 5
     }).addTo(map)
 
-    // // Get the width of #right and the width of #left in pixels, store in variables
-    // const rightWidth = document.querySelector('#right').offsetWidth
-    // const leftWidth = document.querySelector('#left').offsetWidth
-
-    // // compute width of svg given the current zoom level
-    // const svgWidth = 10
-
-    // const originalOffset = (leftWidth - svgWidth) / 2
-    // const newOffset = (leftWidth - rightWidth - svgWidth) / 2
-
-    // // Different between offsets
-    // const leftRightDifference = newOffset - originalOffset
-    // alert("hi " + rightWidth + " " + leftWidth + " " + leftRightDifference)
-
     map.panTo([0, 0])
-
-    // Turn the  leftRightDifference into a correclty scaled number for the map
-    // const leftRightDifferenceScaled = leftRightDifference * 8
 
     L.Control.Coords = L.Control.extend({
         onAdd: function (map) {
@@ -197,11 +180,6 @@ async function main() {
     portalGroup.setAttribute("role", "portals")
     svg.appendChild(portalGroup)
 
-    // if (functions.isMobile()) {
-    //     document.getElementById('right').classList.add('mobileright')
-    //     document.getElementById('left').classList.add('mobileleft')
-    // }
-
     for (i in portals) {
 
         portals[i]['ID'] = i
@@ -227,13 +205,13 @@ async function main() {
         } else tempWiki = ''
 
         if (portals[i]['National'] == 1)
-            tempIcons += '<i class="nation fas fa-flag" title="This is the official exit for its nation or political entity."></i>'
+            tempIcons += '<span class="nation" title="This is the official exit for its nation or political entity."><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-flag"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg></span>'
         if (portals[i]['End'] == 1)
-            tempIcons += '<i class="end fas fa-atom" title="This exit leads to a public-access End Portal."></i>'
+            tempIcons += '<span class="end" title="This exit leads to a public-access End Portal."><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-aperture"><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg></span>'
         if (portals[i]['IBWH'] == 1)
-            tempIcons += '<i class="ibwh fas fa-globe" title="This exit is designated as an official IBWH site."></i>'
+            tempIcons += '<span class="ibwh" title="This exit is designated as an official IBWH site."><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book-open"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg></span>'
         if (portals[i]['Warning'])
-            tempIcons += `<i class="warning fas fa-exclamation-triangle" title="${portals[i]['Warning']}"></i>`
+            tempIcons += `<span class="warning" title="${portals[i]['Warning']}"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-triangle"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></span>`
 
         // Add item to directory
 
@@ -376,12 +354,6 @@ async function main() {
     */
 
     /* Map opacity slider. Todo: find a less hack-y way to display this */
-    document.querySelector('.leaflet-control-attribution').innerHTML = ''
-    // $('.leaflet-control-attribution').html('<b>Map opacity:</b><br><input type="range" min="0" max="0.9" step="0.01" value="0.4">')
-    // $('.leaflet-control-attribution input').mousemove(function () {
-    //     $('.political').css('opacity', this.value)
-    //     $('g[role="lines"]').css('opacity', this.value)
-    // })
 
     function updateCoords(e) {
         let x = (e.latlng.lng * 1).toFixed(0)
@@ -414,8 +386,7 @@ async function main() {
         placement: 'right'
     })
 
-    // Iterate through document.querySelectorAll('.itemcontent i'). Use tippy on each
-    for (let i of document.querySelectorAll('.itemcontent i')) {
+    for (let i of document.querySelectorAll('.itemcontent span')) {
         tippy(i, {
             content: i.getAttribute('title')
         })
