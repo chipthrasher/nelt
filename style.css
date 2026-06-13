@@ -4,7 +4,7 @@
 :root {
   /* Dark mode */
   --col-darkest: #111;
-  --col-darker: #222;
+  --col-darker: #181818;
   --col-dark: #333;
   --col-light: #888;
   --col-lighter: #ccc;
@@ -60,38 +60,7 @@ a {
   color: inherit;
 }
 
-/* @media screen and (min-width: 800px) {
-
-  #left {
-    width: 100vw;
-  }
-
-  #right {
-    width: 400px;
-  }
-}
-
-@media screen and (max-width: 800px) {
-
-  #left {
-    display: none;
-  }
-
-  #right {
-    width: 100vw;
-  }
-} */
-
-/* .mobileleft {
-  display: none;
-}
-
-.mobileright {
-  width: 100vw;
-} */
-
 #left {
-  /* position: absolute; */
   top: 0;
   left: 0;
   width: 100vw;
@@ -108,13 +77,8 @@ a {
   height: 100vh;
   overflow: scroll;
 
-  /* margin: 0.5rem; */
-  /* border-radius: 0.5rem; */
-  /* width: 400px;  */
-
   right: 0;
   top: 0;
-  /* position: absolute; */
   width: 27.5rem;
 }
 
@@ -263,7 +227,7 @@ a {
   font-weight: 400;
 }
 
-.itemcontent i {
+.itemcontent span {
   font-size: 1.25rem;
   transition: 0.2s all;
   display: inline;

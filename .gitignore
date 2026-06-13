@@ -1,5 +1,2 @@
 *.DS_Store
-test/*
-images/*
 data/*
-cache.sh
