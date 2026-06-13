@@ -7,7 +7,7 @@ async function main() {
             return check
         },
         tsvJSON: (tsv) => {
-            const lines = tsv.split('\n')
+            const lines = tsv.replace(/\r/g, '').split('\n')
             const headers = lines.shift().split('\t')
             return lines.map(line => {
                 const data = line.split('\t')
@@ -17,22 +17,6 @@ async function main() {
                 }, {})
             })
         },
-        findClosestX: (num) => { // Vertical lines
-            let lines = [-400, -300, -200, -100, 0, 100, 200, 300, 400]
-            let closestLine = lines[0]
-            for (let item of lines) {
-                if (Math.abs(item - num) < Math.abs(closestLine - num)) closestLine = item
-            }
-            return closestLine
-        },
-        findClosestZ: (num) => { // Horizontal lines
-            let lines = [-400, -300, -200, -100, 0, 100, 200, 300, 400]
-            let closestLine = lines[0]
-            for (let item of lines) {
-                if (Math.abs(item - num) < Math.abs(closestLine - num)) closestLine = item
-            }
-            return closestLine
-        }
     }
 
     let portals = [],
@@ -107,6 +91,26 @@ async function main() {
         }
     }
 
+    // Find closest X/Z main line that actually extends to cover the portal's coordinate
+    functions.findClosestX = (x, z) => {
+        const candidates = innerLines.filter(l =>
+            l.main === 1 && l.x1 === l.x2 &&
+            Math.abs(l.x1 - x) <= 100 &&
+            z >= Math.min(l.z1, l.z2) && z <= Math.max(l.z1, l.z2)
+        )
+        if (candidates.length === 0) return null
+        return candidates.reduce((a, b) => Math.abs(b.x1 - x) < Math.abs(a.x1 - x) ? b : a).x1
+    }
+    functions.findClosestZ = (x, z) => {
+        const candidates = innerLines.filter(l =>
+            l.main === 1 && l.z1 === l.z2 &&
+            Math.abs(l.z1 - z) <= 100 &&
+            x >= Math.min(l.x1, l.x2) && x <= Math.max(l.x1, l.x2)
+        )
+        if (candidates.length === 0) return null
+        return candidates.reduce((a, b) => Math.abs(b.z1 - z) < Math.abs(a.z1 - z) ? b : a).z1
+    }
+
     // Process map data
 
     const mapData = functions.tsvJSON(mapTSV)
@@ -120,9 +124,10 @@ async function main() {
     /* Render map with Leaflet */
 
     // A constant representing the distance between the world border and 0, 0 in the Nether. 
-    const mapSizeMultiplier = 500
+    // TODO: Rather than hardcoding this it would be nice to automatically calculate it from the dynmap endpoints
+    const mapSizeMultiplier = 687.5
 
-    for (let i of document.querySelectorAll('.itemcontent i, .wiki')) {
+    for (let i of document.querySelectorAll('.itemcontent i')) {
         i.classList.add('hidden')
     }
 
@@ -137,7 +142,7 @@ async function main() {
     const topleft = [-8 * mapSizeMultiplier, -8 * mapSizeMultiplier]
     const bottomright = [8 * mapSizeMultiplier, 8 * mapSizeMultiplier]
 
-    L.imageOverlay('political.jpg', [topleft, bottomright], { className: 'political', zIndex: 1 }).addTo(map)
+    L.imageOverlay('political.webp', [topleft, bottomright], { className: 'political', zIndex: 1 }).addTo(map)
 
     const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg")
     svg.setAttribute('viewBox', `0 0 ${mapSizeMultiplier * 2} ${mapSizeMultiplier * 2}`)
@@ -277,9 +282,16 @@ async function main() {
             } else if (specialZ !== '') {
                 // console.log(p['Name'], 'snaps to Z connector', parseInt(specialZ))
                 return 'specialZ'
-            } else if (Math.abs(x - functions.findClosestX(x)) < Math.abs(z - functions.findClosestZ(z))) {
-                return 'autoX'
-            } else return 'autoZ'
+            } else {
+                // console.log(p['Name'], 'is checking for auto snap with coordinates', x, z)
+                const closestX = functions.findClosestX(x, z)
+                const closestZ = functions.findClosestZ(x, z)
+                if (closestX === null && closestZ === null) return 'none'
+                if (closestX === null) return 'autoZ'
+                if (closestZ === null) return 'autoX'
+                if (Math.abs(x - closestX) < Math.abs(z - closestZ)) return 'autoX'
+                return 'autoZ'
+            }
         }
 
         switch (lineDrawingMode(portals[i])) {
@@ -307,10 +319,10 @@ async function main() {
                 z2 = parseInt(specialZ)
                 break
             case 'autoX':
-                x2 = functions.findClosestX(x)
+                x2 = functions.findClosestX(x, z)
                 break
             case 'autoZ':
-                z2 = functions.findClosestZ(z)
+                z2 = functions.findClosestZ(x, z)
                 break
         }
 
@@ -319,11 +331,19 @@ async function main() {
         let dataInner = ''
         if (lineDrawingMode(portals[i]) == 'inner') dataInner = `data-inner="${innerLineID}"`
 
-        thisPortal += `<line class="line" ${dataInner} data-snap="${snap}" x1="${mapSizeMultiplier + x1}" y1="${mapSizeMultiplier + z1}" x2="${mapSizeMultiplier + x2}" y2="${mapSizeMultiplier + z2}" />`
+        // If there is a valid line drawing mode, add a line to thisPortal.
+        if (lineDrawingMode(portals[i]) !== 'none') {
+            thisPortal += `<line class="line" ${dataInner} data-snap="${snap}" x1="${mapSizeMultiplier + x1}" y1="${mapSizeMultiplier + z1}" x2="${mapSizeMultiplier + x2}" y2="${mapSizeMultiplier + z2}" />`
+        }
 
         // ADD CIRCLE (add circle to thisPortal)
 
-        thisPortal += `<circle data-name="${i}" ${dataInner} class="circle" cx="${mapSizeMultiplier + x}" cy="${mapSizeMultiplier + z}" title/>`
+        if (portals[i]['National']) {
+            thisPortal += `<circle class="circle-national-ring" cx="${mapSizeMultiplier + x}" cy="${mapSizeMultiplier + z}"/>`
+            thisPortal += `<circle data-name="${i}" ${dataInner} class="circle circle-national" cx="${mapSizeMultiplier + x}" cy="${mapSizeMultiplier + z}" title/>`
+        } else {
+            thisPortal += `<circle data-name="${i}" ${dataInner} class="circle" cx="${mapSizeMultiplier + x}" cy="${mapSizeMultiplier + z}" title/>`
+        }
 
         portalGroup.innerHTML += `<g data-name="${i}" ${dataInner}>${thisPortal}</g>`
     }
@@ -572,15 +592,19 @@ async function main() {
         // On mouseover, show tooltip
 
         itemtopElements[i].addEventListener('mouseover', (e) => {
-            // e.target.parentNode is the itemtop element
-            document.querySelector(`.circle[data-name="${e.target.parentNode.parentNode.getAttribute('data-name')}"]`).classList.add('hoveredCircle')
+            const name = e.target.parentNode.parentNode.getAttribute('data-name')
+            const circle = document.querySelector(`.circle[data-name="${name}"]`)
+            if (!circle) console.warn(`mouseover: no circle found for list item data-name="${name}"`)
+            circle?.classList.add('hoveredCircle')
         }, false)
 
         // On mouseout, hide tooltip
 
         itemtopElements[i].addEventListener('mouseout', (e) => {
-            // e.target.parentNode is the itemtop element
-            document.querySelector(`.circle[data-name="${e.target.parentNode.parentNode.getAttribute('data-name')}"]`).classList.remove('hoveredCircle')
+            const name = e.target.parentNode.parentNode.getAttribute('data-name')
+            const circle = document.querySelector(`.circle[data-name="${name}"]`)
+            if (!circle) console.warn(`mouseout: no circle found for list item data-name="${name}"`)
+            circle?.classList.remove('hoveredCircle')
         }, false)
     }
 
