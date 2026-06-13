@@ -1,6 +1,7 @@
 // Wires up search, the directory list, the map markers, and the URL state.
 
 import { ANIM_LEN } from './config.js'
+import { el } from './dom.js'
 
 export function wireEvents({ map, portals }) {
     const searchInput = document.querySelector('.search')
@@ -29,7 +30,9 @@ export function wireEvents({ map, portals }) {
         animation: 'fade',
         trigger: 'mouseenter',
         duration: 100,
-        allowHTML: true,
+        // Tooltip content is untrusted spreadsheet text; never parse it as HTML.
+        // The circle tooltip below passes a prebuilt DOM node instead.
+        allowHTML: false,
         arrow: false,
         placement: 'right'
     })
@@ -41,8 +44,12 @@ export function wireEvents({ map, portals }) {
     for (const c of document.querySelectorAll('.circle')) {
         const id = c.getAttribute('data-name')
         const p = portals[id]
+        const content = el('div', {}, [
+            el('div', { class: 'name' }, p['Name']),
+            el('div', { class: 'coords' }, `${p['X']}, ${p['Z']}`),
+        ])
         tippy(c, {
-            content: `<div class="name">${p['Name']}</div> <div class="coords">${p['X']}, ${p['Z']}`,
+            content,
             triggerTarget: [c, document.querySelector(`.item[data-name="${id}"] .itemtop`)]
         })
     }
@@ -184,7 +191,7 @@ export function wireEvents({ map, portals }) {
 
     for (const entity of document.getElementsByClassName('entity')) {
         entity.addEventListener('click', (e) => {
-            searchInput.value = e.target.innerHTML
+            searchInput.value = e.target.textContent
             mapUpdate()
         }, false)
     }

@@ -12,15 +12,6 @@ This is a single-page Leaflet map app: `index.html` + `main.js` (~650 lines) +
 `style.css`, with data pulled from a Google Sheet as TSV and deployed by syncing
 the repo to S3. It works, but several things actively fight maintainability.
 
-### 2. HTML is built by string concatenation and injected via `innerHTML`
-- Untrusted spreadsheet content goes straight into markup: `Wiki URL`
-  (`main.js:204`), `Warning` title (`:213`), name/description/entity
-  (`:218-231`). Anyone who can edit the source Google Sheet can inject
-  script/HTML — a stored XSS vector.
-- `portalGroup.innerHTML += ...` inside the portal loop (`main.js:326`) and
-  `lineGroup.innerHTML += ...` (`:343`) re-parse and re-serialize the growing DOM
-  on every iteration — O(n²).
-
 ### 3. Leaked implicit globals and `for…in` over arrays
 `for (i in colorData)`, `for (j in innerLines)`, `for (k in innerLines)`, etc.
 (`main.js:65, 72, 183, 251, 277, 331`) never declare the loop variable — these
@@ -70,10 +61,7 @@ to rendering order or filtering would break with no warning.
 URL still lives only inside that script.
 
 ### Priorities
-1. Stop building DOM via `innerHTML +=` string concatenation — use
-   `textContent`/`createElement`, which kills both the XSS exposure and the
-   O(n²) reparse.
-2. Introduce a `package.json` with pinned dependencies and a minimal lint/format
+1. Introduce a `package.json` with pinned dependencies and a minimal lint/format
    step in CI.
 
 None of this requires a framework — it's the same vanilla approach, just
