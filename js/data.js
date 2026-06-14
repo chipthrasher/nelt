@@ -1,7 +1,6 @@
 // Loads and normalizes the map data published from Google Sheets.
 
-import { tsvJSON } from './utils.js'
-import { MAP_TABLE, LINE_TABLE, COLOR_TABLE, validateColumns } from './schema.js'
+import { tsvJSON, MAP_TABLE, LINE_TABLE, COLOR_TABLE, validateColumns } from './utils.js'
 
 async function fetchTSV(path) {
     const response = await fetch(path)

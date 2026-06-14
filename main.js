@@ -1,4 +1,4 @@
-// Entry point: load the data, build the map, render it, then wire up events.
+// Entry point
 
 import { loadData } from './js/data.js'
 import { createMap } from './js/map.js'

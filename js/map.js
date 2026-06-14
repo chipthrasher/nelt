@@ -1,6 +1,6 @@
 // Creates the Leaflet map, its image/SVG overlays, and the coordinate control.
 
-import { MAP_SIZE_MULTIPLIER as M } from './config.js'
+import { MAP_SIZE_MULTIPLIER as M } from './utils.js'
 
 export function createMap() {
     const map = L.map('layers', {

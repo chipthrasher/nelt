@@ -1,6 +1,6 @@
 // Builds the directory list and the SVG portal/line markup from map data.
 
-import { MAP_SIZE_MULTIPLIER as M } from './config.js'
+import { MAP_SIZE_MULTIPLIER as M } from './utils.js'
 import { findClosestX, findClosestZ, lineDrawingMode } from './geometry.js'
 import { el, svg, svgFromMarkup, safeUrl } from './dom.js'
 

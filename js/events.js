@@ -1,6 +1,6 @@
 // Wires up search, the directory list, the map markers, and the URL state.
 
-import { ANIM_LEN } from './config.js'
+import { ANIM_LEN } from './utils.js'
 import { el } from './dom.js'
 
 export function wireEvents({ map, portals }) {
