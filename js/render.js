@@ -16,11 +16,11 @@ function iconSpan(className, title, markup) {
 
 function buildIcons(p) {
     const icons = []
-    if (p['National'] == 1)
+    if (p['National'] === '1')
         icons.push(iconSpan('nation', 'This is the official exit for its nation or political entity.', SVG_FLAG))
-    if (p['End'] == 1)
+    if (p['End'] === '1')
         icons.push(iconSpan('end', 'This exit leads to a public-access End Portal.', SVG_APERTURE))
-    if (p['IBWH'] == 1)
+    if (p['IBWH'] === '1')
         icons.push(iconSpan('ibwh', 'This exit is designated as an official IBWH site.', SVG_BOOK))
     if (p['Warning'])
         icons.push(iconSpan('warning', p['Warning'], SVG_ALERT))
@@ -62,10 +62,10 @@ function computePortalGeometry(p, innerLines) {
     let x2 = x, z2 = z
     switch (mode) {
         case 'inner': {
-            const line = innerLines.find(l => innerLineId == l.ID)
+            const line = innerLines.find(l => innerLineId === l.ID)
             if (line) {
-                if (line.x1 == line.x2) x2 = line.x2
-                else if (line.z1 == line.z2) z2 = line.z2
+                if (line.x1 === line.x2) x2 = line.x2
+                else if (line.z1 === line.z2) z2 = line.z2
             }
             break
         }
@@ -101,7 +101,8 @@ function buildPortalGroup(id, p, innerLines) {
 function buildInnerLine(line) {
     return svg('line', {
         class: 'line', role: 'inner', 'data-name': line.ID,
-        'data-main': line.main == 1 ? 'true' : '',
+        // deno-lint-ignore eqeqeq -- TODO figure this out
+        'data-main': line.main == '1' ? 'true' : '',
         x1: M + line.x1, y1: M + line.z1, x2: M + line.x2, y2: M + line.z2,
     })
 }

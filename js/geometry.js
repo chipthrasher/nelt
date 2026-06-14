@@ -25,7 +25,7 @@ export function findClosestZ(innerLines, x, z) {
 // Decide which method to use to draw a portal's connector line. Returns one of:
 // 'inner', 'specialX', 'specialZ', 'autoX', 'autoZ', or 'none'.
 export function lineDrawingMode(innerLines, { innerLineId, specialX, specialZ, x, z }) {
-    if (innerLines.some(l => innerLineId == l.ID)) return 'inner'
+    if (innerLines.some(l => innerLineId === l.ID)) return 'inner'
     if (specialX !== '') return 'specialX'
     if (specialZ !== '') return 'specialZ'
 

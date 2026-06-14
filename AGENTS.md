@@ -8,14 +8,11 @@ If you can accomplish something with less code, please do so. If you can accompl
 
 ## Maintainability assessment
 
-This is a single-page Leaflet map app: `index.html` + `main.js` (~650 lines) +
-`style.css`, with data pulled from a Google Sheet as TSV and deployed by syncing
-the repo to S3. It works, but several things actively fight maintainability.
-
-### 3. Leaked implicit globals and `for…in` over arrays
-`for (i in colorData)`, `for (j in innerLines)`, `for (k in innerLines)`, etc.
-(`main.js:65, 72, 183, 251, 277, 331`) never declare the loop variable — these
-are implicit globals, and `for…in` over arrays is fragile.
+This is a single-page Leaflet map app: `index.html` + `style.css` + a small
+`main.js` entry point that wires together ES modules under `js/` (`data`, `map`,
+`render`, `events`, etc. — ~625 lines of JS total). Data is pulled from a Google
+Sheet as TSV and deployed by syncing the repo to S3. It works, but several
+things actively fight maintainability.
 
 ### 4. `MAP_SIZE_MULTIPLIER` is a hardcoded magic constant
 `MAP_SIZE_MULTIPLIER = 687.5` (`js/config.js`) is hardcoded; the code itself flags
@@ -23,8 +20,6 @@ that it should be computed from the dynmap endpoints rather than pinned.
 
 
 ### 6. Dead code and debugging cruft
-- `functions.isMobile` (`main.js:3-8`) — a giant device-detection regex — is
-  never called.
 - Dozens of commented-out `// console.log(...)` lines throughout, plus
   commented-out code (`:414`) and several `TODO`s (`:127, 308, 341`).
 
@@ -47,14 +42,15 @@ to rendering order or filtering would break with no warning.
   `tsvJSON(colorTSV)` throws on the resulting `undefined` — a failed data load
   produces a blank page, not a graceful message.
 
-### 10. Tooling inconsistency — RESOLVED
-~~`cache.sh` is **both tracked in git and listed in `.gitignore`**.~~ Fixed:
-`cache.sh` removed from `.gitignore`; it remains tracked. Note the canonical data
-URL still lives only inside that script.
 
 ### Priorities
-1. Introduce a `package.json` with pinned dependencies and a minimal lint/format
-   step in CI.
+1. ~~Introduce a minimal lint step in CI.~~ Done with **zero npm** — no
+   `package.json`, `node_modules`, or lockfile. A single Deno binary
+   (`brew install deno`) runs `deno lint` (configured in `deno.json` to flag
+   unused vars/imports/functions, excluding vendored `assets/`). It runs locally
+   via `deno lint`, before each commit via the `.githooks/pre-commit` hook
+   (`git config core.hooksPath .githooks` to enable), and in CI (pinned
+   `denoland/setup-deno`), gating the S3 deploy on it passing.
 
 None of this requires a framework — it's the same vanilla approach, just
 structured so a change in one area can't silently break another.

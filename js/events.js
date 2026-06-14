@@ -100,7 +100,7 @@ export function wireEvents({ map, portals }) {
         // Show an inner line if a visible portal uses it, or if it's a main line
         document.querySelector('g[role="lines"]').childNodes.forEach((node) => {
             const id = node.getAttribute('data-name')
-            const show = linesToShow.includes(id) || node.getAttribute('data-main') == 'true'
+            const show = linesToShow.includes(id) || node.getAttribute('data-main') === 'true'
             node.classList.toggle('hidden', !show)
         })
     }
@@ -108,8 +108,8 @@ export function wireEvents({ map, portals }) {
     // Toggle a directory item open/closed (used by both list and marker clicks)
     const directoryUpdate = (event) => {
         const portalId = (() => {
-            if (event.target.tagName == 'circle') return event.target.getAttribute('data-name')
-            if (event.target.tagName == 'DIV') return event.target.parentNode.parentNode.getAttribute('data-name')
+            if (event.target.tagName === 'circle') return event.target.getAttribute('data-name')
+            if (event.target.tagName === 'DIV') return event.target.parentNode.parentNode.getAttribute('data-name')
         })()
 
         const content = document.querySelector(`.item[data-name="${portalId}"] .itemcontent`)
@@ -122,7 +122,7 @@ export function wireEvents({ map, portals }) {
 
     searchInput.addEventListener('keyup', () => {
         // Ignore keyup if the search value hasn't changed
-        if (searchInput.value != searchVal) mapUpdate()
+        if (searchInput.value !== searchVal) mapUpdate()
     })
 
     /* Directory item events */
@@ -172,7 +172,7 @@ export function wireEvents({ map, portals }) {
         // Click a marker to search for it (or clear if already searched)
         circleElements[i].addEventListener('click', (e) => {
             const clickedCircleName = portals[e.target.parentNode.getAttribute('data-name')]['Name']
-            searchInput.value = searchInput.value == clickedCircleName ? '' : clickedCircleName
+            searchInput.value = searchInput.value === clickedCircleName ? '' : clickedCircleName
             mapUpdate()
             directoryUpdate(e)
         }, false)
@@ -205,6 +205,6 @@ export function wireEvents({ map, portals }) {
 
     // Seed the search bar from the URL, then do the initial render
     const q = params.get('q')
-    if (q != null) searchInput.value = decodeURIComponent(q)
+    if (q !== null) searchInput.value = decodeURIComponent(q)
     mapUpdate()
 }

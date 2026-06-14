@@ -1,14 +1,30 @@
-name: Sync to S3
+name: CI
 on:
   push:
-    branches:
-      - master
+  pull_request:
 jobs:
-  sync:
+  lint:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
+
+    - name: Setup Deno
+      uses: denoland/setup-deno@v2
+      with:
+        deno-version: v2.8.3
+
+    - name: Lint
+      run: deno lint
+
+  sync:
+    # Only deploy master, and only if linting passed.
+    needs: lint
+    if: github.ref == 'refs/heads/master' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
 
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v2
@@ -19,4 +35,3 @@ jobs:
 
     - name: Sync to S3
       run: aws s3 sync . s3://nelt.chipthrasher.com
-

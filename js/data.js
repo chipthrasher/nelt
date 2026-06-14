@@ -51,7 +51,7 @@ export async function loadData() {
     // data-name values stay stable; hidden rows become array holes.
     const portals = []
     tsvJSON(mapTSV).forEach((info, index) => {
-        if (info['Hide'] == '1') return
+        if (info['Hide'] === '1') return
         portals[index] = info
     })
 

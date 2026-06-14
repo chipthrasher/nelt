@@ -6,10 +6,12 @@ const SVG_NS = 'http://www.w3.org/2000/svg'
 
 function build(node, attrs, children) {
     for (const [name, value] of Object.entries(attrs)) {
+        // deno-lint-ignore eqeqeq -- `== null` intentionally matches null OR undefined
         if (value == null || value === false) continue
         node.setAttribute(name, value === true ? '' : value)
     }
     for (const child of [].concat(children)) {
+        // deno-lint-ignore eqeqeq -- `== null` intentionally matches null OR undefined
         if (child == null || child === false) continue
         node.append(child) // strings become text nodes; nodes are appended as-is
     }
