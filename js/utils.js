@@ -3,10 +3,32 @@
 
 // --- Constants ---------------------------------------------------------------
 
-// Distance between the world border and (0, 0) in the Nether.
-// TODO: Rather than hardcoding this it would be nice to automatically
-// calculate it from the dynmap endpoints.
-export const MAP_SIZE_MULTIPLIER = 687.5
+// Distance between the world border and (0, 0) in the Nether. Computed from
+// the live dynmap world border by mapsize.sh and published in config.json;
+// this is only the fallback used until that value loads.
+export let MAP_SIZE_MULTIPLIER = 687.5
+
+// Override the multiplier with the value published in config.json (if any).
+export function setMapSize(value) {
+    if (value) MAP_SIZE_MULTIPLIER = value
+}
+
+// Load config.json (published to S3 at deploy time) once: the map size
+// multiplier (computed from the dynmap world border by mapsize.sh) and the
+// deployed source version. Falls back to an empty config if missing/invalid.
+export async function loadConfig() {
+    try {
+        const res = await fetch('config.json', { cache: 'no-store' })
+        if (res.ok) return await res.json()
+    } catch { /* fall back to defaults */ }
+    return {}
+}
+
+// Show the deployed version in the sidebar. Renders nothing if unset.
+export function showVersion(version) {
+    if (!version) return
+    document.querySelector('.version').append(document.createTextNode('Version ' + version))
+}
 
 // Duration (ms) of the directory slide / map pan animations.
 export const ANIM_LEN = 200
