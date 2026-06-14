@@ -28,12 +28,6 @@ that it should be computed from the dynmap endpoints rather than pinned.
 recomputing the same result. `document.querySelector(...)` is re-run constantly
 inside loops and handlers instead of caching references.
 
-### 8. Fragile by-index event pairing
-Circle and directory handlers are paired by array index — `circleElements[i]` ↔
-`itemtopElements[i]` (`main.js:607, 612`). This silently assumes both DOM
-collections are built in identical order — an unwritten invariant that any change
-to rendering order or filtering would break with no warning.
-
 ### 9. No quality gates; weak error handling
 - CI (`.github/workflows/main.yml`) only does `aws s3 sync .` — no lint, no
   tests, no type check. It also uploads the entire repo (README, AGENTS.md,

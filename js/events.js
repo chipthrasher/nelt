@@ -166,24 +166,26 @@ export function wireEvents({ map, portals }) {
 
     /* Map marker (circle) events */
 
-    const circleElements = document.getElementsByClassName('circle')
+    for (const circle of document.querySelectorAll('.circle')) {
+        const id = circle.getAttribute('data-name')
+        // Pair each marker with its directory item by data-name, not by index
+        const itemtop = document.querySelector(`.item[data-name="${id}"] .itemtop`)
 
-    for (let i = 0; i < circleElements.length; i++) {
         // Click a marker to search for it (or clear if already searched)
-        circleElements[i].addEventListener('click', (e) => {
-            const clickedCircleName = portals[e.target.parentNode.getAttribute('data-name')]['Name']
+        circle.addEventListener('click', (e) => {
+            const clickedCircleName = portals[id]['Name']
             searchInput.value = searchInput.value === clickedCircleName ? '' : clickedCircleName
             mapUpdate()
             directoryUpdate(e)
         }, false)
 
         // Mirror marker hover onto the matching directory item
-        circleElements[i].addEventListener('mouseover', () => {
-            itemtopElements[i].classList.add('itemtopHover')
+        circle.addEventListener('mouseover', () => {
+            itemtop?.classList.add('itemtopHover')
         }, false)
 
-        circleElements[i].addEventListener('mouseout', () => {
-            itemtopElements[i].classList.remove('itemtopHover')
+        circle.addEventListener('mouseout', () => {
+            itemtop?.classList.remove('itemtopHover')
         }, false)
     }
 
