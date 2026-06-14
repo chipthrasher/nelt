@@ -57,6 +57,17 @@ The Nelt map is a single-page web application built with HTML, CSS, and JavaScri
 
 The map loads a TSV output of a [Google Sheets document](https://docs.google.com/spreadsheets/d/e/2PACX-1vSwok3n0HC0TmlJt4gG-C6JXFEInJfcm4zDb4YKtwsLW78TZu5BA3r9FM_EbarcO0q5V2QDAv2QdTGQ/pubhtml), containing portal, inner line, and color data. Thanks to this, it is possible for the map to continue to be maintained without my involvement, which has been my biggest goal for the project.
 
+The JavaScript is made up of:
+
+- **`main.js`** — Entry point
+- **`js/data.js`** — Loads map data from Google Sheets.
+- **`js/map.js`** — Creates the Leaflet map + controls
+- **`js/geometry.js`** — Decide how portals connect to the lines
+- **`js/render.js`** — Create circles/lines on map, fill out directory
+- **`js/events.js`** — Handle events (search, clicking, moving)
+- **`js/dom.js`** — DOM helpers to create HTML elements from spreadsheet data
+- **`js/utils.js`** — Shared constants, generic TSV helpers, and the expected schema from Google Sheets
+
 When this codebase is updated, it syncs to an Amazon S3 bucket. Every 2 hours, an AWS Lambda pulls the latest copy of the Google Sheet into the same S3 bucket under the "data" directory.
 
 The S3 bucket is deployed to a Cloudfront distribution which serves as a cache & as the server for the static site.

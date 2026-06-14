@@ -1,0 +1,29 @@
+{
+  "lint": {
+    "exclude": ["assets/"],
+    "rules": {
+      "tags": ["recommended"],
+
+      "exclude": [
+        "no-window",
+        "no-window-prefix",
+        "no-node-globals",
+        "no-process-global",
+        "no-deprecated-deno-api",
+        "no-sloppy-imports",
+        "prefer-primordials"
+      ],
+
+      "include": [
+        "guard-for-in",
+        "no-throw-literal",
+        "eqeqeq",
+        "no-await-in-loop",
+        "default-param-last",
+        "no-self-compare",
+        "no-sparse-arrays",
+        "camelcase"
+      ]
+    }
+  }
+}
