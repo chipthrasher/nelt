@@ -65,8 +65,8 @@ The JavaScript is made up of:
 - **`js/geometry.js`** — Decide how portals connect to the lines
 - **`js/render.js`** — Create circles/lines on map, fill out directory
 - **`js/events.js`** — Handle events (search, clicking, moving)
-- **`js/dom.js`** — Tiny DOM builders that set untrusted spreadsheet content safely (no `innerHTML`).
-- **`js/utils.js`** — Shared constants, generic TSV helpers, and the data-schema definitions.
+- **`js/dom.js`** — DOM helpers to create HTML elements from spreadsheet data
+- **`js/utils.js`** — Shared constants, generic TSV helpers, and the expected schema from Google Sheets
 
 When this codebase is updated, it syncs to an Amazon S3 bucket. Every 2 hours, an AWS Lambda pulls the latest copy of the Google Sheet into the same S3 bucket under the "data" directory.
 
