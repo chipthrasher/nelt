@@ -112,6 +112,13 @@ a {
   line-height: 1.75rem;
 }
 
+.version {
+  text-align: center;
+  color: var(--col-light);
+  font-size: 0.8rem;
+  margin: 1rem 0;
+}
+
 .subtitle a {
   color: var(--col-lightest);
 }
