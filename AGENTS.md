@@ -41,16 +41,3 @@ to rendering order or filtering would break with no warning.
 - Fetch failures just `console.error` and continue (`main.js:42-60`), then
   `tsvJSON(colorTSV)` throws on the resulting `undefined` — a failed data load
   produces a blank page, not a graceful message.
-
-
-### Priorities
-1. ~~Introduce a minimal lint step in CI.~~ Done with **zero npm** — no
-   `package.json`, `node_modules`, or lockfile. A single Deno binary
-   (`brew install deno`) runs `deno lint` (configured in `deno.json` to flag
-   unused vars/imports/functions, excluding vendored `assets/`). It runs locally
-   via `deno lint`, before each commit via the `.githooks/pre-commit` hook
-   (`git config core.hooksPath .githooks` to enable), and in CI (pinned
-   `denoland/setup-deno`), gating the S3 deploy on it passing.
-
-None of this requires a framework — it's the same vanilla approach, just
-structured so a change in one area can't silently break another.
