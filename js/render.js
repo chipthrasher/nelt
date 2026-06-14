@@ -101,8 +101,7 @@ function buildPortalGroup(id, p, innerLines) {
 function buildInnerLine(line) {
     return svg('line', {
         class: 'line', role: 'inner', 'data-name': line.ID,
-        // deno-lint-ignore eqeqeq -- TODO figure this out
-        'data-main': line.main == '1' ? 'true' : '',
+        'data-main': line.main === 1 ? 'true' : '',
         x1: M + line.x1, y1: M + line.z1, x2: M + line.x2, y2: M + line.z2,
     })
 }

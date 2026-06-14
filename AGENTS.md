@@ -19,10 +19,6 @@ things actively fight maintainability.
 that it should be computed from the dynmap endpoints rather than pinned.
 
 
-### 6. Dead code and debugging cruft
-- Dozens of commented-out `// console.log(...)` lines throughout, plus
-  commented-out code (`:414`) and several `TODO`s (`:127, 308, 341`).
-
 ### 7. Recomputation and uncached lookups
 `lineDrawingMode(portals[i])` is invoked 4× per portal (`main.js:275, 310, 313`),
 recomputing the same result. `document.querySelector(...)` is re-run constantly
