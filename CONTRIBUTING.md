@@ -23,3 +23,4 @@ To help me keep track of your changes, please:
 
 1. Make branches & pull requests for your changes. If you want to contribute regularly, I can add you as a collaborator, so you don't have to fork the repo!
 2. Let me be the one to resolve open threads.
+3. Title your PRs with conventional commits, like `fix: typo in README` or `feat: add new exit`. This helps the automatic versionining work correctly.

@@ -4,7 +4,7 @@ import { loadData } from './js/data.js'
 import { createMap } from './js/map.js'
 import { renderMap } from './js/render.js'
 import { wireEvents } from './js/events.js'
-import { loadConfig, setMapSize, showVersion } from './js/utils.js'
+import { loadConfig, setMapSize, showVersion, showLastUpdated } from './js/utils.js'
 
 async function main() {
     const [{ portals, colors, innerLines }, config] = await Promise.all([loadData(), loadConfig()])
@@ -25,6 +25,7 @@ async function main() {
 
     wireEvents({ map, portals })
     showVersion(config.version)
+    showLastUpdated(config.lastUpdated)
 }
 
 main()

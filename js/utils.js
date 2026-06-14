@@ -8,28 +8,6 @@
 // this is only the fallback used until that value loads.
 export let MAP_SIZE_MULTIPLIER = 687.5
 
-// Override the multiplier with the value published in config.json (if any).
-export function setMapSize(value) {
-    if (value) MAP_SIZE_MULTIPLIER = value
-}
-
-// Load config.json (published to S3 at deploy time) once: the map size
-// multiplier (computed from the dynmap world border by mapsize.sh) and the
-// deployed source version. Falls back to an empty config if missing/invalid.
-export async function loadConfig() {
-    try {
-        const res = await fetch('config.json', { cache: 'no-store' })
-        if (res.ok) return await res.json()
-    } catch { /* fall back to defaults */ }
-    return {}
-}
-
-// Show the deployed version in the sidebar. Renders nothing if unset.
-export function showVersion(version) {
-    if (!version) return
-    document.querySelector('.version').append(document.createTextNode('Version ' + version))
-}
-
 // Duration (ms) of the directory slide / map pan animations.
 export const ANIM_LEN = 200
 
@@ -52,6 +30,40 @@ export function tsvJSON(tsv) {
             return obj
         }, {})
     })
+}
+
+// Override the multiplier with the value published in config.json (if any).
+export function setMapSize(value) {
+    if (value) MAP_SIZE_MULTIPLIER = value
+}
+
+export async function loadConfig() {
+    try {
+        const res = await fetch('config.json', { cache: 'no-store' })
+        if (res.ok) return await res.json()
+    } catch { /* fall back to defaults */ }
+    return {}
+}
+
+export function showVersion(version) {
+    if (!version) return
+    const versionDiv = document.createElement('div')
+    versionDiv.textContent = 'Version ' + version
+    document.querySelector('.version').append(versionDiv)
+}
+
+export function showLastUpdated(lastUpdated) {
+    if (!lastUpdated) return
+
+    // Convert from ISO to human-friendly format. E.g. "2024-06-01T12:00:00Z" -> "June 1, 2024, 12:00 PM UTC".
+    const date = new Date(lastUpdated)
+    const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', timeZoneName: 'short' }
+    const formattedDate = date.toLocaleString('en-US', options)
+    if (formattedDate === 'Invalid Date') return
+    
+    const updatedDiv = document.createElement('div')
+    updatedDiv.innerHTML = 'Map data last updated:<br>' + formattedDate
+    document.querySelector('.version').append(updatedDiv)
 }
 
 // --- Data schema -------------------------------------------------------------
