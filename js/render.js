@@ -89,10 +89,12 @@ function buildPortalGroup(id, p, innerLines) {
         }))
 
     if (p['National']) {
-        children.push(svg('circle', { 'data-name': id, 'data-inner': dataInner, class: 'circle circle-national-ring', cx: M + x, cy: M + z, title: true }))
-        children.push(svg('circle', { 'data-name': id, 'data-inner': dataInner, class: 'circle circle-national', cx: M + x, cy: M + z, title: true }))
+        children.push(svg('g', { 'data-name': id, 'data-inner': dataInner, class: 'circle' }, [
+            svg('circle', { class: 'circle-national-ring', cx: M + x, cy: M + z }),
+            svg('circle', { class: 'circle-national', cx: M + x, cy: M + z }),
+        ]))
     } else {
-        children.push(svg('circle', { 'data-name': id, 'data-inner': dataInner, class: 'circle', cx: M + x, cy: M + z, title: true }))
+        children.push(svg('circle', { 'data-name': id, 'data-inner': dataInner, class: 'circle', cx: M + x, cy: M + z }))
     }
 
     return svg('g', { 'data-name': id, 'data-inner': dataInner }, children)
