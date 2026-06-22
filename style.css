@@ -295,6 +295,7 @@ a {
   fill: transparent;
   stroke: var(--col-circles);
   stroke-width: 0.1rem;
+  pointer-events: all;
   transition: 0.2s all;
 }
 
@@ -308,6 +309,11 @@ a {
   stroke: white;
   stroke-width: 0.4rem;
   fill: var(--col-circles);
+}
+
+g.hoveredCircle .circle-national-ring {
+  stroke: white;
+  stroke-width: 0.4rem;
 }
 
 .line {

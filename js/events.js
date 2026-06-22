@@ -107,10 +107,7 @@ export function wireEvents({ map, portals }) {
 
     // Toggle a directory item open/closed (used by both list and marker clicks)
     const directoryUpdate = (event) => {
-        const portalId = (() => {
-            if (event.target.tagName === 'circle') return event.target.getAttribute('data-name')
-            if (event.target.tagName === 'DIV') return event.target.parentNode.parentNode.getAttribute('data-name')
-        })()
+        const portalId = event.target.closest('[data-name]')?.getAttribute('data-name')
 
         const content = document.querySelector(`.item[data-name="${portalId}"] .itemcontent`)
         if (content.classList.contains('DOM-slider-hidden')) {
