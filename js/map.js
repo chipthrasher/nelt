@@ -14,7 +14,7 @@ export function createMap() {
     const topleft = [-8 * M, -8 * M]
     const bottomright = [8 * M, 8 * M]
 
-    L.imageOverlay('political.webp', [topleft, bottomright], { className: 'political', zIndex: 1 }).addTo(map)
+    L.imageOverlay('political.jpg', [topleft, bottomright], { className: 'political', zIndex: 1 }).addTo(map)
 
     const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
     svg.setAttribute('viewBox', `0 0 ${M * 2} ${M * 2}`)
