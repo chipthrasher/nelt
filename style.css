@@ -112,7 +112,7 @@ a {
   line-height: 1.75rem;
 }
 
-.version {
+.tiny {
   text-align: center;
   color: var(--col-light);
   font-size: 0.8rem;
