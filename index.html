@@ -1,73 +1,21 @@
-<!--
-
-  Someone's behind the scenes!
-  Check out the code on GitHub: https://github.com/chipthrasher/nelt
-
-  – Chip
-
- -->
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <title>Chipt's Nelt Map</title>
-  <script src="assets/leaflet/leaflet.js"></script>
-  <meta property="og:title" content="Chipt's Nelt Map">
-  <meta property="og:site_name" content="chipthrasher.com">
-  <meta property="og:url" content="chipthrasher.com">
-  <meta name="description"
-    content="An interactive map of the Nelt, Elgeis Minecraft Server's worldwide Nether highway.">
-  <meta property="og:description"
-    content="An interactive map of the Nelt, Elgeis Minecraft Server's worldwide Nether highway.">
-  <meta property="og:image"
-    content="https://repository-images.githubusercontent.com/257634653/e0344a41-c3e5-4c8d-ad1f-edbb03efa759">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="favicon.png" type="image/png" />
-  <link rel="stylesheet" href="style.css">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-53HB8HLF9D"></script>
+  <title>Nelt Map has moved</title>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-53HB8HLF9D');
+    const target = 'https://elgeis.chipthrasher.com/?layers=nether,political,dynmap';
+    const q = new URLSearchParams(location.search).get('q');
+    location.replace(q === null ? target : target + '&q=' + encodeURIComponent(q));
   </script>
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=https://elgeis.chipthrasher.com/?layers=nether,political,dynmap">
+  </noscript>
 </head>
 
 <body>
-  <div id="left">
-    <div id="layers" class="layers"></div>
-  </div>
-  <div id="right">
-    <div class="top">
-      <div class="title"><a href="">Nelt Map</a></div>
-      <div class="searchbox">
-        <input class="search" placeholder="Search for a portal">
-        <span class="clear" title="Clear search">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-linecap="round"
-            stroke-linejoin="round">
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
-        </span>
-      </div>
-      <div class="subtitle">Tap on a portal to learn more!<br>Is this outdated? <a href="https://forms.gle/5ww8PukoGoxCJkdJ8">Let us know!</a></div>
-    </div>
-    <div id="directory">
-    </div>
-    <div class="version tiny">
-    </div>
-    <div class="tiny">
-      <strong><a href="https://github.com/chipthrasher/nelt#readme">What is the Nelt map?</a></strong>
-      <br>
-      <strong><a href="https://chipthrasher.com/elgeis/">What date is it in Elgeis?</a></strong>
-    </div>
-  </div>
-  <script src="assets/popper.min.js"></script>
-  <script src="assets/tippy-bundle.umd.min.js"></script>
-  <script src="assets/dom-slider.js"></script>
-  <script type="module" src="main.js"></script>
+  <p>The Nelt Map has moved to <a href="https://elgeis.chipthrasher.com/?layers=nether,political,dynmap">elgeis.chipthrasher.com</a>.</p>
 </body>
 
 </html>
