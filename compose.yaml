@@ -3,6 +3,6 @@ services:
     image: nginx:alpine
     restart: unless-stopped
     ports:
-      - "${PORT:-8080}:80"
+      - "${PORT}:80"
     volumes:
       - ./index.html:/usr/share/nginx/html/index.html:ro
