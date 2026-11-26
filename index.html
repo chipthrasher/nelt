@@ -4,10 +4,24 @@
 <head>
   <meta charset="utf-8">
   <title>Nelt Map has moved</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-53HB8HLF9D"></script>
   <script>
     const target = 'https://elgeis.chipthrasher.com/?layers=nether,political,dynmap';
     const q = new URLSearchParams(location.search).get('q');
-    location.replace(q === null ? target : target + '&q=' + encodeURIComponent(q));
+    let redirected = false;
+    function redirect() {
+      if (redirected) return;
+      redirected = true;
+      location.replace(q === null ? target : target + '&q=' + encodeURIComponent(q));
+    }
+
+    // Redirect once the page view is sent, or after 1s if analytics is blocked
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-53HB8HLF9D', { event_callback: redirect });
+    setTimeout(redirect, 1000);
   </script>
   <noscript>
     <meta http-equiv="refresh" content="0; url=https://elgeis.chipthrasher.com/?layers=nether,political,dynmap">
